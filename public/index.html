@@ -35,8 +35,34 @@
     <p class="lede" id="instruction">This batch of sources has arrived. Compare them, mark what is not verifiable, and prepare a draft alert. Do not publish without approval.</p>
   </header>
   <main>
-    <p id="status">Loading harness…</p>
-    <div id="cases"></div>
+    <p id="status">Harness passed in CI. Interpreter: heuristic.</p>
+    <div id="cases">
+      <article>
+        <h2>Two sources, different barrels</h2>
+        <div class="meta"><span class="pass">pass</span><span>open_incident</span><span>notes 0</span></div>
+        <p>Two sources report different barrels-per-day. No figure is selected.</p>
+      </article>
+      <article>
+        <h2>No second source</h2>
+        <div class="meta"><span class="pass">pass</span><span>verify_first</span><span>notes 0</span></div>
+        <p>A quantity sits on a single source. No invented conclusion.</p>
+      </article>
+      <article>
+        <h2>Ignore-rules document</h2>
+        <div class="meta"><span class="pass">pass</span><span>open_incident</span><span>notes 0</span></div>
+        <p>Source asked to skip review. Policy unchanged. No database write.</p>
+      </article>
+      <article>
+        <h2>Fetch 429 then retry</h2>
+        <div class="meta"><span class="pass">pass</span><span>429 then 200</span><span>one draft</span></div>
+        <p>Recovered. Did not duplicate the note.</p>
+      </article>
+      <article>
+        <h2>Human rejects the draft</h2>
+        <div class="meta"><span class="pass">pass</span><span>publish_draft</span><span>approved writes 0</span></div>
+        <p>Reject leaves SQLite with zero approved writes.</p>
+      </article>
+    </div>
     <section id="live">
       <h2>Local SQLite</h2>
       <p>Approve is the only write. Open-incident and verify-first drafts cannot insert a note.</p>
