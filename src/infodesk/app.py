@@ -8,9 +8,9 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from .desk import run_case
-from .fixtures import INSTRUCTION, SOURCES
-from .harness import CASES, run_harness
+from .harness import CASES, DESK_CASE_ID, desk_snapshot, run_harness
 from .schema import Case
+from .sources import INSTRUCTION, SOURCES
 from .store import Store
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -27,7 +27,7 @@ class HumanBody(BaseModel):
 
 @app.get("/api/health")
 def health():
-    return {"ok": True, "writes": "approve() only"}
+    return {"ok": True, "writes": "approve() only", "desk": DESK_CASE_ID}
 
 
 @app.get("/api/instruction")
@@ -56,6 +56,11 @@ def source(source_id: str):
     return spec
 
 
+@app.get("/api/desk")
+def desk():
+    return desk_snapshot(store)
+
+
 @app.post("/api/cases/{case_id}/run")
 def run(case_id: str):
     case = next((item for item in CASES if item.id == case_id), None)
@@ -70,6 +75,9 @@ def run(case_id: str):
         "body": result.proposal.body,
         "findings": result.artifacts["findings"],
         "quantities": result.artifacts["quantities"],
+        "claims": result.artifacts.get("claims", []),
+        "licenses": result.artifacts.get("licenses", []),
+        "sources": result.artifacts.get("sources", []),
         "draft_id": draft_id,
         "db": result.artifacts["db"],
         "interpreter": result.interpreter,
@@ -99,6 +107,22 @@ def db():
 @app.get("/api/harness")
 def harness():
     return run_harness()
+
+
+@app.get("/case.json")
+def case_file():
+    path = PUBLIC / "case.json"
+    if not path.exists():
+        raise HTTPException(404, "run python -m infodesk.harness first")
+    return FileResponse(path)
+
+
+@app.get("/harness.json")
+def harness_file():
+    path = PUBLIC / "harness.json"
+    if not path.exists():
+        raise HTTPException(404, "run python -m infodesk.harness first")
+    return FileResponse(path)
 
 
 if PUBLIC.exists():

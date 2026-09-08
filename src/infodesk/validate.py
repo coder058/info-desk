@@ -3,10 +3,10 @@ from __future__ import annotations
 from collections import defaultdict
 from dataclasses import replace
 
-from .fixtures import LICENSES
+from .licenses import lookup_license
 from .schema import Finding, Proposal, Quantity
 
-KNOWN_ACTIONS = {"publish_draft", "open_incident", "verify_first"}
+KNOWN_ACTIONS = {"publish_draft", "hold", "verify_first"}
 
 
 class InvalidProposal(ValueError):
@@ -61,25 +61,17 @@ def validate_proposal(
     if proposal.action not in KNOWN_ACTIONS:
         raise InvalidProposal("unknown action")
     if policy:
-        return replace(proposal, action="open_incident")
-    conflicts = conflict_findings(quantities)
-    if conflicts and proposal.action == "publish_draft":
-        raise InvalidProposal("cannot publish while quantities conflict")
+        return replace(proposal, action="hold")
     for code in mentioned_licenses:
-        if code not in LICENSES:
+        if lookup_license(code) is None:
             raise InvalidProposal(f"unknown license {code}")
     if "99Z" in proposal.body or "GL-99Z" in proposal.body:
         raise InvalidProposal("invented license")
-    if conflicts:
-        picked = any(
-            str(int(item.value)) in proposal.body or item.raw in proposal.body
-            for item in quantities
-            if item.name == "barrels_per_day"
-        )
-        # A conflict draft may mention both figures as a disagreement, not as the chosen output.
-        if picked and proposal.action == "publish_draft":
-            raise InvalidProposal("cannot choose a disputed barrel figure")
+    conflicts = conflict_findings(quantities)
+    if conflicts and proposal.action == "publish_draft":
+        raise InvalidProposal("cannot publish while quantities conflict")
     singles = single_source_findings(quantities)
     if singles and not conflicts and proposal.action == "publish_draft":
-        raise InvalidProposal("single-source quantity cannot publish")
+        if any(item.name == "royalty_billion_usd" for item in quantities):
+            raise InvalidProposal("single-source royalty cannot publish")
     return proposal

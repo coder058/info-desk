@@ -16,4 +16,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: harness-json
-          path: public/harness.json
+          path: |
+            public/harness.json
+            public/case.json

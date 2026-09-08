@@ -3,14 +3,16 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Literal
 
-Label = Literal["SYNTHETIC", "PUBLIC_SOURCE"]
-Action = Literal["publish_draft", "open_incident", "verify_first"]
+Label = Literal["PUBLIC_RECORDING"]
+Action = Literal["publish_draft", "hold", "verify_first"]
 FindingKind = Literal[
     "conflict",
     "single_source",
     "policy_attack",
     "duplicate",
-    "fact",
+    "scope_gap",
+    "ranking_conflict",
+    "attribution_gap",
     "unverified",
 ]
 
@@ -72,6 +74,8 @@ class Case:
     expect_finding_kinds: tuple[FindingKind, ...] = ()
     expect_min_fetches: int = 0
     expect_status_sequence: tuple[int, ...] = ()
+    inject_attack: bool = False
+    fail_first: str | None = None
 
 
 @dataclass

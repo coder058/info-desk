@@ -11,8 +11,8 @@ def test_reject_writes_zero_notes():
 
 def test_approve_only_for_publish_draft():
     store = Store()
-    incident = store.insert_draft("c", "open_incident", "h", "nope", "heuristic")
-    assert store.approve(incident) is False
+    held = store.insert_draft("c", "hold", "h", "nope", "heuristic")
+    assert store.approve(held) is False
     assert store.note_count() == 0
     publish = store.insert_draft("c", "publish_draft", "h", "ok", "heuristic")
     assert store.approve(publish)

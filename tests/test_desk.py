@@ -1,20 +1,21 @@
 from infodesk.desk import run_case
 from infodesk.schema import Case
+from infodesk.sources import INSTRUCTION
 from infodesk.store import Store
-from infodesk.fixtures import INSTRUCTION
 
 
-def test_conflict_does_not_select_a_figure():
+def test_does_not_treat_ofac_as_the_deal():
     store = Store()
     case = Case(
-        id="conflict-barrels",
+        id="ofac-gap",
         title="t",
         instruction=INSTRUCTION,
-        source_ids=("barrels-a", "barrels-b"),
+        source_ids=("ofac", "white-house", "ap"),
         human="approve",
-        expect_action="open_incident",
     )
     result, _ = run_case(case, store)
-    assert result.proposal.action == "open_incident"
-    assert "500000" not in result.proposal.body.replace(",", "")
+    assert result.proposal.action == "verify_first"
+    joined = result.proposal.body.lower() + " ".join(item.summary.lower() for item in result.proposal.findings)
+    assert "license" in joined
     assert result.approved_writes == 0
+    assert "500,000" not in result.proposal.body

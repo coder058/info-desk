@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "info-desk"
 version = "0.1.0"
-description = "Verifiable news/energy info desk: limited tools, quoted evidence, human approval. Demo and evals, not a production newsroom."
+description = "Editorial comparison of public OFAC / White House / AP recordings. Demo and evals, not a production newsroom."
 requires-python = ">=3.10"
 dependencies = [
   "fastapi>=0.115",

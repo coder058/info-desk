@@ -1,0 +1,27 @@
+SOURCE: https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions
+FETCHED: 2026-09-08
+LABEL: PUBLIC_RECORDING
+KIND: ofac_licenses
+
+Venezuela-Related Sanctions
+Office of Foreign Assets Control
+
+General Licenses
+OFAC issues general licenses in order to authorize activities that would otherwise be prohibited with regard to Venezuela.
+
+Venezuela General License 5Y- Authorizing Certain Transactions Related to the Petróleos de Venezuela, S.A. 2020 8.5 Percent Bond on or After September 17, 2026 (August 03, 2026)
+Venezuela General License 24A- Certain Transactions Involving the Government of Venezuela Related to Telecommunications and Mail Authorized (June 18, 2026)
+Venezuela General License 30B- Authorizing Certain Transactions Necessary to Port and Airport Operations (February 10, 2026)
+Venezuela General License 46D- Authorizing Certain Activities Involving Venezuelan-Origin Oil or Petrochemical Products (August 27, 2026)
+Venezuela General License 47B- Authorizing the Sale of U.S.-Origin Diluents to Venezuela (August 27, 2026)
+Venezuela General License 48C- Authorizing the Supply of Certain Items and Services to Venezuela (August 27, 2026)
+Venezuela General License 49A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela (March 13, 2026)
+Venezuela General License 50C- Authorizing Transactions Related to Oil or Gas Sector Operations in Venezuela of Certain Entities (August 27, 2026)
+Venezuela General License 51D- Authorizing Certain Activities Involving Venezuelan-Origin Coal or Minerals, Including Gold (September 02, 2026)
+Venezuela General License 52B- Authorizing Certain Transactions Involving Petróleos de Venezuela, S.A. (August 27, 2026)
+Venezuela General License 54C- Authorizing the Supply of Certain Items and Services for Coal or Minerals Operations in Venezuela (September 02, 2026)
+Venezuela General License 55A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela's Coal or Minerals Sectors (September 02, 2026)
+Venezuela General License 61A- Authorizing the Supply of Certain Items and Services to Venezuela Related to Telecommunications (August 27, 2026)
+Venezuela General License 62- Authorizing Negotiations of and Entry Into Contingent Contracts for Investment in the Telecommunications Sector of Venezuela (August 21, 2026)
+
+This page lists general licenses. It does not name North American Blue Energy Partners, 17 oil fields, 100-year concessions, or 65 billion barrels.
