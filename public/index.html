@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Info Desk</title>
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f6f1e0; color: #292824; font: 16px/1.5 Arial, sans-serif; }
+    header, main { max-width: 920px; margin: auto; padding: 28px 20px; }
+    h1 { font-size: clamp(2rem, 6vw, 3.4rem); letter-spacing: -.04em; line-height: 1.1; margin: 0 0 12px; }
+    .lede { max-width: 40rem; margin: 0 0 28px; }
+    .label { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+    article { border: 1px solid #b9b09c; padding: 18px 18px 14px; margin: 0 0 14px; background: #fbf7ea; }
+    article h2 { font-size: 1.15rem; margin: 0 0 8px; }
+    .meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 10px; }
+    .meta span { border: 1px dotted currentColor; padding: 2px 8px; font-size: 13px; }
+    .pass { color: #215c2a; }
+    .fail { color: #8a1f1f; }
+    blockquote { margin: 8px 0; padding: 8px 12px; border-left: 3px solid #614819; }
+    table { border-collapse: collapse; width: 100%; font-size: 14px; margin-top: 10px; }
+    th, td { border: 1px solid #b9b09c; padding: 8px; text-align: left; vertical-align: top; }
+    footer { max-width: 920px; margin: auto; padding: 0 20px 40px; font-size: 14px; }
+    a { color: inherit; }
+    button { font: inherit; border: 1px solid currentColor; background: transparent; padding: 8px 14px; margin-right: 8px; cursor: pointer; }
+    button:hover { background: rgba(41,40,36,.06); }
+    #live { display: none; margin-top: 24px; }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="label">Demo + evals</p>
+    <h1>Info Desk</h1>
+    <p class="lede" id="instruction">This batch of sources has arrived. Compare them, mark what is not verifiable, and prepare a draft alert. Do not publish without approval.</p>
+  </header>
+  <main>
+    <p id="status">Loading harness…</p>
+    <div id="cases"></div>
+    <section id="live">
+      <h2>Local SQLite</h2>
+      <p>Approve is the only write. Open-incident and verify-first drafts cannot insert a note.</p>
+      <p id="db"></p>
+    </section>
+  </main>
+  <footer>
+    <p>Python validates numbers, dates and schema. Ollama is optional and cannot invent a license or write the database. CI checks SQLite, not a model saying done.</p>
+    <p><a href="https://github.com/coder058/info-desk">Code</a></p>
+  </footer>
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const render = (report, live) => {
+      $("status").innerHTML = report.passed
+        ? '<span class="pass">Harness passed.</span> Interpreter: ' + report.interpreter + '.'
+        : '<span class="fail">Harness failed.</span>';
+      $("cases").innerHTML = report.cases.map((row) => `
+        <article>
+          <h2>${row.title}</h2>
+          <div class="meta">
+            <span class="${row.passed ? "pass" : "fail"}">${row.passed ? "pass" : "fail"}</span>
+            <span>${row.action}</span>
+            <span>${row.latency_ms} ms</span>
+            <span>notes ${row.notes}</span>
+            <span>approved writes ${row.approved_writes}</span>
+            <span>baseline ${row.baseline_action}</span>
+          </div>
+          <p>${row.body}</p>
+          ${(row.findings || []).map((f) => `
+            <p><strong>${f.kind}</strong> — ${f.summary}</p>
+            ${(f.quotes || []).map((q, i) => `<blockquote>${q}<br><small>${(f.urls && f.urls[i]) || ""}</small></blockquote>`).join("")}
+          `).join("")}
+          ${live ? `<p><button data-run="${row.id}">Run</button></p>` : ""}
+        </article>
+      `).join("");
+    };
+    const boot = async () => {
+      try {
+        const api = await fetch("/api/harness");
+        if (api.ok) {
+          render(await api.json(), true);
+          $("live").style.display = "block";
+          document.addEventListener("click", async (event) => {
+            const id = event.target.dataset.run;
+            if (!id) return;
+            const ran = await fetch("/api/cases/" + id + "/run", { method: "POST" });
+            const db = await fetch("/api/db");
+            $("db").textContent = JSON.stringify(await db.json(), null, 2);
+            if (!ran.ok) $("db").textContent = "run failed";
+          });
+          return;
+        }
+      } catch (err) {}
+      const file = await fetch("harness.json");
+      render(await file.json(), false);
+    };
+    boot();
+  </script>
+</body>
+</html>
