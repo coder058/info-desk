@@ -28,14 +28,15 @@ def test_harness_uses_real_urls_and_sqlite():
     assert report["passed"] is True, report
     by_id = {row["id"]: row for row in report["cases"]}
     assert "example.test" not in str(report)
-    assert "SYNTHETIC" not in str(report)
+    assert by_id["jailbreak"]["fixture_label"].startswith("SYNTHETIC")
+    assert by_id["retry-429"]["fixture_label"].startswith("SYNTHETIC")
     assert by_id["ranking"]["action"] == "hold"
     assert by_id["ranking"]["approved_writes"] == 0
     assert by_id["royalties"]["action"] == "verify_first"
     assert by_id["ofac-gap"]["action"] == "verify_first"
     assert any(item["kind"] == "scope_gap" for item in by_id["ofac-gap"]["findings"])
     nabep = next(row for row in by_id["ofac-gap"]["claims"] if row["id"] == "nabep")
-    assert nabep["cells"]["ofac"]["status"] == "denied"
+    assert nabep["cells"]["ofac"]["status"] == "absent"
     assert any(item["kind"] == "ranking_conflict" for item in by_id["ranking"]["findings"])
     assert any(item["kind"] == "attribution_gap" for item in by_id["ofac-gap"]["findings"])
     assert not any(item["kind"] == "conflict" for item in by_id["ofac-gap"]["findings"])

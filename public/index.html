@@ -3,262 +3,56 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Info Desk — Venezuela oil vs OFAC licenses</title>
-  <meta name="description" content="Compare the White House oil fact sheet, AP quotes, and the OFAC Venezuela license list. Recordings from 8 September 2026. Demo, not a newsroom.">
-  <style>
-    :root {
-      --bg: #f6f1e0;
-      --ink: #292824;
-      --rule: #b9b09c;
-      --paper: #fbf7ea;
-      --sand: #c7bdaf;
-      --accent: #614819;
-      --muted: #6f6a60;
-      --stated: #1f4d3a;
-      --denied: #7a2e24;
-      --attributed: #614819;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--ink);
-      font: 16px/1.55 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-    }
-    header, main, footer { max-width: 1180px; margin: auto; padding: 28px 22px; }
-    .kicker {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 12px;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin: 0 0 10px;
-    }
-    h1 {
-      font-size: clamp(2.1rem, 5vw, 3.4rem);
-      letter-spacing: -.04em;
-      line-height: 1.08;
-      font-weight: 600;
-      margin: 0 0 14px;
-    }
-    .lede { max-width: 46rem; font-size: 1.08rem; margin: 0 0 18px; }
-    .banner {
-      border: 1px solid var(--ink);
-      background: var(--paper);
-      padding: 14px 16px;
-      margin: 18px 0 28px;
-    }
-    .banner strong {
-      font-family: Arial, Helvetica, sans-serif;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      font-size: 12px;
-    }
-    h2 {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 12px;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      margin: 32px 0 12px;
-    }
-    a { color: inherit; }
-    .sources {
-      display: grid;
-      gap: 14px;
-      grid-template-columns: 1fr;
-    }
-    @media (min-width: 900px) {
-      .sources { grid-template-columns: 1fr 1fr 1fr; }
-    }
-    article.source, .panel, .finding {
-      border: 1px solid var(--rule);
-      background: var(--paper);
-      padding: 16px 16px 14px;
-    }
-    .meta {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 12px;
-      color: var(--muted);
-      letter-spacing: .02em;
-    }
-    article.source h3 { font-size: 1.15rem; margin: 6px 0 8px; line-height: 1.25; }
-    blockquote {
-      margin: 10px 0 0;
-      padding: 0 0 0 12px;
-      border-left: 3px solid var(--accent);
-      font-size: 15px;
-    }
-    .scroll {
-      overflow-x: auto;
-      border: 1px solid var(--rule);
-      background: var(--paper);
-    }
-    table { border-collapse: collapse; width: 100%; font-size: 14px; }
-    th, td { border-bottom: 1px solid var(--rule); padding: 10px 12px; text-align: left; vertical-align: top; }
-    th { font-family: Arial, Helvetica, sans-serif; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
-    td.claim { min-width: 14rem; font-weight: 600; }
-    .cell { font-family: Arial, Helvetica, sans-serif; font-size: 12px; }
-    .cell small { display: block; font-family: Georgia, serif; font-size: 13px; font-weight: 400; margin-top: 6px; color: var(--ink); }
-    .stated { color: var(--stated); font-weight: 700; }
-    .denied { color: var(--denied); font-weight: 700; }
-    .attributed { color: var(--attributed); font-weight: 700; }
-    .absent { color: var(--muted); }
-    .legend { display: flex; flex-wrap: wrap; gap: 14px; font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin: 0 0 10px; color: var(--muted); }
-    .split { display: grid; gap: 16px; grid-template-columns: 1fr; }
-    @media (min-width: 900px) { .split { grid-template-columns: 1.4fr .8fr; } }
-    button {
-      font: 13px/1 Arial, Helvetica, sans-serif;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-      border: 1px solid var(--ink);
-      background: transparent;
-      padding: 10px 14px;
-      margin-right: 8px;
-      cursor: pointer;
-    }
-    button:hover { background: rgba(41,40,36,.06); }
-    button[disabled] { opacity: .4; cursor: not-allowed; }
-    #db { white-space: pre-wrap; font-family: Arial, Helvetica, sans-serif; font-size: 12px; }
-    details { margin-top: 28px; }
-    summary { cursor: pointer; font-family: Arial, Helvetica, sans-serif; font-size: 13px; }
-    footer { color: var(--muted); font-size: 14px; }
-    .limits { max-width: 46rem; }
-  </style>
+  <title>Info Desk — evidence before a headline</title>
+  <meta name="description" content="An evidence review workbench. Compare recorded sources, trace claims to excerpts, inspect verification blockers and test the approval boundary.">
+  <link rel="stylesheet" href="desk.css">
+  <link rel="stylesheet" href="live.css">
+  <script src="desk.js" defer></script>
+  <script src="live.js" defer></script>
 </head>
 <body>
-  <header>
-    <p class="kicker">Info Desk · recordings 8 September 2026</p>
-    <h1>Venezuela oil announcement versus the OFAC license list</h1>
-    <p class="lede" id="instruction">Three public recordings: the OFAC Venezuela sanctions page, the White House fact sheet of 31 August 2026, and quotes from the AP report that followed. The desk compares what each document actually says. It does not scrape live, and it does not publish a note until a person approves.</p>
-    <div class="banner" id="status"><strong>Loading</strong></div>
-  </header>
+  <a class="skip" href="#workspace">Skip to workbench</a>
+  <header class="masthead"><a class="brand" href="./"><span class="brand-mark" aria-hidden="true">i.</span> Info Desk</a><nav aria-label="Project"><a href="#how-it-works">How it works</a><a href="https://github.com/coder058/info-desk">GitHub ↗</a><span id="mode" class="badge">Loading workspace</span></nav></header>
   <main>
-    <h2>The three recordings</h2>
-    <div class="sources" id="sources"></div>
-
-    <h2>What each document says</h2>
-    <p class="legend">
-      <span class="stated">Stated</span>
-      <span class="attributed">Attributed</span>
-      <span class="denied">Denied / not named</span>
-      <span class="absent">Absent</span>
-    </p>
-    <div class="scroll"><table id="claims"><thead></thead><tbody></tbody></table></div>
-
-    <h2>OFAC general licenses on the recording</h2>
-    <div class="scroll"><table id="licenses"><thead><tr><th>Code</th><th>What the page authorises</th><th>Issued</th></tr></thead><tbody></tbody></table></div>
-    <p class="meta">Looking up a code that is not on this page (for example 99Z) returns nothing. The desk cannot invent a license.</p>
-
-    <div class="split">
-      <div>
-        <h2>Findings</h2>
-        <div id="findings"></div>
-      </div>
-      <div>
-        <h2>Draft note</h2>
-        <section class="panel">
-          <p id="draft-head"></p>
-          <p id="draft-body"></p>
-          <p id="human"></p>
-          <pre id="db"></pre>
+    <section class="intro" aria-labelledby="title"><div><p class="eyebrow">Evidence review · recorded case and local live desk</p><h1 id="title">Incoming information.<br>Traceable answers.</h1><p class="lede">Follow official energy and sanctions updates. See what changed, ask a question and inspect the evidence behind the answer — before using it in a decision.</p><p class="lede"><strong>This hosted page opens the recorded case:</strong> dated captures of OFAC, a White House fact sheet and AP excerpts, plus the regression results. The live desk fetches, stores and answers, and it needs the Python backend, so it runs locally from the repository.</p></div><ol class="instructions"><li><strong>Check the sources.</strong> Fetch current EIA, Federal Register and OFAC records. Publication dates and fetch times are separate.</li><li><strong>Ask a focused question.</strong> Search the collected evidence or request a cited AI brief. You can narrow it to selected documents.</li><li><strong>Inspect, don’t just trust.</strong> Open citations, compare document versions and review failures. Nothing is auto-published.</li></ol></section>
+    <div class="desk-modes" aria-label="Workspace mode"><button id="open-recorded" aria-pressed="true">Recorded case &amp; regression tests</button><button id="open-live" aria-pressed="false">Live research (local backend)</button></div>
+    <section id="live-workspace" aria-label="Live research workspace">
+      <div id="live-error" role="alert" hidden></div>
+      <div class="section-heading"><div><p class="eyebrow">Connected sources</p><h2>Energy & sanctions desk</h2></div><span id="live-mode" class="badge">Connecting to the backend…</span></div>
+      <div id="live-sources" class="source-options"></div>
+      <div class="live-toolbar"><button id="live-refresh" class="primary" disabled>Check sources now</button><label><input id="live-auto" type="checkbox" checked> Auto-check while this tab is open</label><span id="live-cadence" class="muted"></span></div>
+      <p id="live-unavailable" class="muted" hidden>The live desk requires the Python backend. GitHub Pages alone cannot fetch, persist or run AI. Start the local app, or use the recorded case without calling it live.</p>
+      <div class="live-grid">
+        <section class="live-inbox" aria-label="Collected documents"><div class="section-heading"><h3>Source inbox</h3><span id="live-count" class="badge">0 documents</span></div><label class="sr-only" for="live-search">Filter collected documents</label><input id="live-search" type="search" placeholder="Filter documents by title…"><p id="live-selection" class="muted">No documents selected: search across selected sources.</p><div id="live-documents"><p class="muted">Connect to the backend to collect current source records.</p></div><p class="muted">“New to desk” means first seen by this installation, not newly published. Changes compare stored versions, not a guessed historical baseline.</p></section>
+        <section class="live-research" aria-label="Research question"><h3>Ask the evidence</h3><p class="muted">Answers use the collected source scope: RSS summaries, notice abstracts and license titles. They are not a substitute for full articles or legal review.</p><form id="live-question-form"><label for="live-question">Your research question</label><textarea id="live-question" rows="3" maxlength="1000" placeholder="What does EIA report about oil production?" required></textarea><div class="live-prompts"><button type="button" data-question="What does EIA report about oil production?">Oil production</button><button type="button" data-question="Which Venezuelan oil activities appear in the OFAC general-license titles?">License scope</button><button type="button" data-question="What do the recent Federal Register sanctions notices describe?">Sanctions notices</button></div><div class="live-ask-options"><label for="live-engine">Analysis</label><select id="live-engine"><option value="model">AI brief with citations</option><option value="evidence">Evidence retrieval only</option></select><button id="live-ask" class="primary" disabled>Research this question →</button></div><p id="live-model-note" class="muted"></p></form>
+          <div id="live-job" class="live-job" hidden><div class="section-heading"><strong id="live-job-state"></strong><button id="live-cancel" type="button">Cancel</button></div><ol id="live-job-trace" aria-live="polite"></ol></div>
+          <div id="live-answer" hidden><div class="section-heading"><h3>Research brief</h3><button id="live-export">Export evidence & answer</button></div><div id="live-answer-status" role="status"></div><div id="live-statements"></div><details id="live-passages"><summary>Retrieved passages & provenance</summary><div id="live-evidence"></div></details></div>
         </section>
       </div>
-    </div>
-
-    <details>
-      <summary>Eval harness (not the desk)</summary>
-      <p>CI also runs six checks against SQLite: ranking conflict, royalties on one document, OFAC is not the deal, a jailbreak line appended to the OFAC recording, a 429 then retry, and a human reject. <a href="harness.json">harness.json</a></p>
-    </details>
+      <details class="live-history"><summary>Recent jobs — persisted across restarts</summary><div id="live-history"></div></details>
+      <p class="live-boundary">Read-only research. Exact citation matching checks where a quote came from; it does not prove that the model’s interpretation is correct. Source failures, stale inputs and insufficient evidence remain visible.</p>
+    </section>
+    <div id="error" role="alert" hidden></div>
+    <noscript><p class="error">JavaScript is required for the interactive workbench. You can still <a href="case.json">read the recorded evidence</a> or <a href="harness.json">download the evaluation results</a>.</p></noscript>
+    <section id="workspace" aria-label="Evidence workbench" hidden>
+      <div class="section-heading"><div><p class="eyebrow">Source selection</p><h2>Venezuela oil announcement</h2></div><p class="muted">Excerpts recorded 8 September 2026 · not a live feed</p></div>
+      <fieldset id="source-selection"><legend class="sr-only">Choose recordings to compare</legend><div id="source-options" class="source-options"></div></fieldset>
+      <div class="run-bar"><button id="compare" class="primary" disabled>Compare selected sources <span aria-hidden="true">→</span></button><label id="model-control" hidden><input type="checkbox" id="use-model"> Model-assisted finding order</label><span id="selection-status" role="status">Loading recorded analyses…</span></div>
+      <div class="scenarios"><span>Explore a case</span><button data-scenario="ranking">Different rankings</button><button data-scenario="royalties">One-source figure</button><button data-scenario="jailbreak">Prompt injection</button><button data-scenario="retry-429">Source retry</button></div>
+      <section id="result" hidden>
+        <div class="decision-strip"><div><span id="decision" class="badge"></span><h2 id="headline"></h2><p id="result-context" class="muted"></p></div><div class="counts"><div><strong id="claim-count">—</strong><span>claims in scope</span></div><div><strong id="finding-count">—</strong><span>review findings</span></div></div></div>
+        <div class="tabs" role="tablist" aria-label="Analysis views"><button id="tab-evidence" role="tab" aria-controls="panel-evidence" aria-selected="true" data-tab="evidence">Evidence</button><button id="tab-review" role="tab" aria-controls="panel-review" aria-selected="false" tabindex="-1" data-tab="review">Review & export</button><button id="tab-evaluations" role="tab" aria-controls="panel-evaluations" aria-selected="false" tabindex="-1" data-tab="evaluations">Evaluations & trace</button></div>
+        <section id="panel-evidence" role="tabpanel" aria-labelledby="tab-evidence">
+          <div class="filters"><label>Find a claim<input id="search" type="search" placeholder="Try royalties, fields, ranking…"></label><label>Show<select id="filter"><option value="all">All claims in scope</option><option value="review">Needs verification</option><option value="shared">Repeated in selected excerpts</option></select></label><span id="visible-count" class="muted" role="status"></span></div>
+          <div class="evidence-layout"><div><p class="table-hint">Select a claim to inspect its evidence. “Not found” means absent from the stored excerpt, not disproved.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Claim comparison"><table id="claims"><caption class="sr-only">Claims found in selected source excerpts</caption><thead></thead><tbody></tbody></table></div><p id="empty" hidden>No claims match these filters. Clear the search or choose another filter.</p></div><aside id="inspector" tabindex="-1" aria-label="Selected claim evidence"></aside></div>
+          <details id="license-section"><summary>License titles found in the selected OFAC excerpt</summary><p>Titles are an index, not permission to transact. Read the full license and its conditions; this tool does not provide sanctions advice.</p><div class="table-scroll"><table id="licenses"><thead><tr><th scope="col">Code</th><th scope="col">Recorded title</th><th scope="col">Issue date</th></tr></thead><tbody></tbody></table></div></details>
+        </section>
+        <section id="panel-review" role="tabpanel" aria-labelledby="tab-review" hidden><div class="review-layout"><div><div class="section-heading"><h3>Verification queue</h3><span id="review-progress" class="muted"></span></div><p class="muted">Marking a finding as read does not resolve it or change the release decision.</p><div id="findings"></div></div><aside class="memo"><p class="eyebrow">Review memo · not published</p><h3 id="memo-title"></h3><p id="memo-body"></p><label>Your review notes<textarea id="review-notes" rows="4" placeholder="What would you check next? Notes stay in this tab until exported."></textarea></label><div class="export-actions"><button id="export-md" class="primary">Download cited memo</button><button id="export-json">Evidence JSON</button></div><div class="approval-box"><h4>Human decision</h4><p id="approval-explanation"></p><button id="approve" disabled>Approve note</button><button id="reject" disabled>Reject draft</button><p id="decision-feedback" role="status"></p></div></aside></div></section>
+        <section id="panel-evaluations" role="tabpanel" aria-labelledby="tab-evaluations" hidden><div class="review-layout"><div><div class="section-heading"><h3>Regression cases</h3><span id="eval-score" class="badge"></span></div><p class="muted">Assertions inspect the action, evidence and SQLite writes. Attack and retry faults are synthetic. These curated cases are not a general AI accuracy benchmark.</p><div id="eval-cases"></div></div><aside class="memo"><h3>This analysis, step by step</h3><p id="trace-mode" class="muted"></p><ol id="trace"></ol><p id="engine-note"></p><details><summary>Database snapshot at analysis time</summary><pre id="db"></pre></details><a href="harness.json">Download recorded evaluation report ↗</a></aside></div></section>
+      </section>
+    </section>
+    <section id="how-it-works" class="architecture"><p class="eyebrow">Under the hood</p><h2>From a source update to a reviewable answer.</h2><p>The live pipeline collects official records, keeps document versions and retrieves passages with SQLite FTS5 / BM25. A local model writes a short answer with exact source quotations. Failed checks stay failed; no recording is substituted for a live result.</p><div class="table-scroll"><table><thead><tr><th>Component</th><th>Depends on</th><th>Produces / enforces</th></tr></thead><tbody><tr><th>Live connectors</th><td>EIA RSS, Federal Register API, OFAC HTML</td><td>Conditional HTTP requests, provider cooldowns, response limits and visible source errors</td></tr><tr><th>Version store</th><td>Validated source documents</td><td>Append-only captures, fingerprints and diffs; publication and fetch dates stay separate</td></tr><tr><th>Retrieval</th><td>Latest stored versions + user-selected scope</td><td>BM25-ranked passages with document/version IDs; no-match abstention</td></tr><tr><th>AI brief</th><td>Question + retrieved passages + structured-output model</td><td>Quote and numeric validation, visible failures, reviewable interpretation — no automatic publication</td></tr><tr><th>Job worker</th><td>Local API + SQLite checkpoints</td><td>Responsive progress, one-job backpressure, cancellation and restart recovery to an interrupted state</td></tr></tbody></table></div><p class="muted">The separate recorded case remains a reproducible regression lab. Live coverage is publisher summaries, abstracts and license titles, not every full document. Lexical retrieval can miss relevant passages, and citation matching cannot prove semantic correctness. Public multi-user hosting requires authentication and a deployed backend.</p></section>
   </main>
-  <footer>
-    <p class="limits">Demo and evals, not a newsroom in production. These are dated recordings, not a live OFAC feed. AP is quotes only — not a republication of the article. A White House fact sheet is not signed concession contracts. SQLite exists only when you run the app locally; GitHub Pages serves this comparison as JSON. <a href="https://github.com/coder058/info-desk">Code</a></p>
-  </footer>
-  <script>
-    const esc = (value) => String(value ?? "").replace(/[&<>"']/g, (ch) => ({
-      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
-    }[ch]));
-    const $ = (id) => document.getElementById(id);
-    const label = (status) => ({
-      stated: "Stated",
-      denied: "Not named on this page",
-      attributed: "Attributed",
-      absent: "Absent"
-    }[status] || status);
-
-    const paint = (desk, live) => {
-      if (desk.instruction) $("instruction").textContent = desk.instruction;
-      $("status").innerHTML = "<strong>" + esc(desk.action) + "</strong><p>" + esc(desk.headline || "") + "</p>";
-      const order = ["ofac", "white-house", "ap"];
-      const sources = (desk.sources || []).slice().sort((a, b) => order.indexOf(a.id) - order.indexOf(b.id));
-      $("sources").innerHTML = sources.map((source) =>
-        "<article class=\"source\">" +
-          "<p class=\"meta\">" + esc(source.kind || source.id) + " · " + esc((source.fetched_at || "").slice(0, 10)) + "</p>" +
-          "<h3>" + esc(source.title || source.id) + "</h3>" +
-          "<p class=\"meta\"><a href=\"" + esc(source.url) + "\">" + esc(source.url) + "</a></p>" +
-          "<blockquote>" + esc(source.quote) + "</blockquote>" +
-        "</article>"
-      ).join("");
-
-      const claims = desk.claims || [];
-      const cols = sources.map((source) => source.id);
-      const shortName = { ofac: "OFAC", "white-house": "White House", ap: "AP" };
-      const thead = $("claims").querySelector("thead");
-      thead.innerHTML = "<tr><th>Claim</th>" + cols.map((id) => {
-        return "<th>" + esc(shortName[id] || id) + "</th>";
-      }).join("") + "</tr>";
-      $("claims").querySelector("tbody").innerHTML = claims.map((row) =>
-        "<tr><td class=\"claim\">" + esc(row.label) + "</td>" + cols.map((id) => {
-          const cell = (row.cells && row.cells[id]) || { status: "absent", quote: "" };
-          return "<td class=\"cell\"><span class=\"" + esc(cell.status) + "\">" + esc(label(cell.status)) + "</span>" +
-            (cell.quote ? "<small>" + esc(cell.quote) + "</small>" : "") + "</td>";
-        }).join("") + "</tr>"
-      ).join("");
-
-      const licenses = (desk.licenses || []).filter(Boolean);
-      $("licenses").querySelector("tbody").innerHTML = licenses.map((item) =>
-        "<tr><th>" + esc(item.code) + "</th><td>" + esc(item.title) + "</td><td>" + esc(item.issued) + "</td></tr>"
-      ).join("");
-
-      $("findings").innerHTML = (desk.findings || []).map((item) =>
-        "<article class=\"finding\"><p class=\"meta\">" + esc(item.kind) + "</p><p>" + esc(item.summary) + "</p>" +
-        (item.quotes || []).map((quote, i) =>
-          "<blockquote>" + esc(quote) + (item.urls && item.urls[i] ? "<br><span class=\"meta\">" + esc(item.urls[i]) + "</span>" : "") + "</blockquote>"
-        ).join("") + "</article>"
-      ).join("");
-
-      $("draft-head").innerHTML = "<strong>" + esc(desk.headline || "") + "</strong>";
-      $("draft-body").textContent = desk.body || "";
-      if (live && desk.draft_id && desk.action === "publish_draft") {
-        $("human").innerHTML = "<button data-d=\"approve\">Approve write</button><button data-d=\"reject\">Reject</button>";
-      } else if (live && desk.draft_id) {
-        $("human").innerHTML = "<button data-d=\"approve\" disabled>Approve (only for publish_draft)</button><button data-d=\"reject\">Reject</button>";
-      } else {
-        $("human").innerHTML = "<p class=\"meta\">GitHub Pages serves the comparison. Approve exists only when you run the local app.</p>";
-      }
-      $("human").onclick = async (ev) => {
-        const decision = ev.target.dataset.d;
-        if (!decision) return;
-        const res = await fetch("/api/drafts/" + desk.draft_id + "/decide", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ decision: decision })
-        });
-        $("db").textContent = JSON.stringify(await res.json(), null, 2);
-      };
-    };
-
-    const boot = async () => {
-      try {
-        const api = await fetch("/api/desk");
-        if (api.ok) {
-          paint(await api.json(), true);
-          return;
-        }
-      } catch (err) {}
-      const file = await fetch("case.json");
-      paint(await file.json(), false);
-    };
-    boot();
-  </script>
+  <footer><span>Info Desk · Built by Jordi</span><a href="https://github.com/coder058/info-desk">Source, setup & tests ↗</a></footer>
 </body>
 </html>

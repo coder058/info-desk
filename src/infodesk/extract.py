@@ -54,7 +54,7 @@ RULES = (
 )
 
 _LEAD = {
-    "ofac": re.compile(r"does not name", re.I),
+    "ofac": re.compile(r"OFAC issues general licenses", re.I),
     "white-house": re.compile(r"North American Blue Energy Partners", re.I),
     "ap": re.compile(r"behind Chevron", re.I),
 }

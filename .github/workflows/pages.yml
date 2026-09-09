@@ -21,7 +21,14 @@ jobs:
         with:
           python-version: "3.12"
       - run: python -m pip install -e ".[dev]"
+      - run: python -m pytest
       - run: python -m infodesk.harness
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:browser
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public

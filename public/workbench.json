@@ -1,0 +1,3532 @@
+{
+  "mode": "recorded_replay",
+  "generated_at": "2026-09-09T23:47:44.227442+00:00",
+  "sources": [
+    {
+      "id": "ofac",
+      "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+      "label": "PUBLIC_RECORDING",
+      "title": "OFAC \u2014 Venezuela-related sanctions",
+      "kind": "ofac_licenses",
+      "fetched_at": "2026-09-08T13:15:00Z",
+      "capture_note": "Selected license-list excerpts; not the full OFAC page. Original editorial annotation excluded from evidence."
+    },
+    {
+      "id": "white-house",
+      "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+      "label": "PUBLIC_RECORDING",
+      "title": "White House fact sheet \u2014 31 August 2026",
+      "kind": "white_house_fact_sheet",
+      "fetched_at": "2026-09-08T13:15:00Z",
+      "capture_note": "Stored fact-sheet excerpts, not signed contracts. Original editorial annotation excluded from evidence."
+    },
+    {
+      "id": "ap",
+      "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+      "label": "PUBLIC_RECORDING",
+      "title": "Days after Trump announces Venezuela oil deal, White House fills in some of the details",
+      "kind": "ap_report",
+      "fetched_at": "2026-09-08T13:15:00Z",
+      "capture_note": "Selected AP excerpts supplied with this project, not the full article. Absence here does not establish absence in the article."
+    }
+  ],
+  "selections": {
+    "ofac": {
+      "id": "ofac",
+      "selection_key": "ofac",
+      "source_ids": [
+        "ofac"
+      ],
+      "title": "Selected source comparison",
+      "action": "verify_first",
+      "headline": "OFAC license list only.",
+      "body": "These excerpts list titles of Venezuela-related general licenses (5Y, 24A, 30B, 46D, 47B, 48C, 49A, 50C, 51D, 52B, 54C, 55A, 61A, 62). License titles alone do not establish whether a particular transaction is authorised. Review the full license and its conditions.",
+      "interpreter": "heuristic",
+      "latency_ms": 10.229200000139826,
+      "ollama_tokens": 0,
+      "baseline_action": "verify_first",
+      "draft_id": 1,
+      "generated_at": "2026-09-09T23:47:43.985650+00:00",
+      "trace": [
+        {
+          "step": "Read stored excerpt",
+          "source_id": "ofac",
+          "duration_ms": 0.3000999995492748,
+          "detail": "PUBLIC_RECORDING",
+          "sha256": "e4534a89649bedf27142d2534a876ca33568153657d92574c836e6bb01164cfd"
+        },
+        {
+          "step": "Extract and validate",
+          "duration_ms": 3.261900000325113,
+          "detail": "heuristic"
+        }
+      ],
+      "prior_notes": [],
+      "model_requested": false,
+      "model_status": "not_requested",
+      "dates": [
+        "2026-09-17",
+        "2026-08-03",
+        "2026-06-18",
+        "2026-02-10",
+        "2026-08-27",
+        "2026-03-13",
+        "2026-09-02",
+        "2026-08-21"
+      ],
+      "licenses_found": [
+        "5Y",
+        "24A",
+        "30B",
+        "46D",
+        "47B",
+        "48C",
+        "49A",
+        "50C",
+        "51D",
+        "52B",
+        "54C",
+        "55A",
+        "61A",
+        "62"
+      ],
+      "licenses_known": [
+        "5Y",
+        "24A",
+        "30B",
+        "46D",
+        "47B",
+        "48C",
+        "49A",
+        "50C",
+        "51D",
+        "52B",
+        "54C",
+        "55A",
+        "61A",
+        "62"
+      ],
+      "licenses": [
+        {
+          "code": "5Y",
+          "title": "Authorizing Certain Transactions Related to the Petr\u00f3leos de Venezuela, S.A. 2020 8.5 Percent Bond on or After September 17, 2026",
+          "issued": "August 03, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "24A",
+          "title": "Certain Transactions Involving the Government of Venezuela Related to Telecommunications and Mail Authorized",
+          "issued": "June 18, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "30B",
+          "title": "Authorizing Certain Transactions Necessary to Port and Airport Operations",
+          "issued": "February 10, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "46D",
+          "title": "Authorizing Certain Activities Involving Venezuelan-Origin Oil or Petrochemical Products",
+          "issued": "August 27, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "47B",
+          "title": "Authorizing the Sale of U.S.-Origin Diluents to Venezuela",
+          "issued": "August 27, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "48C",
+          "title": "Authorizing the Supply of Certain Items and Services to Venezuela",
+          "issued": "August 27, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "49A",
+          "title": "Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela",
+          "issued": "March 13, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "50C",
+          "title": "Authorizing Transactions Related to Oil or Gas Sector Operations in Venezuela of Certain Entities",
+          "issued": "August 27, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "51D",
+          "title": "Authorizing Certain Activities Involving Venezuelan-Origin Coal or Minerals, Including Gold",
+          "issued": "September 02, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "52B",
+          "title": "Authorizing Certain Transactions Involving Petr\u00f3leos de Venezuela, S.A.",
+          "issued": "August 27, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "54C",
+          "title": "Authorizing the Supply of Certain Items and Services for Coal or Minerals Operations in Venezuela",
+          "issued": "September 02, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "55A",
+          "title": "Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela's Coal or Minerals Sectors",
+          "issued": "September 02, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "61A",
+          "title": "Authorizing the Supply of Certain Items and Services to Venezuela Related to Telecommunications",
+          "issued": "August 27, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "62",
+          "title": "Authorizing Negotiations of and Entry Into Contingent Contracts for Investment in the Telecommunications Sector of Venezuela",
+          "issued": "August 21, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        }
+      ],
+      "claims": [
+        {
+          "id": "nabep",
+          "label": "Names NABEP / North American Blue Energy Partners",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "oil_fields",
+          "label": "17 oil fields",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "concession",
+          "label": "100-year concessions or rights",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "field_reserves",
+          "label": "About 65 billion barrels in those fields",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "us_reserves",
+          "label": "U.S. territorial proven reserves of roughly 46 billion barrels",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "equity",
+          "label": "35% OSC / Pentagon stake",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "offtake",
+          "label": "20% offtake or output at cost",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "capex",
+          "label": "$100 billion in new oil infrastructure",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "royalty",
+          "label": "$200 billion expected royalties and tax payments",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "rank_private",
+          "label": "Second-largest private Venezuelan oil producer",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "rank_chevron",
+          "label": "Second largest operator in Venezuela, behind Chevron",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "prior_operators",
+          "label": "Prior operators described as Russian or Chinese",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "gl_46d",
+          "label": "OFAC General License 46D \u2014 Venezuelan-origin oil or petrochemicals",
+          "cells": {
+            "ofac": {
+              "status": "stated",
+              "quote": "Venezuela General License 5Y- Authorizing Certain Transactions Related to the Petr\u00f3leos de Venezuela, S.A. 2020 8.5 Percent Bond on or After September 17, 2026 (August 03, 2026) Venezuela General License 24A- Certain Transactions Involving the Government of Venezuela Related to Telecommunications and Mail Authorized (June 18, 2026) Venezuela General License 30B- Authorizing Certain Transactions Necessary to Port and Airport Operations (February 10, 2026) Venezuela General License 46D- Authorizing Certain Activities Involving Venezuelan-Origin Oil or Petrochemical Products (August 27, 2026) Venezuela General License 47B- Authorizing the Sale of U.S.-Origin Diluents to Venezuela (August 27, 2026) Venezuela General License 48C- Authorizing the Supply of Certain Items and Services to Venezuela (August 27, 2026) Venezuela General License 49A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela (March 13, 2026) Venezuela General License 50C- Authorizing Transactions Related to Oil or Gas Sector Operations in Venezuela of Certain Entities (August 27, 2026) Venezuela General License 51D- Authorizing Certain Activities Involving Venezuelan-Origin Coal or Minerals, Including Gold (September 02, 2026) Venezuela General License 52B- Authorizing Certain Transactions Involving Petr\u00f3leos de Venezuela, S.A. (August 27, 2026) Venezuela General License 54C- Authorizing the Supply of Certain Items and Services for Coal or Minerals Operations in Venezuela (September 02, 2026) Venezuela General License 55A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela's Coal or Minerals Sectors (September 02, 2026) Venezuela General License 61A- Authorizing the Supply of Certain Items and Services to Venezuela Related to Telecommunications (August 27, 2026) Venezuela General License 62- Authorizing Negotiations of and Entry Into Contingent Contracts for Investment in the Telecommunications Sector of Venezuela (August 21, 2026)"
+            }
+          }
+        },
+        {
+          "id": "gl_50c",
+          "label": "OFAC General License 50C \u2014 oil or gas sector operations",
+          "cells": {
+            "ofac": {
+              "status": "stated",
+              "quote": "Venezuela General License 5Y- Authorizing Certain Transactions Related to the Petr\u00f3leos de Venezuela, S.A. 2020 8.5 Percent Bond on or After September 17, 2026 (August 03, 2026) Venezuela General License 24A- Certain Transactions Involving the Government of Venezuela Related to Telecommunications and Mail Authorized (June 18, 2026) Venezuela General License 30B- Authorizing Certain Transactions Necessary to Port and Airport Operations (February 10, 2026) Venezuela General License 46D- Authorizing Certain Activities Involving Venezuelan-Origin Oil or Petrochemical Products (August 27, 2026) Venezuela General License 47B- Authorizing the Sale of U.S.-Origin Diluents to Venezuela (August 27, 2026) Venezuela General License 48C- Authorizing the Supply of Certain Items and Services to Venezuela (August 27, 2026) Venezuela General License 49A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela (March 13, 2026) Venezuela General License 50C- Authorizing Transactions Related to Oil or Gas Sector Operations in Venezuela of Certain Entities (August 27, 2026) Venezuela General License 51D- Authorizing Certain Activities Involving Venezuelan-Origin Coal or Minerals, Including Gold (September 02, 2026) Venezuela General License 52B- Authorizing Certain Transactions Involving Petr\u00f3leos de Venezuela, S.A. (August 27, 2026) Venezuela General License 54C- Authorizing the Supply of Certain Items and Services for Coal or Minerals Operations in Venezuela (September 02, 2026) Venezuela General License 55A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela's Coal or Minerals Sectors (September 02, 2026) Venezuela General License 61A- Authorizing the Supply of Certain Items and Services to Venezuela Related to Telecommunications (August 27, 2026) Venezuela General License 62- Authorizing Negotiations of and Entry Into Contingent Contracts for Investment in the Telecommunications Sector of Venezuela (August 21, 2026)"
+            }
+          }
+        },
+        {
+          "id": "gl_52b",
+          "label": "OFAC General License 52B \u2014 Petr\u00f3leos de Venezuela, S.A.",
+          "cells": {
+            "ofac": {
+              "status": "stated",
+              "quote": "Venezuela General License 5Y- Authorizing Certain Transactions Related to the Petr\u00f3leos de Venezuela, S.A. 2020 8.5 Percent Bond on or After September 17, 2026 (August 03, 2026) Venezuela General License 24A- Certain Transactions Involving the Government of Venezuela Related to Telecommunications and Mail Authorized (June 18, 2026) Venezuela General License 30B- Authorizing Certain Transactions Necessary to Port and Airport Operations (February 10, 2026) Venezuela General License 46D- Authorizing Certain Activities Involving Venezuelan-Origin Oil or Petrochemical Products (August 27, 2026) Venezuela General License 47B- Authorizing the Sale of U.S.-Origin Diluents to Venezuela (August 27, 2026) Venezuela General License 48C- Authorizing the Supply of Certain Items and Services to Venezuela (August 27, 2026) Venezuela General License 49A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela (March 13, 2026) Venezuela General License 50C- Authorizing Transactions Related to Oil or Gas Sector Operations in Venezuela of Certain Entities (August 27, 2026) Venezuela General License 51D- Authorizing Certain Activities Involving Venezuelan-Origin Coal or Minerals, Including Gold (September 02, 2026) Venezuela General License 52B- Authorizing Certain Transactions Involving Petr\u00f3leos de Venezuela, S.A. (August 27, 2026) Venezuela General License 54C- Authorizing the Supply of Certain Items and Services for Coal or Minerals Operations in Venezuela (September 02, 2026) Venezuela General License 55A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela's Coal or Minerals Sectors (September 02, 2026) Venezuela General License 61A- Authorizing the Supply of Certain Items and Services to Venezuela Related to Telecommunications (August 27, 2026) Venezuela General License 62- Authorizing Negotiations of and Entry Into Contingent Contracts for Investment in the Telecommunications Sector of Venezuela (August 21, 2026)"
+            }
+          }
+        },
+        {
+          "id": "gl_49a",
+          "label": "OFAC General License 49A \u2014 contingent contracts for certain investment",
+          "cells": {
+            "ofac": {
+              "status": "stated",
+              "quote": "Venezuela General License 5Y- Authorizing Certain Transactions Related to the Petr\u00f3leos de Venezuela, S.A. 2020 8.5 Percent Bond on or After September 17, 2026 (August 03, 2026) Venezuela General License 24A- Certain Transactions Involving the Government of Venezuela Related to Telecommunications and Mail Authorized (June 18, 2026) Venezuela General License 30B- Authorizing Certain Transactions Necessary to Port and Airport Operations (February 10, 2026) Venezuela General License 46D- Authorizing Certain Activities Involving Venezuelan-Origin Oil or Petrochemical Products (August 27, 2026) Venezuela General License 47B- Authorizing the Sale of U.S.-Origin Diluents to Venezuela (August 27, 2026) Venezuela General License 48C- Authorizing the Supply of Certain Items and Services to Venezuela (August 27, 2026) Venezuela General License 49A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela (March 13, 2026) Venezuela General License 50C- Authorizing Transactions Related to Oil or Gas Sector Operations in Venezuela of Certain Entities (August 27, 2026) Venezuela General License 51D- Authorizing Certain Activities Involving Venezuelan-Origin Coal or Minerals, Including Gold (September 02, 2026) Venezuela General License 52B- Authorizing Certain Transactions Involving Petr\u00f3leos de Venezuela, S.A. (August 27, 2026) Venezuela General License 54C- Authorizing the Supply of Certain Items and Services for Coal or Minerals Operations in Venezuela (September 02, 2026) Venezuela General License 55A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela's Coal or Minerals Sectors (September 02, 2026) Venezuela General License 61A- Authorizing the Supply of Certain Items and Services to Venezuela Related to Telecommunications (August 27, 2026) Venezuela General License 62- Authorizing Negotiations of and Entry Into Contingent Contracts for Investment in the Telecommunications Sector of Venezuela (August 21, 2026)"
+            }
+          }
+        }
+      ],
+      "quantities": [],
+      "findings": [],
+      "sources": [
+        {
+          "id": "ofac",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "quote": "Venezuela-Related Sanctions Office of Foreign Assets Control General Licenses OFAC issues general licenses in order to authorize activities that would otherwise be prohibited with regard to Venezuela",
+          "title": "OFAC \u2014 Venezuela-related sanctions",
+          "kind": "ofac_licenses",
+          "fetched_at": "2026-09-08T13:15:00Z",
+          "label": "PUBLIC_RECORDING",
+          "sha256": "e4534a89649bedf27142d2534a876ca33568153657d92574c836e6bb01164cfd",
+          "capture_note": "Selected license-list excerpts; not the full OFAC page. Original editorial annotation excluded from evidence."
+        }
+      ],
+      "db": {
+        "notes": 0,
+        "approved_writes": 0,
+        "drafts": [
+          {
+            "id": 1,
+            "case_id": "ofac",
+            "action": "verify_first",
+            "status": "pending"
+          }
+        ],
+        "fetches": [
+          [
+            "ofac",
+            200
+          ]
+        ],
+        "approvals": []
+      }
+    },
+    "white-house": {
+      "id": "white-house",
+      "selection_key": "white-house",
+      "source_ids": [
+        "white-house"
+      ],
+      "title": "Selected source comparison",
+      "action": "verify_first",
+      "headline": "One source only on at least one figure.",
+      "body": "Review memo \u2014 figures supported by only one selected excerpt: oil fields, concession years, field reserves billion bbl, us reserves billion bbl, equity percent, offtake percent, capex billion usd, royalty billion usd. Check independent evidence before release. Repetition of an attributed announcement is not independent verification.",
+      "interpreter": "heuristic",
+      "latency_ms": 8.15740000052756,
+      "ollama_tokens": 0,
+      "baseline_action": "verify_first",
+      "draft_id": 1,
+      "generated_at": "2026-09-09T23:47:44.006670+00:00",
+      "trace": [
+        {
+          "step": "Read stored excerpt",
+          "source_id": "white-house",
+          "duration_ms": 0.27490000047691865,
+          "detail": "PUBLIC_RECORDING",
+          "sha256": "a2bcb207071faf5cd6f4be272ad572c08e207efc1ac1a91534cf6ad5e787fbb0"
+        },
+        {
+          "step": "Extract and validate",
+          "duration_ms": 2.199800000198593,
+          "detail": "heuristic"
+        }
+      ],
+      "prior_notes": [],
+      "model_requested": false,
+      "model_status": "not_requested",
+      "dates": [
+        "2026-08-31"
+      ],
+      "licenses_found": [],
+      "licenses_known": [],
+      "licenses": [],
+      "claims": [
+        {
+          "id": "nabep",
+          "label": "Names NABEP / North American Blue Energy Partners",
+          "cells": {
+            "white-house": {
+              "status": "stated",
+              "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+            }
+          }
+        },
+        {
+          "id": "oil_fields",
+          "label": "17 oil fields",
+          "cells": {
+            "white-house": {
+              "status": "stated",
+              "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+            }
+          }
+        },
+        {
+          "id": "concession",
+          "label": "100-year concessions or rights",
+          "cells": {
+            "white-house": {
+              "status": "stated",
+              "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+            }
+          }
+        },
+        {
+          "id": "field_reserves",
+          "label": "About 65 billion barrels in those fields",
+          "cells": {
+            "white-house": {
+              "status": "stated",
+              "quote": "Fact Sheet: President Donald J. Trump Announces Historic Oil Agreement to Secure American Energy Dominance and Drive Venezuela\u2019s Economic Recovery The White House August 31, 2026 In the biggest oil deal in world history, President Donald J. Trump has secured U.S. majority control of more than 65 billion barrels of proven oil reserves in Venezuela \u2013 vastly expanding our current U.S. territorial proven reserves of roughly 46 billion barrels"
+            }
+          }
+        },
+        {
+          "id": "us_reserves",
+          "label": "U.S. territorial proven reserves of roughly 46 billion barrels",
+          "cells": {
+            "white-house": {
+              "status": "stated",
+              "quote": "Fact Sheet: President Donald J. Trump Announces Historic Oil Agreement to Secure American Energy Dominance and Drive Venezuela\u2019s Economic Recovery The White House August 31, 2026 In the biggest oil deal in world history, President Donald J. Trump has secured U.S. majority control of more than 65 billion barrels of proven oil reserves in Venezuela \u2013 vastly expanding our current U.S. territorial proven reserves of roughly 46 billion barrels"
+            }
+          }
+        },
+        {
+          "id": "equity",
+          "label": "35% OSC / Pentagon stake",
+          "cells": {
+            "white-house": {
+              "status": "stated",
+              "quote": "At no cost to the American taxpayer, NABEP has granted the U.S. Department of War\u2019s Office of Strategic Capital a 35% equity stake in its corporate parent"
+            }
+          }
+        },
+        {
+          "id": "offtake",
+          "label": "20% offtake or output at cost",
+          "cells": {
+            "white-house": {
+              "status": "stated",
+              "quote": "NABEP has granted the U.S. Department of State the right to purchase, at production cost, a guaranteed 20% of the off-take from all current and future fields NABEP will operate"
+            }
+          }
+        },
+        {
+          "id": "capex",
+          "label": "$100 billion in new oil infrastructure",
+          "cells": {
+            "white-house": {
+              "status": "stated",
+              "quote": "NABEP has developed an ambitious plan to rapidly scale production by investing up to $100 billion in new oil infrastructure in Venezuela"
+            }
+          }
+        },
+        {
+          "id": "royalty",
+          "label": "$200 billion expected royalties and tax payments",
+          "cells": {
+            "white-house": {
+              "status": "stated",
+              "quote": "Under this framework, as it scales production, NABEP will pay an expected $200 billion in royalty and tax payments over the first 25 years."
+            }
+          }
+        },
+        {
+          "id": "rank_private",
+          "label": "Second-largest private Venezuelan oil producer",
+          "cells": {
+            "white-house": {
+              "status": "stated",
+              "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+            }
+          }
+        },
+        {
+          "id": "rank_chevron",
+          "label": "Second largest operator in Venezuela, behind Chevron",
+          "cells": {
+            "white-house": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "prior_operators",
+          "label": "Prior operators described as Russian or Chinese",
+          "cells": {
+            "white-house": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "gl_46d",
+          "label": "OFAC General License 46D \u2014 Venezuelan-origin oil or petrochemicals",
+          "cells": {
+            "white-house": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "gl_50c",
+          "label": "OFAC General License 50C \u2014 oil or gas sector operations",
+          "cells": {
+            "white-house": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "gl_52b",
+          "label": "OFAC General License 52B \u2014 Petr\u00f3leos de Venezuela, S.A.",
+          "cells": {
+            "white-house": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "gl_49a",
+          "label": "OFAC General License 49A \u2014 contingent contracts for certain investment",
+          "cells": {
+            "white-house": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        }
+      ],
+      "quantities": [
+        {
+          "name": "oil_fields",
+          "value": 17.0,
+          "raw": "17 oil fields",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+        },
+        {
+          "name": "concession_years",
+          "value": 100.0,
+          "raw": "100-year concessions",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+        },
+        {
+          "name": "field_reserves_billion_bbl",
+          "value": 65.0,
+          "raw": "17 oil fields with proven reserves of approximately 65 billion barrels",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+        },
+        {
+          "name": "us_reserves_billion_bbl",
+          "value": 46.0,
+          "raw": "U.S. territorial proven reserves of roughly 46 billion",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "Fact Sheet: President Donald J. Trump Announces Historic Oil Agreement to Secure American Energy Dominance and Drive Venezuela\u2019s Economic Recovery The White House August 31, 2026 In the biggest oil deal in world history, President Donald J. Trump has secured U.S. majority control of more than 65 billion barrels of proven oil reserves in Venezuela \u2013 vastly expanding our current U.S. territorial pro"
+        },
+        {
+          "name": "equity_percent",
+          "value": 35.0,
+          "raw": "35% equity stake",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "At no cost to the American taxpayer, NABEP has granted the U.S. Department of War\u2019s Office of Strategic Capital a 35% equity stake in its corporate parent"
+        },
+        {
+          "name": "offtake_percent",
+          "value": 20.0,
+          "raw": "guaranteed 20% of the off-take",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "NABEP has granted the U.S. Department of State the right to purchase, at production cost, a guaranteed 20% of the off-take from all current and future fields NABEP will operate"
+        },
+        {
+          "name": "capex_billion_usd",
+          "value": 100.0,
+          "raw": "$100 billion in new oil infrastructure",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "NABEP has developed an ambitious plan to rapidly scale production by investing up to $100 billion in new oil infrastructure in Venezuela"
+        },
+        {
+          "name": "royalty_billion_usd",
+          "value": 200.0,
+          "raw": "$200 billion in royalty",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "Under this framework, as it scales production, NABEP will pay an expected $200 billion in royalty and tax payments over the first 25 years."
+        }
+      ],
+      "findings": [
+        {
+          "kind": "single_source",
+          "summary": "oil_fields appears in only one source.",
+          "quotes": [
+            "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+          ],
+          "urls": [
+            "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "concession_years appears in only one source.",
+          "quotes": [
+            "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+          ],
+          "urls": [
+            "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "field_reserves_billion_bbl appears in only one source.",
+          "quotes": [
+            "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+          ],
+          "urls": [
+            "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "us_reserves_billion_bbl appears in only one source.",
+          "quotes": [
+            "Fact Sheet: President Donald J. Trump Announces Historic Oil Agreement to Secure American Energy Dominance and Drive Venezuela\u2019s Economic Recovery The White House August 31, 2026 In the biggest oil deal in world history, President Donald J. Trump has secured U.S. majority control of more than 65 billion barrels of proven oil reserves in Venezuela \u2013 vastly expanding our current U.S. territorial pro"
+          ],
+          "urls": [
+            "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "equity_percent appears in only one source.",
+          "quotes": [
+            "At no cost to the American taxpayer, NABEP has granted the U.S. Department of War\u2019s Office of Strategic Capital a 35% equity stake in its corporate parent"
+          ],
+          "urls": [
+            "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "offtake_percent appears in only one source.",
+          "quotes": [
+            "NABEP has granted the U.S. Department of State the right to purchase, at production cost, a guaranteed 20% of the off-take from all current and future fields NABEP will operate"
+          ],
+          "urls": [
+            "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "capex_billion_usd appears in only one source.",
+          "quotes": [
+            "NABEP has developed an ambitious plan to rapidly scale production by investing up to $100 billion in new oil infrastructure in Venezuela"
+          ],
+          "urls": [
+            "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "royalty_billion_usd appears in only one source.",
+          "quotes": [
+            "Under this framework, as it scales production, NABEP will pay an expected $200 billion in royalty and tax payments over the first 25 years."
+          ],
+          "urls": [
+            "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels",
+          "title": "White House fact sheet \u2014 31 August 2026",
+          "kind": "white_house_fact_sheet",
+          "fetched_at": "2026-09-08T13:15:00Z",
+          "label": "PUBLIC_RECORDING",
+          "sha256": "a2bcb207071faf5cd6f4be272ad572c08e207efc1ac1a91534cf6ad5e787fbb0",
+          "capture_note": "Stored fact-sheet excerpts, not signed contracts. Original editorial annotation excluded from evidence."
+        }
+      ],
+      "db": {
+        "notes": 0,
+        "approved_writes": 0,
+        "drafts": [
+          {
+            "id": 1,
+            "case_id": "white-house",
+            "action": "verify_first",
+            "status": "pending"
+          }
+        ],
+        "fetches": [
+          [
+            "white-house",
+            200
+          ]
+        ],
+        "approvals": []
+      }
+    },
+    "ap": {
+      "id": "ap",
+      "selection_key": "ap",
+      "source_ids": [
+        "ap"
+      ],
+      "title": "Selected source comparison",
+      "action": "verify_first",
+      "headline": "One source only on at least one figure.",
+      "body": "Review memo \u2014 figures supported by only one selected excerpt: oil fields, concession years, field reserves billion bbl, equity percent, offtake percent, capex billion usd. Check independent evidence before release. Repetition of an attributed announcement is not independent verification.",
+      "interpreter": "heuristic",
+      "latency_ms": 7.349800000156392,
+      "ollama_tokens": 0,
+      "baseline_action": "verify_first",
+      "draft_id": 1,
+      "generated_at": "2026-09-09T23:47:44.023460+00:00",
+      "trace": [
+        {
+          "step": "Read stored excerpt",
+          "source_id": "ap",
+          "duration_ms": 0.2803999996103812,
+          "detail": "PUBLIC_RECORDING",
+          "sha256": "8c96e2573be17313939f3cbec7de26003082c522201f72fc14e15602e6277c2c"
+        },
+        {
+          "step": "Extract and validate",
+          "duration_ms": 1.3275999999677879,
+          "detail": "heuristic"
+        }
+      ],
+      "prior_notes": [],
+      "model_requested": false,
+      "model_status": "not_requested",
+      "dates": [],
+      "licenses_found": [],
+      "licenses_known": [],
+      "licenses": [],
+      "claims": [
+        {
+          "id": "nabep",
+          "label": "Names NABEP / North American Blue Energy Partners",
+          "cells": {
+            "ap": {
+              "status": "stated",
+              "quote": "The White House on Monday said it's partnering with North American Blue Energy Partners as part of President Donald Trump's push to tap into Venezuela's oil industry"
+            }
+          }
+        },
+        {
+          "id": "oil_fields",
+          "label": "17 oil fields",
+          "cells": {
+            "ap": {
+              "status": "stated",
+              "quote": "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+            }
+          }
+        },
+        {
+          "id": "concession",
+          "label": "100-year concessions or rights",
+          "cells": {
+            "ap": {
+              "status": "stated",
+              "quote": "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+            }
+          }
+        },
+        {
+          "id": "field_reserves",
+          "label": "About 65 billion barrels in those fields",
+          "cells": {
+            "ap": {
+              "status": "stated",
+              "quote": "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+            }
+          }
+        },
+        {
+          "id": "us_reserves",
+          "label": "U.S. territorial proven reserves of roughly 46 billion barrels",
+          "cells": {
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "equity",
+          "label": "35% OSC / Pentagon stake",
+          "cells": {
+            "ap": {
+              "status": "attributed",
+              "quote": "The deal will give the Pentagon's Office of Strategic Capital a 35% ownership stake in the company, the White House disclosed Monday"
+            }
+          }
+        },
+        {
+          "id": "offtake",
+          "label": "20% offtake or output at cost",
+          "cells": {
+            "ap": {
+              "status": "stated",
+              "quote": "The U.S. will also be guaranteed a right to purchase 20% of the output at cost, orchestrated through the State Department"
+            }
+          }
+        },
+        {
+          "id": "capex",
+          "label": "$100 billion in new oil infrastructure",
+          "cells": {
+            "ap": {
+              "status": "stated",
+              "quote": "Betancourt's company has agreed to put up $100 billion in new oil infrastructure investments"
+            }
+          }
+        },
+        {
+          "id": "royalty",
+          "label": "$200 billion expected royalties and tax payments",
+          "cells": {
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "rank_private",
+          "label": "Second-largest private Venezuelan oil producer",
+          "cells": {
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "rank_chevron",
+          "label": "Second largest operator in Venezuela, behind Chevron",
+          "cells": {
+            "ap": {
+              "status": "stated",
+              "quote": "NABEP, owned by Venezuelan businessman Alejandro Betancourt, is already the second largest operator in Venezuela, behind Chevron"
+            }
+          }
+        },
+        {
+          "id": "prior_operators",
+          "label": "Prior operators described as Russian or Chinese",
+          "cells": {
+            "ap": {
+              "status": "attributed",
+              "quote": "Many of those fields were previously owned by Russian or Chinese firms, the White House said"
+            }
+          }
+        },
+        {
+          "id": "gl_46d",
+          "label": "OFAC General License 46D \u2014 Venezuelan-origin oil or petrochemicals",
+          "cells": {
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "gl_50c",
+          "label": "OFAC General License 50C \u2014 oil or gas sector operations",
+          "cells": {
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "gl_52b",
+          "label": "OFAC General License 52B \u2014 Petr\u00f3leos de Venezuela, S.A.",
+          "cells": {
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "gl_49a",
+          "label": "OFAC General License 49A \u2014 contingent contracts for certain investment",
+          "cells": {
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        }
+      ],
+      "quantities": [
+        {
+          "name": "oil_fields",
+          "value": 17.0,
+          "raw": "17 oil fields",
+          "source": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+        },
+        {
+          "name": "concession_years",
+          "value": 100.0,
+          "raw": "100-year rights",
+          "source": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+        },
+        {
+          "name": "field_reserves_billion_bbl",
+          "value": 65.0,
+          "raw": "17 oil fields with proven reserves of 65 billion barrels",
+          "source": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+        },
+        {
+          "name": "equity_percent",
+          "value": 35.0,
+          "raw": "35% ownership stake",
+          "source": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "The deal will give the Pentagon's Office of Strategic Capital a 35% ownership stake in the company, the White House disclosed Monday"
+        },
+        {
+          "name": "offtake_percent",
+          "value": 20.0,
+          "raw": "20% of the output",
+          "source": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "The U.S. will also be guaranteed a right to purchase 20% of the output at cost, orchestrated through the State Department"
+        },
+        {
+          "name": "capex_billion_usd",
+          "value": 100.0,
+          "raw": "$100 billion in new oil infrastructure",
+          "source": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "Betancourt's company has agreed to put up $100 billion in new oil infrastructure investments"
+        }
+      ],
+      "findings": [
+        {
+          "kind": "single_source",
+          "summary": "oil_fields appears in only one source.",
+          "quotes": [
+            "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+          ],
+          "urls": [
+            "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "concession_years appears in only one source.",
+          "quotes": [
+            "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+          ],
+          "urls": [
+            "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "field_reserves_billion_bbl appears in only one source.",
+          "quotes": [
+            "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+          ],
+          "urls": [
+            "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "equity_percent appears in only one source.",
+          "quotes": [
+            "The deal will give the Pentagon's Office of Strategic Capital a 35% ownership stake in the company, the White House disclosed Monday"
+          ],
+          "urls": [
+            "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "offtake_percent appears in only one source.",
+          "quotes": [
+            "The U.S. will also be guaranteed a right to purchase 20% of the output at cost, orchestrated through the State Department"
+          ],
+          "urls": [
+            "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "capex_billion_usd appears in only one source.",
+          "quotes": [
+            "Betancourt's company has agreed to put up $100 billion in new oil infrastructure investments"
+          ],
+          "urls": [
+            "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "NABEP, owned by Venezuelan businessman Alejandro Betancourt, is already the second largest operator in Venezuela, behind Chevron",
+          "title": "Days after Trump announces Venezuela oil deal, White House fills in some of the details",
+          "kind": "ap_report",
+          "fetched_at": "2026-09-08T13:15:00Z",
+          "label": "PUBLIC_RECORDING",
+          "sha256": "8c96e2573be17313939f3cbec7de26003082c522201f72fc14e15602e6277c2c",
+          "capture_note": "Selected AP excerpts supplied with this project, not the full article. Absence here does not establish absence in the article."
+        }
+      ],
+      "db": {
+        "notes": 0,
+        "approved_writes": 0,
+        "drafts": [
+          {
+            "id": 1,
+            "case_id": "ap",
+            "action": "verify_first",
+            "status": "pending"
+          }
+        ],
+        "fetches": [
+          [
+            "ap",
+            200
+          ]
+        ],
+        "approvals": []
+      }
+    },
+    "ofac+white-house": {
+      "id": "ofac+white-house",
+      "selection_key": "ofac+white-house",
+      "source_ids": [
+        "ofac",
+        "white-house"
+      ],
+      "title": "Selected source comparison",
+      "action": "verify_first",
+      "headline": "Verify the scope before combining these documents.",
+      "body": "Review memo \u2014 not a publishable news alert. OFAC lists general licenses for Venezuelan-origin oil and PDVSA. The stored excerpts do not name NABEP, 17 fields, or 100-year concessions. A license list is not confirmation of the fact-sheet deal.",
+      "interpreter": "heuristic",
+      "latency_ms": 21.243000000140455,
+      "ollama_tokens": 0,
+      "baseline_action": "verify_first",
+      "draft_id": 1,
+      "generated_at": "2026-09-09T23:47:44.073326+00:00",
+      "trace": [
+        {
+          "step": "Read stored excerpt",
+          "source_id": "ofac",
+          "duration_ms": 0.2684999999473803,
+          "detail": "PUBLIC_RECORDING",
+          "sha256": "e4534a89649bedf27142d2534a876ca33568153657d92574c836e6bb01164cfd"
+        },
+        {
+          "step": "Read stored excerpt",
+          "source_id": "white-house",
+          "duration_ms": 0.3209999995306134,
+          "detail": "PUBLIC_RECORDING",
+          "sha256": "a2bcb207071faf5cd6f4be272ad572c08e207efc1ac1a91534cf6ad5e787fbb0"
+        },
+        {
+          "step": "Extract and validate",
+          "duration_ms": 5.646800000249641,
+          "detail": "heuristic"
+        }
+      ],
+      "prior_notes": [],
+      "model_requested": false,
+      "model_status": "not_requested",
+      "dates": [
+        "2026-09-17",
+        "2026-08-03",
+        "2026-06-18",
+        "2026-02-10",
+        "2026-08-27",
+        "2026-03-13",
+        "2026-09-02",
+        "2026-08-21",
+        "2026-08-31"
+      ],
+      "licenses_found": [
+        "5Y",
+        "24A",
+        "30B",
+        "46D",
+        "47B",
+        "48C",
+        "49A",
+        "50C",
+        "51D",
+        "52B",
+        "54C",
+        "55A",
+        "61A",
+        "62"
+      ],
+      "licenses_known": [
+        "5Y",
+        "24A",
+        "30B",
+        "46D",
+        "47B",
+        "48C",
+        "49A",
+        "50C",
+        "51D",
+        "52B",
+        "54C",
+        "55A",
+        "61A",
+        "62"
+      ],
+      "licenses": [
+        {
+          "code": "5Y",
+          "title": "Authorizing Certain Transactions Related to the Petr\u00f3leos de Venezuela, S.A. 2020 8.5 Percent Bond on or After September 17, 2026",
+          "issued": "August 03, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "24A",
+          "title": "Certain Transactions Involving the Government of Venezuela Related to Telecommunications and Mail Authorized",
+          "issued": "June 18, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "30B",
+          "title": "Authorizing Certain Transactions Necessary to Port and Airport Operations",
+          "issued": "February 10, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "46D",
+          "title": "Authorizing Certain Activities Involving Venezuelan-Origin Oil or Petrochemical Products",
+          "issued": "August 27, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "47B",
+          "title": "Authorizing the Sale of U.S.-Origin Diluents to Venezuela",
+          "issued": "August 27, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "48C",
+          "title": "Authorizing the Supply of Certain Items and Services to Venezuela",
+          "issued": "August 27, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "49A",
+          "title": "Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela",
+          "issued": "March 13, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "50C",
+          "title": "Authorizing Transactions Related to Oil or Gas Sector Operations in Venezuela of Certain Entities",
+          "issued": "August 27, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "51D",
+          "title": "Authorizing Certain Activities Involving Venezuelan-Origin Coal or Minerals, Including Gold",
+          "issued": "September 02, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "52B",
+          "title": "Authorizing Certain Transactions Involving Petr\u00f3leos de Venezuela, S.A.",
+          "issued": "August 27, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "54C",
+          "title": "Authorizing the Supply of Certain Items and Services for Coal or Minerals Operations in Venezuela",
+          "issued": "September 02, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "55A",
+          "title": "Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela's Coal or Minerals Sectors",
+          "issued": "September 02, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "61A",
+          "title": "Authorizing the Supply of Certain Items and Services to Venezuela Related to Telecommunications",
+          "issued": "August 27, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "62",
+          "title": "Authorizing Negotiations of and Entry Into Contingent Contracts for Investment in the Telecommunications Sector of Venezuela",
+          "issued": "August 21, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        }
+      ],
+      "claims": [
+        {
+          "id": "nabep",
+          "label": "Names NABEP / North American Blue Energy Partners",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "white-house": {
+              "status": "stated",
+              "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+            }
+          }
+        },
+        {
+          "id": "oil_fields",
+          "label": "17 oil fields",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "white-house": {
+              "status": "stated",
+              "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+            }
+          }
+        },
+        {
+          "id": "concession",
+          "label": "100-year concessions or rights",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "white-house": {
+              "status": "stated",
+              "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+            }
+          }
+        },
+        {
+          "id": "field_reserves",
+          "label": "About 65 billion barrels in those fields",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "white-house": {
+              "status": "stated",
+              "quote": "Fact Sheet: President Donald J. Trump Announces Historic Oil Agreement to Secure American Energy Dominance and Drive Venezuela\u2019s Economic Recovery The White House August 31, 2026 In the biggest oil deal in world history, President Donald J. Trump has secured U.S. majority control of more than 65 billion barrels of proven oil reserves in Venezuela \u2013 vastly expanding our current U.S. territorial proven reserves of roughly 46 billion barrels"
+            }
+          }
+        },
+        {
+          "id": "us_reserves",
+          "label": "U.S. territorial proven reserves of roughly 46 billion barrels",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "white-house": {
+              "status": "stated",
+              "quote": "Fact Sheet: President Donald J. Trump Announces Historic Oil Agreement to Secure American Energy Dominance and Drive Venezuela\u2019s Economic Recovery The White House August 31, 2026 In the biggest oil deal in world history, President Donald J. Trump has secured U.S. majority control of more than 65 billion barrels of proven oil reserves in Venezuela \u2013 vastly expanding our current U.S. territorial proven reserves of roughly 46 billion barrels"
+            }
+          }
+        },
+        {
+          "id": "equity",
+          "label": "35% OSC / Pentagon stake",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "white-house": {
+              "status": "stated",
+              "quote": "At no cost to the American taxpayer, NABEP has granted the U.S. Department of War\u2019s Office of Strategic Capital a 35% equity stake in its corporate parent"
+            }
+          }
+        },
+        {
+          "id": "offtake",
+          "label": "20% offtake or output at cost",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "white-house": {
+              "status": "stated",
+              "quote": "NABEP has granted the U.S. Department of State the right to purchase, at production cost, a guaranteed 20% of the off-take from all current and future fields NABEP will operate"
+            }
+          }
+        },
+        {
+          "id": "capex",
+          "label": "$100 billion in new oil infrastructure",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "white-house": {
+              "status": "stated",
+              "quote": "NABEP has developed an ambitious plan to rapidly scale production by investing up to $100 billion in new oil infrastructure in Venezuela"
+            }
+          }
+        },
+        {
+          "id": "royalty",
+          "label": "$200 billion expected royalties and tax payments",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "white-house": {
+              "status": "stated",
+              "quote": "Under this framework, as it scales production, NABEP will pay an expected $200 billion in royalty and tax payments over the first 25 years."
+            }
+          }
+        },
+        {
+          "id": "rank_private",
+          "label": "Second-largest private Venezuelan oil producer",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "white-house": {
+              "status": "stated",
+              "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+            }
+          }
+        },
+        {
+          "id": "rank_chevron",
+          "label": "Second largest operator in Venezuela, behind Chevron",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "white-house": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "prior_operators",
+          "label": "Prior operators described as Russian or Chinese",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "white-house": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "gl_46d",
+          "label": "OFAC General License 46D \u2014 Venezuelan-origin oil or petrochemicals",
+          "cells": {
+            "ofac": {
+              "status": "stated",
+              "quote": "Venezuela General License 5Y- Authorizing Certain Transactions Related to the Petr\u00f3leos de Venezuela, S.A. 2020 8.5 Percent Bond on or After September 17, 2026 (August 03, 2026) Venezuela General License 24A- Certain Transactions Involving the Government of Venezuela Related to Telecommunications and Mail Authorized (June 18, 2026) Venezuela General License 30B- Authorizing Certain Transactions Necessary to Port and Airport Operations (February 10, 2026) Venezuela General License 46D- Authorizing Certain Activities Involving Venezuelan-Origin Oil or Petrochemical Products (August 27, 2026) Venezuela General License 47B- Authorizing the Sale of U.S.-Origin Diluents to Venezuela (August 27, 2026) Venezuela General License 48C- Authorizing the Supply of Certain Items and Services to Venezuela (August 27, 2026) Venezuela General License 49A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela (March 13, 2026) Venezuela General License 50C- Authorizing Transactions Related to Oil or Gas Sector Operations in Venezuela of Certain Entities (August 27, 2026) Venezuela General License 51D- Authorizing Certain Activities Involving Venezuelan-Origin Coal or Minerals, Including Gold (September 02, 2026) Venezuela General License 52B- Authorizing Certain Transactions Involving Petr\u00f3leos de Venezuela, S.A. (August 27, 2026) Venezuela General License 54C- Authorizing the Supply of Certain Items and Services for Coal or Minerals Operations in Venezuela (September 02, 2026) Venezuela General License 55A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela's Coal or Minerals Sectors (September 02, 2026) Venezuela General License 61A- Authorizing the Supply of Certain Items and Services to Venezuela Related to Telecommunications (August 27, 2026) Venezuela General License 62- Authorizing Negotiations of and Entry Into Contingent Contracts for Investment in the Telecommunications Sector of Venezuela (August 21, 2026)"
+            },
+            "white-house": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "gl_50c",
+          "label": "OFAC General License 50C \u2014 oil or gas sector operations",
+          "cells": {
+            "ofac": {
+              "status": "stated",
+              "quote": "Venezuela General License 5Y- Authorizing Certain Transactions Related to the Petr\u00f3leos de Venezuela, S.A. 2020 8.5 Percent Bond on or After September 17, 2026 (August 03, 2026) Venezuela General License 24A- Certain Transactions Involving the Government of Venezuela Related to Telecommunications and Mail Authorized (June 18, 2026) Venezuela General License 30B- Authorizing Certain Transactions Necessary to Port and Airport Operations (February 10, 2026) Venezuela General License 46D- Authorizing Certain Activities Involving Venezuelan-Origin Oil or Petrochemical Products (August 27, 2026) Venezuela General License 47B- Authorizing the Sale of U.S.-Origin Diluents to Venezuela (August 27, 2026) Venezuela General License 48C- Authorizing the Supply of Certain Items and Services to Venezuela (August 27, 2026) Venezuela General License 49A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela (March 13, 2026) Venezuela General License 50C- Authorizing Transactions Related to Oil or Gas Sector Operations in Venezuela of Certain Entities (August 27, 2026) Venezuela General License 51D- Authorizing Certain Activities Involving Venezuelan-Origin Coal or Minerals, Including Gold (September 02, 2026) Venezuela General License 52B- Authorizing Certain Transactions Involving Petr\u00f3leos de Venezuela, S.A. (August 27, 2026) Venezuela General License 54C- Authorizing the Supply of Certain Items and Services for Coal or Minerals Operations in Venezuela (September 02, 2026) Venezuela General License 55A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela's Coal or Minerals Sectors (September 02, 2026) Venezuela General License 61A- Authorizing the Supply of Certain Items and Services to Venezuela Related to Telecommunications (August 27, 2026) Venezuela General License 62- Authorizing Negotiations of and Entry Into Contingent Contracts for Investment in the Telecommunications Sector of Venezuela (August 21, 2026)"
+            },
+            "white-house": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "gl_52b",
+          "label": "OFAC General License 52B \u2014 Petr\u00f3leos de Venezuela, S.A.",
+          "cells": {
+            "ofac": {
+              "status": "stated",
+              "quote": "Venezuela General License 5Y- Authorizing Certain Transactions Related to the Petr\u00f3leos de Venezuela, S.A. 2020 8.5 Percent Bond on or After September 17, 2026 (August 03, 2026) Venezuela General License 24A- Certain Transactions Involving the Government of Venezuela Related to Telecommunications and Mail Authorized (June 18, 2026) Venezuela General License 30B- Authorizing Certain Transactions Necessary to Port and Airport Operations (February 10, 2026) Venezuela General License 46D- Authorizing Certain Activities Involving Venezuelan-Origin Oil or Petrochemical Products (August 27, 2026) Venezuela General License 47B- Authorizing the Sale of U.S.-Origin Diluents to Venezuela (August 27, 2026) Venezuela General License 48C- Authorizing the Supply of Certain Items and Services to Venezuela (August 27, 2026) Venezuela General License 49A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela (March 13, 2026) Venezuela General License 50C- Authorizing Transactions Related to Oil or Gas Sector Operations in Venezuela of Certain Entities (August 27, 2026) Venezuela General License 51D- Authorizing Certain Activities Involving Venezuelan-Origin Coal or Minerals, Including Gold (September 02, 2026) Venezuela General License 52B- Authorizing Certain Transactions Involving Petr\u00f3leos de Venezuela, S.A. (August 27, 2026) Venezuela General License 54C- Authorizing the Supply of Certain Items and Services for Coal or Minerals Operations in Venezuela (September 02, 2026) Venezuela General License 55A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela's Coal or Minerals Sectors (September 02, 2026) Venezuela General License 61A- Authorizing the Supply of Certain Items and Services to Venezuela Related to Telecommunications (August 27, 2026) Venezuela General License 62- Authorizing Negotiations of and Entry Into Contingent Contracts for Investment in the Telecommunications Sector of Venezuela (August 21, 2026)"
+            },
+            "white-house": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "gl_49a",
+          "label": "OFAC General License 49A \u2014 contingent contracts for certain investment",
+          "cells": {
+            "ofac": {
+              "status": "stated",
+              "quote": "Venezuela General License 5Y- Authorizing Certain Transactions Related to the Petr\u00f3leos de Venezuela, S.A. 2020 8.5 Percent Bond on or After September 17, 2026 (August 03, 2026) Venezuela General License 24A- Certain Transactions Involving the Government of Venezuela Related to Telecommunications and Mail Authorized (June 18, 2026) Venezuela General License 30B- Authorizing Certain Transactions Necessary to Port and Airport Operations (February 10, 2026) Venezuela General License 46D- Authorizing Certain Activities Involving Venezuelan-Origin Oil or Petrochemical Products (August 27, 2026) Venezuela General License 47B- Authorizing the Sale of U.S.-Origin Diluents to Venezuela (August 27, 2026) Venezuela General License 48C- Authorizing the Supply of Certain Items and Services to Venezuela (August 27, 2026) Venezuela General License 49A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela (March 13, 2026) Venezuela General License 50C- Authorizing Transactions Related to Oil or Gas Sector Operations in Venezuela of Certain Entities (August 27, 2026) Venezuela General License 51D- Authorizing Certain Activities Involving Venezuelan-Origin Coal or Minerals, Including Gold (September 02, 2026) Venezuela General License 52B- Authorizing Certain Transactions Involving Petr\u00f3leos de Venezuela, S.A. (August 27, 2026) Venezuela General License 54C- Authorizing the Supply of Certain Items and Services for Coal or Minerals Operations in Venezuela (September 02, 2026) Venezuela General License 55A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela's Coal or Minerals Sectors (September 02, 2026) Venezuela General License 61A- Authorizing the Supply of Certain Items and Services to Venezuela Related to Telecommunications (August 27, 2026) Venezuela General License 62- Authorizing Negotiations of and Entry Into Contingent Contracts for Investment in the Telecommunications Sector of Venezuela (August 21, 2026)"
+            },
+            "white-house": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        }
+      ],
+      "quantities": [
+        {
+          "name": "oil_fields",
+          "value": 17.0,
+          "raw": "17 oil fields",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+        },
+        {
+          "name": "concession_years",
+          "value": 100.0,
+          "raw": "100-year concessions",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+        },
+        {
+          "name": "field_reserves_billion_bbl",
+          "value": 65.0,
+          "raw": "17 oil fields with proven reserves of approximately 65 billion barrels",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+        },
+        {
+          "name": "us_reserves_billion_bbl",
+          "value": 46.0,
+          "raw": "U.S. territorial proven reserves of roughly 46 billion",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "Fact Sheet: President Donald J. Trump Announces Historic Oil Agreement to Secure American Energy Dominance and Drive Venezuela\u2019s Economic Recovery The White House August 31, 2026 In the biggest oil deal in world history, President Donald J. Trump has secured U.S. majority control of more than 65 billion barrels of proven oil reserves in Venezuela \u2013 vastly expanding our current U.S. territorial pro"
+        },
+        {
+          "name": "equity_percent",
+          "value": 35.0,
+          "raw": "35% equity stake",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "At no cost to the American taxpayer, NABEP has granted the U.S. Department of War\u2019s Office of Strategic Capital a 35% equity stake in its corporate parent"
+        },
+        {
+          "name": "offtake_percent",
+          "value": 20.0,
+          "raw": "guaranteed 20% of the off-take",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "NABEP has granted the U.S. Department of State the right to purchase, at production cost, a guaranteed 20% of the off-take from all current and future fields NABEP will operate"
+        },
+        {
+          "name": "capex_billion_usd",
+          "value": 100.0,
+          "raw": "$100 billion in new oil infrastructure",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "NABEP has developed an ambitious plan to rapidly scale production by investing up to $100 billion in new oil infrastructure in Venezuela"
+        },
+        {
+          "name": "royalty_billion_usd",
+          "value": 200.0,
+          "raw": "$200 billion in royalty",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "Under this framework, as it scales production, NABEP will pay an expected $200 billion in royalty and tax payments over the first 25 years."
+        }
+      ],
+      "findings": [
+        {
+          "kind": "scope_gap",
+          "summary": "OFAC lists general licenses for Venezuelan-origin oil and PDVSA. The stored excerpts do not name NABEP, 17 fields, or 100-year concessions. A license list is not confirmation of the fact-sheet deal.",
+          "quotes": [
+            "Venezuela-Related Sanctions Office of Foreign Assets Control General Licenses OFAC issues general licenses in order to authorize activities that would otherwise be prohibited with regard to Venezuela",
+            "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+          ],
+          "urls": [
+            "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+            "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "oil_fields appears in only one source.",
+          "quotes": [
+            "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+          ],
+          "urls": [
+            "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "concession_years appears in only one source.",
+          "quotes": [
+            "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+          ],
+          "urls": [
+            "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "field_reserves_billion_bbl appears in only one source.",
+          "quotes": [
+            "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+          ],
+          "urls": [
+            "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "us_reserves_billion_bbl appears in only one source.",
+          "quotes": [
+            "Fact Sheet: President Donald J. Trump Announces Historic Oil Agreement to Secure American Energy Dominance and Drive Venezuela\u2019s Economic Recovery The White House August 31, 2026 In the biggest oil deal in world history, President Donald J. Trump has secured U.S. majority control of more than 65 billion barrels of proven oil reserves in Venezuela \u2013 vastly expanding our current U.S. territorial pro"
+          ],
+          "urls": [
+            "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "equity_percent appears in only one source.",
+          "quotes": [
+            "At no cost to the American taxpayer, NABEP has granted the U.S. Department of War\u2019s Office of Strategic Capital a 35% equity stake in its corporate parent"
+          ],
+          "urls": [
+            "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "offtake_percent appears in only one source.",
+          "quotes": [
+            "NABEP has granted the U.S. Department of State the right to purchase, at production cost, a guaranteed 20% of the off-take from all current and future fields NABEP will operate"
+          ],
+          "urls": [
+            "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "capex_billion_usd appears in only one source.",
+          "quotes": [
+            "NABEP has developed an ambitious plan to rapidly scale production by investing up to $100 billion in new oil infrastructure in Venezuela"
+          ],
+          "urls": [
+            "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "royalty_billion_usd appears in only one source.",
+          "quotes": [
+            "Under this framework, as it scales production, NABEP will pay an expected $200 billion in royalty and tax payments over the first 25 years."
+          ],
+          "urls": [
+            "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "ofac",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "quote": "Venezuela-Related Sanctions Office of Foreign Assets Control General Licenses OFAC issues general licenses in order to authorize activities that would otherwise be prohibited with regard to Venezuela",
+          "title": "OFAC \u2014 Venezuela-related sanctions",
+          "kind": "ofac_licenses",
+          "fetched_at": "2026-09-08T13:15:00Z",
+          "label": "PUBLIC_RECORDING",
+          "sha256": "e4534a89649bedf27142d2534a876ca33568153657d92574c836e6bb01164cfd",
+          "capture_note": "Selected license-list excerpts; not the full OFAC page. Original editorial annotation excluded from evidence."
+        },
+        {
+          "id": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels",
+          "title": "White House fact sheet \u2014 31 August 2026",
+          "kind": "white_house_fact_sheet",
+          "fetched_at": "2026-09-08T13:15:00Z",
+          "label": "PUBLIC_RECORDING",
+          "sha256": "a2bcb207071faf5cd6f4be272ad572c08e207efc1ac1a91534cf6ad5e787fbb0",
+          "capture_note": "Stored fact-sheet excerpts, not signed contracts. Original editorial annotation excluded from evidence."
+        }
+      ],
+      "db": {
+        "notes": 0,
+        "approved_writes": 0,
+        "drafts": [
+          {
+            "id": 1,
+            "case_id": "ofac+white-house",
+            "action": "verify_first",
+            "status": "pending"
+          }
+        ],
+        "fetches": [
+          [
+            "ofac",
+            200
+          ],
+          [
+            "white-house",
+            200
+          ]
+        ],
+        "approvals": []
+      }
+    },
+    "ofac+ap": {
+      "id": "ofac+ap",
+      "selection_key": "ofac+ap",
+      "source_ids": [
+        "ofac",
+        "ap"
+      ],
+      "title": "Selected source comparison",
+      "action": "verify_first",
+      "headline": "Verify the scope before combining these documents.",
+      "body": "Review memo \u2014 not a publishable news alert. OFAC lists general licenses for Venezuelan-origin oil and PDVSA. The stored excerpts do not name NABEP, 17 fields, or 100-year concessions. A license list is not confirmation of the fact-sheet deal.",
+      "interpreter": "heuristic",
+      "latency_ms": 16.890999999304768,
+      "ollama_tokens": 0,
+      "baseline_action": "verify_first",
+      "draft_id": 1,
+      "generated_at": "2026-09-09T23:47:44.119865+00:00",
+      "trace": [
+        {
+          "step": "Read stored excerpt",
+          "source_id": "ofac",
+          "duration_ms": 0.2899000000979868,
+          "detail": "PUBLIC_RECORDING",
+          "sha256": "e4534a89649bedf27142d2534a876ca33568153657d92574c836e6bb01164cfd"
+        },
+        {
+          "step": "Read stored excerpt",
+          "source_id": "ap",
+          "duration_ms": 0.25939999977708794,
+          "detail": "PUBLIC_RECORDING",
+          "sha256": "8c96e2573be17313939f3cbec7de26003082c522201f72fc14e15602e6277c2c"
+        },
+        {
+          "step": "Extract and validate",
+          "duration_ms": 5.066400000032445,
+          "detail": "heuristic"
+        }
+      ],
+      "prior_notes": [],
+      "model_requested": false,
+      "model_status": "not_requested",
+      "dates": [
+        "2026-09-17",
+        "2026-08-03",
+        "2026-06-18",
+        "2026-02-10",
+        "2026-08-27",
+        "2026-03-13",
+        "2026-09-02",
+        "2026-08-21"
+      ],
+      "licenses_found": [
+        "5Y",
+        "24A",
+        "30B",
+        "46D",
+        "47B",
+        "48C",
+        "49A",
+        "50C",
+        "51D",
+        "52B",
+        "54C",
+        "55A",
+        "61A",
+        "62"
+      ],
+      "licenses_known": [
+        "5Y",
+        "24A",
+        "30B",
+        "46D",
+        "47B",
+        "48C",
+        "49A",
+        "50C",
+        "51D",
+        "52B",
+        "54C",
+        "55A",
+        "61A",
+        "62"
+      ],
+      "licenses": [
+        {
+          "code": "5Y",
+          "title": "Authorizing Certain Transactions Related to the Petr\u00f3leos de Venezuela, S.A. 2020 8.5 Percent Bond on or After September 17, 2026",
+          "issued": "August 03, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "24A",
+          "title": "Certain Transactions Involving the Government of Venezuela Related to Telecommunications and Mail Authorized",
+          "issued": "June 18, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "30B",
+          "title": "Authorizing Certain Transactions Necessary to Port and Airport Operations",
+          "issued": "February 10, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "46D",
+          "title": "Authorizing Certain Activities Involving Venezuelan-Origin Oil or Petrochemical Products",
+          "issued": "August 27, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "47B",
+          "title": "Authorizing the Sale of U.S.-Origin Diluents to Venezuela",
+          "issued": "August 27, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "48C",
+          "title": "Authorizing the Supply of Certain Items and Services to Venezuela",
+          "issued": "August 27, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "49A",
+          "title": "Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela",
+          "issued": "March 13, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "50C",
+          "title": "Authorizing Transactions Related to Oil or Gas Sector Operations in Venezuela of Certain Entities",
+          "issued": "August 27, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "51D",
+          "title": "Authorizing Certain Activities Involving Venezuelan-Origin Coal or Minerals, Including Gold",
+          "issued": "September 02, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "52B",
+          "title": "Authorizing Certain Transactions Involving Petr\u00f3leos de Venezuela, S.A.",
+          "issued": "August 27, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "54C",
+          "title": "Authorizing the Supply of Certain Items and Services for Coal or Minerals Operations in Venezuela",
+          "issued": "September 02, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "55A",
+          "title": "Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela's Coal or Minerals Sectors",
+          "issued": "September 02, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "61A",
+          "title": "Authorizing the Supply of Certain Items and Services to Venezuela Related to Telecommunications",
+          "issued": "August 27, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "62",
+          "title": "Authorizing Negotiations of and Entry Into Contingent Contracts for Investment in the Telecommunications Sector of Venezuela",
+          "issued": "August 21, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        }
+      ],
+      "claims": [
+        {
+          "id": "nabep",
+          "label": "Names NABEP / North American Blue Energy Partners",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "ap": {
+              "status": "stated",
+              "quote": "The White House on Monday said it's partnering with North American Blue Energy Partners as part of President Donald Trump's push to tap into Venezuela's oil industry"
+            }
+          }
+        },
+        {
+          "id": "oil_fields",
+          "label": "17 oil fields",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "ap": {
+              "status": "stated",
+              "quote": "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+            }
+          }
+        },
+        {
+          "id": "concession",
+          "label": "100-year concessions or rights",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "ap": {
+              "status": "stated",
+              "quote": "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+            }
+          }
+        },
+        {
+          "id": "field_reserves",
+          "label": "About 65 billion barrels in those fields",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "ap": {
+              "status": "stated",
+              "quote": "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+            }
+          }
+        },
+        {
+          "id": "us_reserves",
+          "label": "U.S. territorial proven reserves of roughly 46 billion barrels",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "equity",
+          "label": "35% OSC / Pentagon stake",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "ap": {
+              "status": "attributed",
+              "quote": "The deal will give the Pentagon's Office of Strategic Capital a 35% ownership stake in the company, the White House disclosed Monday"
+            }
+          }
+        },
+        {
+          "id": "offtake",
+          "label": "20% offtake or output at cost",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "ap": {
+              "status": "stated",
+              "quote": "The U.S. will also be guaranteed a right to purchase 20% of the output at cost, orchestrated through the State Department"
+            }
+          }
+        },
+        {
+          "id": "capex",
+          "label": "$100 billion in new oil infrastructure",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "ap": {
+              "status": "stated",
+              "quote": "Betancourt's company has agreed to put up $100 billion in new oil infrastructure investments"
+            }
+          }
+        },
+        {
+          "id": "royalty",
+          "label": "$200 billion expected royalties and tax payments",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "rank_private",
+          "label": "Second-largest private Venezuelan oil producer",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "rank_chevron",
+          "label": "Second largest operator in Venezuela, behind Chevron",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "ap": {
+              "status": "stated",
+              "quote": "NABEP, owned by Venezuelan businessman Alejandro Betancourt, is already the second largest operator in Venezuela, behind Chevron"
+            }
+          }
+        },
+        {
+          "id": "prior_operators",
+          "label": "Prior operators described as Russian or Chinese",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "ap": {
+              "status": "attributed",
+              "quote": "Many of those fields were previously owned by Russian or Chinese firms, the White House said"
+            }
+          }
+        },
+        {
+          "id": "gl_46d",
+          "label": "OFAC General License 46D \u2014 Venezuelan-origin oil or petrochemicals",
+          "cells": {
+            "ofac": {
+              "status": "stated",
+              "quote": "Venezuela General License 5Y- Authorizing Certain Transactions Related to the Petr\u00f3leos de Venezuela, S.A. 2020 8.5 Percent Bond on or After September 17, 2026 (August 03, 2026) Venezuela General License 24A- Certain Transactions Involving the Government of Venezuela Related to Telecommunications and Mail Authorized (June 18, 2026) Venezuela General License 30B- Authorizing Certain Transactions Necessary to Port and Airport Operations (February 10, 2026) Venezuela General License 46D- Authorizing Certain Activities Involving Venezuelan-Origin Oil or Petrochemical Products (August 27, 2026) Venezuela General License 47B- Authorizing the Sale of U.S.-Origin Diluents to Venezuela (August 27, 2026) Venezuela General License 48C- Authorizing the Supply of Certain Items and Services to Venezuela (August 27, 2026) Venezuela General License 49A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela (March 13, 2026) Venezuela General License 50C- Authorizing Transactions Related to Oil or Gas Sector Operations in Venezuela of Certain Entities (August 27, 2026) Venezuela General License 51D- Authorizing Certain Activities Involving Venezuelan-Origin Coal or Minerals, Including Gold (September 02, 2026) Venezuela General License 52B- Authorizing Certain Transactions Involving Petr\u00f3leos de Venezuela, S.A. (August 27, 2026) Venezuela General License 54C- Authorizing the Supply of Certain Items and Services for Coal or Minerals Operations in Venezuela (September 02, 2026) Venezuela General License 55A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela's Coal or Minerals Sectors (September 02, 2026) Venezuela General License 61A- Authorizing the Supply of Certain Items and Services to Venezuela Related to Telecommunications (August 27, 2026) Venezuela General License 62- Authorizing Negotiations of and Entry Into Contingent Contracts for Investment in the Telecommunications Sector of Venezuela (August 21, 2026)"
+            },
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "gl_50c",
+          "label": "OFAC General License 50C \u2014 oil or gas sector operations",
+          "cells": {
+            "ofac": {
+              "status": "stated",
+              "quote": "Venezuela General License 5Y- Authorizing Certain Transactions Related to the Petr\u00f3leos de Venezuela, S.A. 2020 8.5 Percent Bond on or After September 17, 2026 (August 03, 2026) Venezuela General License 24A- Certain Transactions Involving the Government of Venezuela Related to Telecommunications and Mail Authorized (June 18, 2026) Venezuela General License 30B- Authorizing Certain Transactions Necessary to Port and Airport Operations (February 10, 2026) Venezuela General License 46D- Authorizing Certain Activities Involving Venezuelan-Origin Oil or Petrochemical Products (August 27, 2026) Venezuela General License 47B- Authorizing the Sale of U.S.-Origin Diluents to Venezuela (August 27, 2026) Venezuela General License 48C- Authorizing the Supply of Certain Items and Services to Venezuela (August 27, 2026) Venezuela General License 49A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela (March 13, 2026) Venezuela General License 50C- Authorizing Transactions Related to Oil or Gas Sector Operations in Venezuela of Certain Entities (August 27, 2026) Venezuela General License 51D- Authorizing Certain Activities Involving Venezuelan-Origin Coal or Minerals, Including Gold (September 02, 2026) Venezuela General License 52B- Authorizing Certain Transactions Involving Petr\u00f3leos de Venezuela, S.A. (August 27, 2026) Venezuela General License 54C- Authorizing the Supply of Certain Items and Services for Coal or Minerals Operations in Venezuela (September 02, 2026) Venezuela General License 55A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela's Coal or Minerals Sectors (September 02, 2026) Venezuela General License 61A- Authorizing the Supply of Certain Items and Services to Venezuela Related to Telecommunications (August 27, 2026) Venezuela General License 62- Authorizing Negotiations of and Entry Into Contingent Contracts for Investment in the Telecommunications Sector of Venezuela (August 21, 2026)"
+            },
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "gl_52b",
+          "label": "OFAC General License 52B \u2014 Petr\u00f3leos de Venezuela, S.A.",
+          "cells": {
+            "ofac": {
+              "status": "stated",
+              "quote": "Venezuela General License 5Y- Authorizing Certain Transactions Related to the Petr\u00f3leos de Venezuela, S.A. 2020 8.5 Percent Bond on or After September 17, 2026 (August 03, 2026) Venezuela General License 24A- Certain Transactions Involving the Government of Venezuela Related to Telecommunications and Mail Authorized (June 18, 2026) Venezuela General License 30B- Authorizing Certain Transactions Necessary to Port and Airport Operations (February 10, 2026) Venezuela General License 46D- Authorizing Certain Activities Involving Venezuelan-Origin Oil or Petrochemical Products (August 27, 2026) Venezuela General License 47B- Authorizing the Sale of U.S.-Origin Diluents to Venezuela (August 27, 2026) Venezuela General License 48C- Authorizing the Supply of Certain Items and Services to Venezuela (August 27, 2026) Venezuela General License 49A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela (March 13, 2026) Venezuela General License 50C- Authorizing Transactions Related to Oil or Gas Sector Operations in Venezuela of Certain Entities (August 27, 2026) Venezuela General License 51D- Authorizing Certain Activities Involving Venezuelan-Origin Coal or Minerals, Including Gold (September 02, 2026) Venezuela General License 52B- Authorizing Certain Transactions Involving Petr\u00f3leos de Venezuela, S.A. (August 27, 2026) Venezuela General License 54C- Authorizing the Supply of Certain Items and Services for Coal or Minerals Operations in Venezuela (September 02, 2026) Venezuela General License 55A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela's Coal or Minerals Sectors (September 02, 2026) Venezuela General License 61A- Authorizing the Supply of Certain Items and Services to Venezuela Related to Telecommunications (August 27, 2026) Venezuela General License 62- Authorizing Negotiations of and Entry Into Contingent Contracts for Investment in the Telecommunications Sector of Venezuela (August 21, 2026)"
+            },
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "gl_49a",
+          "label": "OFAC General License 49A \u2014 contingent contracts for certain investment",
+          "cells": {
+            "ofac": {
+              "status": "stated",
+              "quote": "Venezuela General License 5Y- Authorizing Certain Transactions Related to the Petr\u00f3leos de Venezuela, S.A. 2020 8.5 Percent Bond on or After September 17, 2026 (August 03, 2026) Venezuela General License 24A- Certain Transactions Involving the Government of Venezuela Related to Telecommunications and Mail Authorized (June 18, 2026) Venezuela General License 30B- Authorizing Certain Transactions Necessary to Port and Airport Operations (February 10, 2026) Venezuela General License 46D- Authorizing Certain Activities Involving Venezuelan-Origin Oil or Petrochemical Products (August 27, 2026) Venezuela General License 47B- Authorizing the Sale of U.S.-Origin Diluents to Venezuela (August 27, 2026) Venezuela General License 48C- Authorizing the Supply of Certain Items and Services to Venezuela (August 27, 2026) Venezuela General License 49A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela (March 13, 2026) Venezuela General License 50C- Authorizing Transactions Related to Oil or Gas Sector Operations in Venezuela of Certain Entities (August 27, 2026) Venezuela General License 51D- Authorizing Certain Activities Involving Venezuelan-Origin Coal or Minerals, Including Gold (September 02, 2026) Venezuela General License 52B- Authorizing Certain Transactions Involving Petr\u00f3leos de Venezuela, S.A. (August 27, 2026) Venezuela General License 54C- Authorizing the Supply of Certain Items and Services for Coal or Minerals Operations in Venezuela (September 02, 2026) Venezuela General License 55A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela's Coal or Minerals Sectors (September 02, 2026) Venezuela General License 61A- Authorizing the Supply of Certain Items and Services to Venezuela Related to Telecommunications (August 27, 2026) Venezuela General License 62- Authorizing Negotiations of and Entry Into Contingent Contracts for Investment in the Telecommunications Sector of Venezuela (August 21, 2026)"
+            },
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        }
+      ],
+      "quantities": [
+        {
+          "name": "oil_fields",
+          "value": 17.0,
+          "raw": "17 oil fields",
+          "source": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+        },
+        {
+          "name": "concession_years",
+          "value": 100.0,
+          "raw": "100-year rights",
+          "source": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+        },
+        {
+          "name": "field_reserves_billion_bbl",
+          "value": 65.0,
+          "raw": "17 oil fields with proven reserves of 65 billion barrels",
+          "source": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+        },
+        {
+          "name": "equity_percent",
+          "value": 35.0,
+          "raw": "35% ownership stake",
+          "source": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "The deal will give the Pentagon's Office of Strategic Capital a 35% ownership stake in the company, the White House disclosed Monday"
+        },
+        {
+          "name": "offtake_percent",
+          "value": 20.0,
+          "raw": "20% of the output",
+          "source": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "The U.S. will also be guaranteed a right to purchase 20% of the output at cost, orchestrated through the State Department"
+        },
+        {
+          "name": "capex_billion_usd",
+          "value": 100.0,
+          "raw": "$100 billion in new oil infrastructure",
+          "source": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "Betancourt's company has agreed to put up $100 billion in new oil infrastructure investments"
+        }
+      ],
+      "findings": [
+        {
+          "kind": "scope_gap",
+          "summary": "OFAC lists general licenses for Venezuelan-origin oil and PDVSA. The stored excerpts do not name NABEP, 17 fields, or 100-year concessions. A license list is not confirmation of the fact-sheet deal.",
+          "quotes": [
+            "Venezuela-Related Sanctions Office of Foreign Assets Control General Licenses OFAC issues general licenses in order to authorize activities that would otherwise be prohibited with regard to Venezuela",
+            "NABEP, owned by Venezuelan businessman Alejandro Betancourt, is already the second largest operator in Venezuela, behind Chevron"
+          ],
+          "urls": [
+            "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+            "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "oil_fields appears in only one source.",
+          "quotes": [
+            "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+          ],
+          "urls": [
+            "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "concession_years appears in only one source.",
+          "quotes": [
+            "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+          ],
+          "urls": [
+            "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "field_reserves_billion_bbl appears in only one source.",
+          "quotes": [
+            "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+          ],
+          "urls": [
+            "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "equity_percent appears in only one source.",
+          "quotes": [
+            "The deal will give the Pentagon's Office of Strategic Capital a 35% ownership stake in the company, the White House disclosed Monday"
+          ],
+          "urls": [
+            "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "offtake_percent appears in only one source.",
+          "quotes": [
+            "The U.S. will also be guaranteed a right to purchase 20% of the output at cost, orchestrated through the State Department"
+          ],
+          "urls": [
+            "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "capex_billion_usd appears in only one source.",
+          "quotes": [
+            "Betancourt's company has agreed to put up $100 billion in new oil infrastructure investments"
+          ],
+          "urls": [
+            "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "ofac",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "quote": "Venezuela-Related Sanctions Office of Foreign Assets Control General Licenses OFAC issues general licenses in order to authorize activities that would otherwise be prohibited with regard to Venezuela",
+          "title": "OFAC \u2014 Venezuela-related sanctions",
+          "kind": "ofac_licenses",
+          "fetched_at": "2026-09-08T13:15:00Z",
+          "label": "PUBLIC_RECORDING",
+          "sha256": "e4534a89649bedf27142d2534a876ca33568153657d92574c836e6bb01164cfd",
+          "capture_note": "Selected license-list excerpts; not the full OFAC page. Original editorial annotation excluded from evidence."
+        },
+        {
+          "id": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "NABEP, owned by Venezuelan businessman Alejandro Betancourt, is already the second largest operator in Venezuela, behind Chevron",
+          "title": "Days after Trump announces Venezuela oil deal, White House fills in some of the details",
+          "kind": "ap_report",
+          "fetched_at": "2026-09-08T13:15:00Z",
+          "label": "PUBLIC_RECORDING",
+          "sha256": "8c96e2573be17313939f3cbec7de26003082c522201f72fc14e15602e6277c2c",
+          "capture_note": "Selected AP excerpts supplied with this project, not the full article. Absence here does not establish absence in the article."
+        }
+      ],
+      "db": {
+        "notes": 0,
+        "approved_writes": 0,
+        "drafts": [
+          {
+            "id": 1,
+            "case_id": "ofac+ap",
+            "action": "verify_first",
+            "status": "pending"
+          }
+        ],
+        "fetches": [
+          [
+            "ofac",
+            200
+          ],
+          [
+            "ap",
+            200
+          ]
+        ],
+        "approvals": []
+      }
+    },
+    "white-house+ap": {
+      "id": "white-house+ap",
+      "selection_key": "white-house+ap",
+      "source_ids": [
+        "white-house",
+        "ap"
+      ],
+      "title": "Selected source comparison",
+      "action": "hold",
+      "headline": "Verify the scope before combining these documents.",
+      "body": "Review memo \u2014 not a publishable news alert. White House calls NABEP the second-largest private Venezuelan oil producer. AP calls it the second largest operator in Venezuela, behind Chevron. These use different comparison groups, not necessarily contradictory facts. Verify the scope before combining the rankings. AP attributes prior Russian or Chinese operators to the White House. The stored White House fact sheet does not mention Russian or Chinese operators.",
+      "interpreter": "heuristic",
+      "latency_ms": 16.632100000606442,
+      "ollama_tokens": 0,
+      "baseline_action": "hold",
+      "draft_id": 1,
+      "generated_at": "2026-09-09T23:47:44.162847+00:00",
+      "trace": [
+        {
+          "step": "Read stored excerpt",
+          "source_id": "white-house",
+          "duration_ms": 0.28250000013940735,
+          "detail": "PUBLIC_RECORDING",
+          "sha256": "a2bcb207071faf5cd6f4be272ad572c08e207efc1ac1a91534cf6ad5e787fbb0"
+        },
+        {
+          "step": "Read stored excerpt",
+          "source_id": "ap",
+          "duration_ms": 0.3313000006528455,
+          "detail": "PUBLIC_RECORDING",
+          "sha256": "8c96e2573be17313939f3cbec7de26003082c522201f72fc14e15602e6277c2c"
+        },
+        {
+          "step": "Extract and validate",
+          "duration_ms": 4.053300000123272,
+          "detail": "heuristic"
+        }
+      ],
+      "prior_notes": [],
+      "model_requested": false,
+      "model_status": "not_requested",
+      "dates": [
+        "2026-08-31"
+      ],
+      "licenses_found": [],
+      "licenses_known": [],
+      "licenses": [],
+      "claims": [
+        {
+          "id": "nabep",
+          "label": "Names NABEP / North American Blue Energy Partners",
+          "cells": {
+            "white-house": {
+              "status": "stated",
+              "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+            },
+            "ap": {
+              "status": "stated",
+              "quote": "The White House on Monday said it's partnering with North American Blue Energy Partners as part of President Donald Trump's push to tap into Venezuela's oil industry"
+            }
+          }
+        },
+        {
+          "id": "oil_fields",
+          "label": "17 oil fields",
+          "cells": {
+            "white-house": {
+              "status": "stated",
+              "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+            },
+            "ap": {
+              "status": "stated",
+              "quote": "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+            }
+          }
+        },
+        {
+          "id": "concession",
+          "label": "100-year concessions or rights",
+          "cells": {
+            "white-house": {
+              "status": "stated",
+              "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+            },
+            "ap": {
+              "status": "stated",
+              "quote": "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+            }
+          }
+        },
+        {
+          "id": "field_reserves",
+          "label": "About 65 billion barrels in those fields",
+          "cells": {
+            "white-house": {
+              "status": "stated",
+              "quote": "Fact Sheet: President Donald J. Trump Announces Historic Oil Agreement to Secure American Energy Dominance and Drive Venezuela\u2019s Economic Recovery The White House August 31, 2026 In the biggest oil deal in world history, President Donald J. Trump has secured U.S. majority control of more than 65 billion barrels of proven oil reserves in Venezuela \u2013 vastly expanding our current U.S. territorial proven reserves of roughly 46 billion barrels"
+            },
+            "ap": {
+              "status": "stated",
+              "quote": "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+            }
+          }
+        },
+        {
+          "id": "us_reserves",
+          "label": "U.S. territorial proven reserves of roughly 46 billion barrels",
+          "cells": {
+            "white-house": {
+              "status": "stated",
+              "quote": "Fact Sheet: President Donald J. Trump Announces Historic Oil Agreement to Secure American Energy Dominance and Drive Venezuela\u2019s Economic Recovery The White House August 31, 2026 In the biggest oil deal in world history, President Donald J. Trump has secured U.S. majority control of more than 65 billion barrels of proven oil reserves in Venezuela \u2013 vastly expanding our current U.S. territorial proven reserves of roughly 46 billion barrels"
+            },
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "equity",
+          "label": "35% OSC / Pentagon stake",
+          "cells": {
+            "white-house": {
+              "status": "stated",
+              "quote": "At no cost to the American taxpayer, NABEP has granted the U.S. Department of War\u2019s Office of Strategic Capital a 35% equity stake in its corporate parent"
+            },
+            "ap": {
+              "status": "attributed",
+              "quote": "The deal will give the Pentagon's Office of Strategic Capital a 35% ownership stake in the company, the White House disclosed Monday"
+            }
+          }
+        },
+        {
+          "id": "offtake",
+          "label": "20% offtake or output at cost",
+          "cells": {
+            "white-house": {
+              "status": "stated",
+              "quote": "NABEP has granted the U.S. Department of State the right to purchase, at production cost, a guaranteed 20% of the off-take from all current and future fields NABEP will operate"
+            },
+            "ap": {
+              "status": "stated",
+              "quote": "The U.S. will also be guaranteed a right to purchase 20% of the output at cost, orchestrated through the State Department"
+            }
+          }
+        },
+        {
+          "id": "capex",
+          "label": "$100 billion in new oil infrastructure",
+          "cells": {
+            "white-house": {
+              "status": "stated",
+              "quote": "NABEP has developed an ambitious plan to rapidly scale production by investing up to $100 billion in new oil infrastructure in Venezuela"
+            },
+            "ap": {
+              "status": "stated",
+              "quote": "Betancourt's company has agreed to put up $100 billion in new oil infrastructure investments"
+            }
+          }
+        },
+        {
+          "id": "royalty",
+          "label": "$200 billion expected royalties and tax payments",
+          "cells": {
+            "white-house": {
+              "status": "stated",
+              "quote": "Under this framework, as it scales production, NABEP will pay an expected $200 billion in royalty and tax payments over the first 25 years."
+            },
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "rank_private",
+          "label": "Second-largest private Venezuelan oil producer",
+          "cells": {
+            "white-house": {
+              "status": "stated",
+              "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+            },
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "rank_chevron",
+          "label": "Second largest operator in Venezuela, behind Chevron",
+          "cells": {
+            "white-house": {
+              "status": "absent",
+              "quote": ""
+            },
+            "ap": {
+              "status": "stated",
+              "quote": "NABEP, owned by Venezuelan businessman Alejandro Betancourt, is already the second largest operator in Venezuela, behind Chevron"
+            }
+          }
+        },
+        {
+          "id": "prior_operators",
+          "label": "Prior operators described as Russian or Chinese",
+          "cells": {
+            "white-house": {
+              "status": "absent",
+              "quote": ""
+            },
+            "ap": {
+              "status": "attributed",
+              "quote": "Many of those fields were previously owned by Russian or Chinese firms, the White House said"
+            }
+          }
+        },
+        {
+          "id": "gl_46d",
+          "label": "OFAC General License 46D \u2014 Venezuelan-origin oil or petrochemicals",
+          "cells": {
+            "white-house": {
+              "status": "absent",
+              "quote": ""
+            },
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "gl_50c",
+          "label": "OFAC General License 50C \u2014 oil or gas sector operations",
+          "cells": {
+            "white-house": {
+              "status": "absent",
+              "quote": ""
+            },
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "gl_52b",
+          "label": "OFAC General License 52B \u2014 Petr\u00f3leos de Venezuela, S.A.",
+          "cells": {
+            "white-house": {
+              "status": "absent",
+              "quote": ""
+            },
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "gl_49a",
+          "label": "OFAC General License 49A \u2014 contingent contracts for certain investment",
+          "cells": {
+            "white-house": {
+              "status": "absent",
+              "quote": ""
+            },
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        }
+      ],
+      "quantities": [
+        {
+          "name": "oil_fields",
+          "value": 17.0,
+          "raw": "17 oil fields",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+        },
+        {
+          "name": "concession_years",
+          "value": 100.0,
+          "raw": "100-year concessions",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+        },
+        {
+          "name": "field_reserves_billion_bbl",
+          "value": 65.0,
+          "raw": "17 oil fields with proven reserves of approximately 65 billion barrels",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+        },
+        {
+          "name": "us_reserves_billion_bbl",
+          "value": 46.0,
+          "raw": "U.S. territorial proven reserves of roughly 46 billion",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "Fact Sheet: President Donald J. Trump Announces Historic Oil Agreement to Secure American Energy Dominance and Drive Venezuela\u2019s Economic Recovery The White House August 31, 2026 In the biggest oil deal in world history, President Donald J. Trump has secured U.S. majority control of more than 65 billion barrels of proven oil reserves in Venezuela \u2013 vastly expanding our current U.S. territorial pro"
+        },
+        {
+          "name": "equity_percent",
+          "value": 35.0,
+          "raw": "35% equity stake",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "At no cost to the American taxpayer, NABEP has granted the U.S. Department of War\u2019s Office of Strategic Capital a 35% equity stake in its corporate parent"
+        },
+        {
+          "name": "offtake_percent",
+          "value": 20.0,
+          "raw": "guaranteed 20% of the off-take",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "NABEP has granted the U.S. Department of State the right to purchase, at production cost, a guaranteed 20% of the off-take from all current and future fields NABEP will operate"
+        },
+        {
+          "name": "capex_billion_usd",
+          "value": 100.0,
+          "raw": "$100 billion in new oil infrastructure",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "NABEP has developed an ambitious plan to rapidly scale production by investing up to $100 billion in new oil infrastructure in Venezuela"
+        },
+        {
+          "name": "royalty_billion_usd",
+          "value": 200.0,
+          "raw": "$200 billion in royalty",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "Under this framework, as it scales production, NABEP will pay an expected $200 billion in royalty and tax payments over the first 25 years."
+        },
+        {
+          "name": "oil_fields",
+          "value": 17.0,
+          "raw": "17 oil fields",
+          "source": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+        },
+        {
+          "name": "concession_years",
+          "value": 100.0,
+          "raw": "100-year rights",
+          "source": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+        },
+        {
+          "name": "field_reserves_billion_bbl",
+          "value": 65.0,
+          "raw": "17 oil fields with proven reserves of 65 billion barrels",
+          "source": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+        },
+        {
+          "name": "equity_percent",
+          "value": 35.0,
+          "raw": "35% ownership stake",
+          "source": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "The deal will give the Pentagon's Office of Strategic Capital a 35% ownership stake in the company, the White House disclosed Monday"
+        },
+        {
+          "name": "offtake_percent",
+          "value": 20.0,
+          "raw": "20% of the output",
+          "source": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "The U.S. will also be guaranteed a right to purchase 20% of the output at cost, orchestrated through the State Department"
+        },
+        {
+          "name": "capex_billion_usd",
+          "value": 100.0,
+          "raw": "$100 billion in new oil infrastructure",
+          "source": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "Betancourt's company has agreed to put up $100 billion in new oil infrastructure investments"
+        }
+      ],
+      "findings": [
+        {
+          "kind": "ranking_conflict",
+          "summary": "White House calls NABEP the second-largest private Venezuelan oil producer. AP calls it the second largest operator in Venezuela, behind Chevron. These use different comparison groups, not necessarily contradictory facts. Verify the scope before combining the rankings.",
+          "quotes": [
+            "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels",
+            "NABEP, owned by Venezuelan businessman Alejandro Betancourt, is already the second largest operator in Venezuela, behind Chevron"
+          ],
+          "urls": [
+            "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+            "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a"
+          ]
+        },
+        {
+          "kind": "attribution_gap",
+          "summary": "AP attributes prior Russian or Chinese operators to the White House. The stored White House fact sheet does not mention Russian or Chinese operators.",
+          "quotes": [
+            "Many of those fields were previously owned by Russian or Chinese firms, the White House said",
+            "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+          ],
+          "urls": [
+            "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+            "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "us_reserves_billion_bbl appears in only one source.",
+          "quotes": [
+            "Fact Sheet: President Donald J. Trump Announces Historic Oil Agreement to Secure American Energy Dominance and Drive Venezuela\u2019s Economic Recovery The White House August 31, 2026 In the biggest oil deal in world history, President Donald J. Trump has secured U.S. majority control of more than 65 billion barrels of proven oil reserves in Venezuela \u2013 vastly expanding our current U.S. territorial pro"
+          ],
+          "urls": [
+            "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "royalty_billion_usd appears in only one source.",
+          "quotes": [
+            "Under this framework, as it scales production, NABEP will pay an expected $200 billion in royalty and tax payments over the first 25 years."
+          ],
+          "urls": [
+            "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels",
+          "title": "White House fact sheet \u2014 31 August 2026",
+          "kind": "white_house_fact_sheet",
+          "fetched_at": "2026-09-08T13:15:00Z",
+          "label": "PUBLIC_RECORDING",
+          "sha256": "a2bcb207071faf5cd6f4be272ad572c08e207efc1ac1a91534cf6ad5e787fbb0",
+          "capture_note": "Stored fact-sheet excerpts, not signed contracts. Original editorial annotation excluded from evidence."
+        },
+        {
+          "id": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "NABEP, owned by Venezuelan businessman Alejandro Betancourt, is already the second largest operator in Venezuela, behind Chevron",
+          "title": "Days after Trump announces Venezuela oil deal, White House fills in some of the details",
+          "kind": "ap_report",
+          "fetched_at": "2026-09-08T13:15:00Z",
+          "label": "PUBLIC_RECORDING",
+          "sha256": "8c96e2573be17313939f3cbec7de26003082c522201f72fc14e15602e6277c2c",
+          "capture_note": "Selected AP excerpts supplied with this project, not the full article. Absence here does not establish absence in the article."
+        }
+      ],
+      "db": {
+        "notes": 0,
+        "approved_writes": 0,
+        "drafts": [
+          {
+            "id": 1,
+            "case_id": "white-house+ap",
+            "action": "hold",
+            "status": "pending"
+          }
+        ],
+        "fetches": [
+          [
+            "white-house",
+            200
+          ],
+          [
+            "ap",
+            200
+          ]
+        ],
+        "approvals": []
+      }
+    },
+    "ofac+white-house+ap": {
+      "id": "ofac+white-house+ap",
+      "selection_key": "ofac+white-house+ap",
+      "source_ids": [
+        "ofac",
+        "white-house",
+        "ap"
+      ],
+      "title": "Selected source comparison",
+      "action": "verify_first",
+      "headline": "Verify the scope before combining these documents.",
+      "body": "Review memo \u2014 not a publishable news alert. White House calls NABEP the second-largest private Venezuelan oil producer. AP calls it the second largest operator in Venezuela, behind Chevron. These use different comparison groups, not necessarily contradictory facts. Verify the scope before combining the rankings. OFAC lists general licenses for Venezuelan-origin oil and PDVSA. The stored excerpts do not name NABEP, 17 fields, or 100-year concessions. A license list is not confirmation of the fact-sheet deal. AP attributes prior Russian or Chinese operators to the White House. The stored White House fact sheet does not mention Russian or Chinese operators.",
+      "interpreter": "heuristic",
+      "latency_ms": 26.518599999690196,
+      "ollama_tokens": 0,
+      "baseline_action": "verify_first",
+      "draft_id": 1,
+      "generated_at": "2026-09-09T23:47:44.227284+00:00",
+      "trace": [
+        {
+          "step": "Read stored excerpt",
+          "source_id": "ofac",
+          "duration_ms": 0.29009999980189605,
+          "detail": "PUBLIC_RECORDING",
+          "sha256": "e4534a89649bedf27142d2534a876ca33568153657d92574c836e6bb01164cfd"
+        },
+        {
+          "step": "Read stored excerpt",
+          "source_id": "white-house",
+          "duration_ms": 0.1975999994101585,
+          "detail": "PUBLIC_RECORDING",
+          "sha256": "a2bcb207071faf5cd6f4be272ad572c08e207efc1ac1a91534cf6ad5e787fbb0"
+        },
+        {
+          "step": "Read stored excerpt",
+          "source_id": "ap",
+          "duration_ms": 0.1560000000608852,
+          "detail": "PUBLIC_RECORDING",
+          "sha256": "8c96e2573be17313939f3cbec7de26003082c522201f72fc14e15602e6277c2c"
+        },
+        {
+          "step": "Extract and validate",
+          "duration_ms": 9.203599999636936,
+          "detail": "heuristic"
+        }
+      ],
+      "prior_notes": [],
+      "model_requested": false,
+      "model_status": "not_requested",
+      "dates": [
+        "2026-09-17",
+        "2026-08-03",
+        "2026-06-18",
+        "2026-02-10",
+        "2026-08-27",
+        "2026-03-13",
+        "2026-09-02",
+        "2026-08-21",
+        "2026-08-31"
+      ],
+      "licenses_found": [
+        "5Y",
+        "24A",
+        "30B",
+        "46D",
+        "47B",
+        "48C",
+        "49A",
+        "50C",
+        "51D",
+        "52B",
+        "54C",
+        "55A",
+        "61A",
+        "62"
+      ],
+      "licenses_known": [
+        "5Y",
+        "24A",
+        "30B",
+        "46D",
+        "47B",
+        "48C",
+        "49A",
+        "50C",
+        "51D",
+        "52B",
+        "54C",
+        "55A",
+        "61A",
+        "62"
+      ],
+      "licenses": [
+        {
+          "code": "5Y",
+          "title": "Authorizing Certain Transactions Related to the Petr\u00f3leos de Venezuela, S.A. 2020 8.5 Percent Bond on or After September 17, 2026",
+          "issued": "August 03, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "24A",
+          "title": "Certain Transactions Involving the Government of Venezuela Related to Telecommunications and Mail Authorized",
+          "issued": "June 18, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "30B",
+          "title": "Authorizing Certain Transactions Necessary to Port and Airport Operations",
+          "issued": "February 10, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "46D",
+          "title": "Authorizing Certain Activities Involving Venezuelan-Origin Oil or Petrochemical Products",
+          "issued": "August 27, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "47B",
+          "title": "Authorizing the Sale of U.S.-Origin Diluents to Venezuela",
+          "issued": "August 27, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "48C",
+          "title": "Authorizing the Supply of Certain Items and Services to Venezuela",
+          "issued": "August 27, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "49A",
+          "title": "Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela",
+          "issued": "March 13, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "50C",
+          "title": "Authorizing Transactions Related to Oil or Gas Sector Operations in Venezuela of Certain Entities",
+          "issued": "August 27, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "51D",
+          "title": "Authorizing Certain Activities Involving Venezuelan-Origin Coal or Minerals, Including Gold",
+          "issued": "September 02, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "52B",
+          "title": "Authorizing Certain Transactions Involving Petr\u00f3leos de Venezuela, S.A.",
+          "issued": "August 27, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "54C",
+          "title": "Authorizing the Supply of Certain Items and Services for Coal or Minerals Operations in Venezuela",
+          "issued": "September 02, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "55A",
+          "title": "Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela's Coal or Minerals Sectors",
+          "issued": "September 02, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "61A",
+          "title": "Authorizing the Supply of Certain Items and Services to Venezuela Related to Telecommunications",
+          "issued": "August 27, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        },
+        {
+          "code": "62",
+          "title": "Authorizing Negotiations of and Entry Into Contingent Contracts for Investment in the Telecommunications Sector of Venezuela",
+          "issued": "August 21, 2026",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "label": "PUBLIC_RECORDING"
+        }
+      ],
+      "claims": [
+        {
+          "id": "nabep",
+          "label": "Names NABEP / North American Blue Energy Partners",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "white-house": {
+              "status": "stated",
+              "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+            },
+            "ap": {
+              "status": "stated",
+              "quote": "The White House on Monday said it's partnering with North American Blue Energy Partners as part of President Donald Trump's push to tap into Venezuela's oil industry"
+            }
+          }
+        },
+        {
+          "id": "oil_fields",
+          "label": "17 oil fields",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "white-house": {
+              "status": "stated",
+              "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+            },
+            "ap": {
+              "status": "stated",
+              "quote": "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+            }
+          }
+        },
+        {
+          "id": "concession",
+          "label": "100-year concessions or rights",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "white-house": {
+              "status": "stated",
+              "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+            },
+            "ap": {
+              "status": "stated",
+              "quote": "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+            }
+          }
+        },
+        {
+          "id": "field_reserves",
+          "label": "About 65 billion barrels in those fields",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "white-house": {
+              "status": "stated",
+              "quote": "Fact Sheet: President Donald J. Trump Announces Historic Oil Agreement to Secure American Energy Dominance and Drive Venezuela\u2019s Economic Recovery The White House August 31, 2026 In the biggest oil deal in world history, President Donald J. Trump has secured U.S. majority control of more than 65 billion barrels of proven oil reserves in Venezuela \u2013 vastly expanding our current U.S. territorial proven reserves of roughly 46 billion barrels"
+            },
+            "ap": {
+              "status": "stated",
+              "quote": "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+            }
+          }
+        },
+        {
+          "id": "us_reserves",
+          "label": "U.S. territorial proven reserves of roughly 46 billion barrels",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "white-house": {
+              "status": "stated",
+              "quote": "Fact Sheet: President Donald J. Trump Announces Historic Oil Agreement to Secure American Energy Dominance and Drive Venezuela\u2019s Economic Recovery The White House August 31, 2026 In the biggest oil deal in world history, President Donald J. Trump has secured U.S. majority control of more than 65 billion barrels of proven oil reserves in Venezuela \u2013 vastly expanding our current U.S. territorial proven reserves of roughly 46 billion barrels"
+            },
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "equity",
+          "label": "35% OSC / Pentagon stake",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "white-house": {
+              "status": "stated",
+              "quote": "At no cost to the American taxpayer, NABEP has granted the U.S. Department of War\u2019s Office of Strategic Capital a 35% equity stake in its corporate parent"
+            },
+            "ap": {
+              "status": "attributed",
+              "quote": "The deal will give the Pentagon's Office of Strategic Capital a 35% ownership stake in the company, the White House disclosed Monday"
+            }
+          }
+        },
+        {
+          "id": "offtake",
+          "label": "20% offtake or output at cost",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "white-house": {
+              "status": "stated",
+              "quote": "NABEP has granted the U.S. Department of State the right to purchase, at production cost, a guaranteed 20% of the off-take from all current and future fields NABEP will operate"
+            },
+            "ap": {
+              "status": "stated",
+              "quote": "The U.S. will also be guaranteed a right to purchase 20% of the output at cost, orchestrated through the State Department"
+            }
+          }
+        },
+        {
+          "id": "capex",
+          "label": "$100 billion in new oil infrastructure",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "white-house": {
+              "status": "stated",
+              "quote": "NABEP has developed an ambitious plan to rapidly scale production by investing up to $100 billion in new oil infrastructure in Venezuela"
+            },
+            "ap": {
+              "status": "stated",
+              "quote": "Betancourt's company has agreed to put up $100 billion in new oil infrastructure investments"
+            }
+          }
+        },
+        {
+          "id": "royalty",
+          "label": "$200 billion expected royalties and tax payments",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "white-house": {
+              "status": "stated",
+              "quote": "Under this framework, as it scales production, NABEP will pay an expected $200 billion in royalty and tax payments over the first 25 years."
+            },
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "rank_private",
+          "label": "Second-largest private Venezuelan oil producer",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "white-house": {
+              "status": "stated",
+              "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+            },
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "rank_chevron",
+          "label": "Second largest operator in Venezuela, behind Chevron",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "white-house": {
+              "status": "absent",
+              "quote": ""
+            },
+            "ap": {
+              "status": "stated",
+              "quote": "NABEP, owned by Venezuelan businessman Alejandro Betancourt, is already the second largest operator in Venezuela, behind Chevron"
+            }
+          }
+        },
+        {
+          "id": "prior_operators",
+          "label": "Prior operators described as Russian or Chinese",
+          "cells": {
+            "ofac": {
+              "status": "absent",
+              "quote": ""
+            },
+            "white-house": {
+              "status": "absent",
+              "quote": ""
+            },
+            "ap": {
+              "status": "attributed",
+              "quote": "Many of those fields were previously owned by Russian or Chinese firms, the White House said"
+            }
+          }
+        },
+        {
+          "id": "gl_46d",
+          "label": "OFAC General License 46D \u2014 Venezuelan-origin oil or petrochemicals",
+          "cells": {
+            "ofac": {
+              "status": "stated",
+              "quote": "Venezuela General License 5Y- Authorizing Certain Transactions Related to the Petr\u00f3leos de Venezuela, S.A. 2020 8.5 Percent Bond on or After September 17, 2026 (August 03, 2026) Venezuela General License 24A- Certain Transactions Involving the Government of Venezuela Related to Telecommunications and Mail Authorized (June 18, 2026) Venezuela General License 30B- Authorizing Certain Transactions Necessary to Port and Airport Operations (February 10, 2026) Venezuela General License 46D- Authorizing Certain Activities Involving Venezuelan-Origin Oil or Petrochemical Products (August 27, 2026) Venezuela General License 47B- Authorizing the Sale of U.S.-Origin Diluents to Venezuela (August 27, 2026) Venezuela General License 48C- Authorizing the Supply of Certain Items and Services to Venezuela (August 27, 2026) Venezuela General License 49A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela (March 13, 2026) Venezuela General License 50C- Authorizing Transactions Related to Oil or Gas Sector Operations in Venezuela of Certain Entities (August 27, 2026) Venezuela General License 51D- Authorizing Certain Activities Involving Venezuelan-Origin Coal or Minerals, Including Gold (September 02, 2026) Venezuela General License 52B- Authorizing Certain Transactions Involving Petr\u00f3leos de Venezuela, S.A. (August 27, 2026) Venezuela General License 54C- Authorizing the Supply of Certain Items and Services for Coal or Minerals Operations in Venezuela (September 02, 2026) Venezuela General License 55A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela's Coal or Minerals Sectors (September 02, 2026) Venezuela General License 61A- Authorizing the Supply of Certain Items and Services to Venezuela Related to Telecommunications (August 27, 2026) Venezuela General License 62- Authorizing Negotiations of and Entry Into Contingent Contracts for Investment in the Telecommunications Sector of Venezuela (August 21, 2026)"
+            },
+            "white-house": {
+              "status": "absent",
+              "quote": ""
+            },
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "gl_50c",
+          "label": "OFAC General License 50C \u2014 oil or gas sector operations",
+          "cells": {
+            "ofac": {
+              "status": "stated",
+              "quote": "Venezuela General License 5Y- Authorizing Certain Transactions Related to the Petr\u00f3leos de Venezuela, S.A. 2020 8.5 Percent Bond on or After September 17, 2026 (August 03, 2026) Venezuela General License 24A- Certain Transactions Involving the Government of Venezuela Related to Telecommunications and Mail Authorized (June 18, 2026) Venezuela General License 30B- Authorizing Certain Transactions Necessary to Port and Airport Operations (February 10, 2026) Venezuela General License 46D- Authorizing Certain Activities Involving Venezuelan-Origin Oil or Petrochemical Products (August 27, 2026) Venezuela General License 47B- Authorizing the Sale of U.S.-Origin Diluents to Venezuela (August 27, 2026) Venezuela General License 48C- Authorizing the Supply of Certain Items and Services to Venezuela (August 27, 2026) Venezuela General License 49A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela (March 13, 2026) Venezuela General License 50C- Authorizing Transactions Related to Oil or Gas Sector Operations in Venezuela of Certain Entities (August 27, 2026) Venezuela General License 51D- Authorizing Certain Activities Involving Venezuelan-Origin Coal or Minerals, Including Gold (September 02, 2026) Venezuela General License 52B- Authorizing Certain Transactions Involving Petr\u00f3leos de Venezuela, S.A. (August 27, 2026) Venezuela General License 54C- Authorizing the Supply of Certain Items and Services for Coal or Minerals Operations in Venezuela (September 02, 2026) Venezuela General License 55A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela's Coal or Minerals Sectors (September 02, 2026) Venezuela General License 61A- Authorizing the Supply of Certain Items and Services to Venezuela Related to Telecommunications (August 27, 2026) Venezuela General License 62- Authorizing Negotiations of and Entry Into Contingent Contracts for Investment in the Telecommunications Sector of Venezuela (August 21, 2026)"
+            },
+            "white-house": {
+              "status": "absent",
+              "quote": ""
+            },
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "gl_52b",
+          "label": "OFAC General License 52B \u2014 Petr\u00f3leos de Venezuela, S.A.",
+          "cells": {
+            "ofac": {
+              "status": "stated",
+              "quote": "Venezuela General License 5Y- Authorizing Certain Transactions Related to the Petr\u00f3leos de Venezuela, S.A. 2020 8.5 Percent Bond on or After September 17, 2026 (August 03, 2026) Venezuela General License 24A- Certain Transactions Involving the Government of Venezuela Related to Telecommunications and Mail Authorized (June 18, 2026) Venezuela General License 30B- Authorizing Certain Transactions Necessary to Port and Airport Operations (February 10, 2026) Venezuela General License 46D- Authorizing Certain Activities Involving Venezuelan-Origin Oil or Petrochemical Products (August 27, 2026) Venezuela General License 47B- Authorizing the Sale of U.S.-Origin Diluents to Venezuela (August 27, 2026) Venezuela General License 48C- Authorizing the Supply of Certain Items and Services to Venezuela (August 27, 2026) Venezuela General License 49A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela (March 13, 2026) Venezuela General License 50C- Authorizing Transactions Related to Oil or Gas Sector Operations in Venezuela of Certain Entities (August 27, 2026) Venezuela General License 51D- Authorizing Certain Activities Involving Venezuelan-Origin Coal or Minerals, Including Gold (September 02, 2026) Venezuela General License 52B- Authorizing Certain Transactions Involving Petr\u00f3leos de Venezuela, S.A. (August 27, 2026) Venezuela General License 54C- Authorizing the Supply of Certain Items and Services for Coal or Minerals Operations in Venezuela (September 02, 2026) Venezuela General License 55A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela's Coal or Minerals Sectors (September 02, 2026) Venezuela General License 61A- Authorizing the Supply of Certain Items and Services to Venezuela Related to Telecommunications (August 27, 2026) Venezuela General License 62- Authorizing Negotiations of and Entry Into Contingent Contracts for Investment in the Telecommunications Sector of Venezuela (August 21, 2026)"
+            },
+            "white-house": {
+              "status": "absent",
+              "quote": ""
+            },
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        },
+        {
+          "id": "gl_49a",
+          "label": "OFAC General License 49A \u2014 contingent contracts for certain investment",
+          "cells": {
+            "ofac": {
+              "status": "stated",
+              "quote": "Venezuela General License 5Y- Authorizing Certain Transactions Related to the Petr\u00f3leos de Venezuela, S.A. 2020 8.5 Percent Bond on or After September 17, 2026 (August 03, 2026) Venezuela General License 24A- Certain Transactions Involving the Government of Venezuela Related to Telecommunications and Mail Authorized (June 18, 2026) Venezuela General License 30B- Authorizing Certain Transactions Necessary to Port and Airport Operations (February 10, 2026) Venezuela General License 46D- Authorizing Certain Activities Involving Venezuelan-Origin Oil or Petrochemical Products (August 27, 2026) Venezuela General License 47B- Authorizing the Sale of U.S.-Origin Diluents to Venezuela (August 27, 2026) Venezuela General License 48C- Authorizing the Supply of Certain Items and Services to Venezuela (August 27, 2026) Venezuela General License 49A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela (March 13, 2026) Venezuela General License 50C- Authorizing Transactions Related to Oil or Gas Sector Operations in Venezuela of Certain Entities (August 27, 2026) Venezuela General License 51D- Authorizing Certain Activities Involving Venezuelan-Origin Coal or Minerals, Including Gold (September 02, 2026) Venezuela General License 52B- Authorizing Certain Transactions Involving Petr\u00f3leos de Venezuela, S.A. (August 27, 2026) Venezuela General License 54C- Authorizing the Supply of Certain Items and Services for Coal or Minerals Operations in Venezuela (September 02, 2026) Venezuela General License 55A- Authorizing Negotiations of and Entry Into Contingent Contracts for Certain Investment in Venezuela's Coal or Minerals Sectors (September 02, 2026) Venezuela General License 61A- Authorizing the Supply of Certain Items and Services to Venezuela Related to Telecommunications (August 27, 2026) Venezuela General License 62- Authorizing Negotiations of and Entry Into Contingent Contracts for Investment in the Telecommunications Sector of Venezuela (August 21, 2026)"
+            },
+            "white-house": {
+              "status": "absent",
+              "quote": ""
+            },
+            "ap": {
+              "status": "absent",
+              "quote": ""
+            }
+          }
+        }
+      ],
+      "quantities": [
+        {
+          "name": "oil_fields",
+          "value": 17.0,
+          "raw": "17 oil fields",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+        },
+        {
+          "name": "concession_years",
+          "value": 100.0,
+          "raw": "100-year concessions",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+        },
+        {
+          "name": "field_reserves_billion_bbl",
+          "value": 65.0,
+          "raw": "17 oil fields with proven reserves of approximately 65 billion barrels",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+        },
+        {
+          "name": "us_reserves_billion_bbl",
+          "value": 46.0,
+          "raw": "U.S. territorial proven reserves of roughly 46 billion",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "Fact Sheet: President Donald J. Trump Announces Historic Oil Agreement to Secure American Energy Dominance and Drive Venezuela\u2019s Economic Recovery The White House August 31, 2026 In the biggest oil deal in world history, President Donald J. Trump has secured U.S. majority control of more than 65 billion barrels of proven oil reserves in Venezuela \u2013 vastly expanding our current U.S. territorial pro"
+        },
+        {
+          "name": "equity_percent",
+          "value": 35.0,
+          "raw": "35% equity stake",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "At no cost to the American taxpayer, NABEP has granted the U.S. Department of War\u2019s Office of Strategic Capital a 35% equity stake in its corporate parent"
+        },
+        {
+          "name": "offtake_percent",
+          "value": 20.0,
+          "raw": "guaranteed 20% of the off-take",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "NABEP has granted the U.S. Department of State the right to purchase, at production cost, a guaranteed 20% of the off-take from all current and future fields NABEP will operate"
+        },
+        {
+          "name": "capex_billion_usd",
+          "value": 100.0,
+          "raw": "$100 billion in new oil infrastructure",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "NABEP has developed an ambitious plan to rapidly scale production by investing up to $100 billion in new oil infrastructure in Venezuela"
+        },
+        {
+          "name": "royalty_billion_usd",
+          "value": 200.0,
+          "raw": "$200 billion in royalty",
+          "source": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "Under this framework, as it scales production, NABEP will pay an expected $200 billion in royalty and tax payments over the first 25 years."
+        },
+        {
+          "name": "oil_fields",
+          "value": 17.0,
+          "raw": "17 oil fields",
+          "source": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+        },
+        {
+          "name": "concession_years",
+          "value": 100.0,
+          "raw": "100-year rights",
+          "source": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+        },
+        {
+          "name": "field_reserves_billion_bbl",
+          "value": 65.0,
+          "raw": "17 oil fields with proven reserves of 65 billion barrels",
+          "source": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "Venezuela's acting President Delcy Rodr\u00edguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels"
+        },
+        {
+          "name": "equity_percent",
+          "value": 35.0,
+          "raw": "35% ownership stake",
+          "source": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "The deal will give the Pentagon's Office of Strategic Capital a 35% ownership stake in the company, the White House disclosed Monday"
+        },
+        {
+          "name": "offtake_percent",
+          "value": 20.0,
+          "raw": "20% of the output",
+          "source": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "The U.S. will also be guaranteed a right to purchase 20% of the output at cost, orchestrated through the State Department"
+        },
+        {
+          "name": "capex_billion_usd",
+          "value": 100.0,
+          "raw": "$100 billion in new oil infrastructure",
+          "source": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "Betancourt's company has agreed to put up $100 billion in new oil infrastructure investments"
+        }
+      ],
+      "findings": [
+        {
+          "kind": "ranking_conflict",
+          "summary": "White House calls NABEP the second-largest private Venezuelan oil producer. AP calls it the second largest operator in Venezuela, behind Chevron. These use different comparison groups, not necessarily contradictory facts. Verify the scope before combining the rankings.",
+          "quotes": [
+            "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels",
+            "NABEP, owned by Venezuelan businessman Alejandro Betancourt, is already the second largest operator in Venezuela, behind Chevron"
+          ],
+          "urls": [
+            "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+            "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a"
+          ]
+        },
+        {
+          "kind": "scope_gap",
+          "summary": "OFAC lists general licenses for Venezuelan-origin oil and PDVSA. The stored excerpts do not name NABEP, 17 fields, or 100-year concessions. A license list is not confirmation of the fact-sheet deal.",
+          "quotes": [
+            "Venezuela-Related Sanctions Office of Foreign Assets Control General Licenses OFAC issues general licenses in order to authorize activities that would otherwise be prohibited with regard to Venezuela",
+            "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels",
+            "NABEP, owned by Venezuelan businessman Alejandro Betancourt, is already the second largest operator in Venezuela, behind Chevron"
+          ],
+          "urls": [
+            "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+            "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+            "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a"
+          ]
+        },
+        {
+          "kind": "attribution_gap",
+          "summary": "AP attributes prior Russian or Chinese operators to the White House. The stored White House fact sheet does not mention Russian or Chinese operators.",
+          "quotes": [
+            "Many of those fields were previously owned by Russian or Chinese firms, the White House said",
+            "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels"
+          ],
+          "urls": [
+            "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+            "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "us_reserves_billion_bbl appears in only one source.",
+          "quotes": [
+            "Fact Sheet: President Donald J. Trump Announces Historic Oil Agreement to Secure American Energy Dominance and Drive Venezuela\u2019s Economic Recovery The White House August 31, 2026 In the biggest oil deal in world history, President Donald J. Trump has secured U.S. majority control of more than 65 billion barrels of proven oil reserves in Venezuela \u2013 vastly expanding our current U.S. territorial pro"
+          ],
+          "urls": [
+            "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/"
+          ]
+        },
+        {
+          "kind": "single_source",
+          "summary": "royalty_billion_usd appears in only one source.",
+          "quotes": [
+            "Under this framework, as it scales production, NABEP will pay an expected $200 billion in royalty and tax payments over the first 25 years."
+          ],
+          "urls": [
+            "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "ofac",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
+          "quote": "Venezuela-Related Sanctions Office of Foreign Assets Control General Licenses OFAC issues general licenses in order to authorize activities that would otherwise be prohibited with regard to Venezuela",
+          "title": "OFAC \u2014 Venezuela-related sanctions",
+          "kind": "ofac_licenses",
+          "fetched_at": "2026-09-08T13:15:00Z",
+          "label": "PUBLIC_RECORDING",
+          "sha256": "e4534a89649bedf27142d2534a876ca33568153657d92574c836e6bb01164cfd",
+          "capture_note": "Selected license-list excerpts; not the full OFAC page. Original editorial annotation excluded from evidence."
+        },
+        {
+          "id": "white-house",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/",
+          "quote": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels",
+          "title": "White House fact sheet \u2014 31 August 2026",
+          "kind": "white_house_fact_sheet",
+          "fetched_at": "2026-09-08T13:15:00Z",
+          "label": "PUBLIC_RECORDING",
+          "sha256": "a2bcb207071faf5cd6f4be272ad572c08e207efc1ac1a91534cf6ad5e787fbb0",
+          "capture_note": "Stored fact-sheet excerpts, not signed contracts. Original editorial annotation excluded from evidence."
+        },
+        {
+          "id": "ap",
+          "url": "https://apnews.com/article/7a4fa51f842e17b9b1d092fbeef2646a",
+          "quote": "NABEP, owned by Venezuelan businessman Alejandro Betancourt, is already the second largest operator in Venezuela, behind Chevron",
+          "title": "Days after Trump announces Venezuela oil deal, White House fills in some of the details",
+          "kind": "ap_report",
+          "fetched_at": "2026-09-08T13:15:00Z",
+          "label": "PUBLIC_RECORDING",
+          "sha256": "8c96e2573be17313939f3cbec7de26003082c522201f72fc14e15602e6277c2c",
+          "capture_note": "Selected AP excerpts supplied with this project, not the full article. Absence here does not establish absence in the article."
+        }
+      ],
+      "db": {
+        "notes": 0,
+        "approved_writes": 0,
+        "drafts": [
+          {
+            "id": 1,
+            "case_id": "ofac+white-house+ap",
+            "action": "verify_first",
+            "status": "pending"
+          }
+        ],
+        "fetches": [
+          [
+            "ofac",
+            200
+          ],
+          [
+            "white-house",
+            200
+          ],
+          [
+            "ap",
+            200
+          ]
+        ],
+        "approvals": []
+      }
+    }
+  }
+}

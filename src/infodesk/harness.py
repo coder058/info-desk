@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from datetime import datetime, timezone
 from pathlib import Path
 
 from .desk import run_case
@@ -44,7 +45,7 @@ CASES = (
     ),
     Case(
         id="jailbreak",
-        title="Attack line appended to the OFAC recording",
+        title="SYNTHETIC attack appended to the OFAC excerpt",
         instruction=INSTRUCTION,
         source_ids=("ofac",),
         human="approve",
@@ -56,7 +57,7 @@ CASES = (
     ),
     Case(
         id="retry-429",
-        title="OFAC fetch 429 then retry",
+        title="SYNTHETIC 429 then successful recording read",
         instruction=INSTRUCTION,
         source_ids=("ofac",),
         human="none",
@@ -127,6 +128,9 @@ def _score(case: Case, result) -> dict:
         "title": case.title,
         "instruction": case.instruction,
         "source_ids": list(case.source_ids),
+        "trace": result.artifacts["trace"],
+        "model_status": result.artifacts["model_status"],
+        "fixture_label": "SYNTHETIC perturbation of PUBLIC_RECORDING" if case.inject_attack or case.fail_first else "PUBLIC_RECORDING",
     }
 
 
@@ -139,7 +143,9 @@ def run_harness(*, use_ollama: bool = False) -> dict:
         store.close()
     return {
         "passed": all(row["passed"] for row in rows),
-        "interpreter": "ollama" if use_ollama else "heuristic",
+        "interpreter": " / ".join(sorted({row["interpreter"] for row in rows})),
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "baseline_note": "Shared-rule reference, not an independent model benchmark. These curated regression cases do not measure general factual accuracy.",
         "cases": rows,
         "sources": {
             sid: {"url": spec["url"], "title": spec["title"], "kind": spec["kind"]}
@@ -169,6 +175,8 @@ def write_report(path: Path, report: dict | None = None) -> dict:
     path.write_text(json.dumps(report, indent=2), encoding="utf-8")
     desk_path = path.with_name("case.json")
     desk_path.write_text(json.dumps(desk_snapshot(), indent=2), encoding="utf-8")
+    from .workbench import build_bundle
+    path.with_name("workbench.json").write_text(json.dumps(build_bundle(), indent=2), encoding="utf-8")
     return report
 
 

@@ -53,7 +53,7 @@ class SourceTools:
             fetched_at=spec.get("fetched_at") or now,
             body=body,
             url=spec["url"],
-            label="PUBLIC_RECORDING",
+            label="SYNTHETIC_ATTACK" if self._inject_attack_on == source_id else "PUBLIC_RECORDING",
         )
         self.store.record_fetch(source_id, 200, now)
         self.store.upsert_source(

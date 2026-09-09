@@ -5,10 +5,10 @@ from infodesk.sources import SOURCES
 def test_matrix_is_the_documents_not_a_guess():
     bodies = {sid: spec["body"] for sid, spec in SOURCES.items()}
     rows = {row["id"]: row for row in build_matrix(bodies)}
-    assert rows["nabep"]["cells"]["ofac"]["status"] == "denied"
+    assert rows["nabep"]["cells"]["ofac"]["status"] == "absent"
     assert rows["nabep"]["cells"]["white-house"]["status"] == "stated"
     assert rows["nabep"]["cells"]["ap"]["status"] == "stated"
-    assert rows["oil_fields"]["cells"]["ofac"]["status"] == "denied"
+    assert rows["oil_fields"]["cells"]["ofac"]["status"] == "absent"
     assert rows["royalty"]["cells"]["white-house"]["status"] == "stated"
     assert rows["royalty"]["cells"]["ap"]["status"] == "absent"
     assert rows["royalty"]["cells"]["ofac"]["status"] == "absent"

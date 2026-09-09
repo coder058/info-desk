@@ -8,3 +8,6 @@ __pycache__/
 .DS_Store
 dist/
 build/
+node_modules/
+test-results/
+data/

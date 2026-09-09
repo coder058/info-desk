@@ -28,7 +28,7 @@ CLAIMS: tuple[tuple[str, str, str], ...] = (
     ("capex", "$100 billion in new oil infrastructure", r"\$100 billion in new oil infrastructure"),
     (
         "royalty",
-        "$200 billion expected royalties (White House only)",
+        "$200 billion expected royalties and tax payments",
         r"\$200 billion in royalty",
     ),
     (
@@ -72,11 +72,17 @@ _ATTR = re.compile(r"the White House (said|disclosed)", re.I)
 
 
 def classify_sentence(text: str, pattern: str) -> dict:
+    """Four outcomes, kept apart on purpose.
+
+    `not_named` means the capture carries a scope line stating the page does not
+    mention the claim. That is still an absence, not the page denying the claim,
+    so it must never be read as a rebuttal of the other sources.
+    """
     hit = sentence_matching(text, pattern)
     if not hit:
         return {"status": "absent", "quote": ""}
     if is_negated(hit):
-        return {"status": "denied", "quote": hit}
+        return {"status": "not_named", "quote": hit}
     if _ATTR.search(hit):
         return {"status": "attributed", "quote": hit}
     return {"status": "stated", "quote": hit}

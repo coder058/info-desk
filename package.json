@@ -1,0 +1,6 @@
+{
+  "name": "info-desk-browser-checks",
+  "private": true,
+  "scripts": {"test:browser": "node e2e/workbench.cjs"},
+  "devDependencies": {"playwright": "1.62.1"}
+}

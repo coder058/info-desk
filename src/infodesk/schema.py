@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Literal
 
-Label = Literal["PUBLIC_RECORDING"]
+Label = Literal["PUBLIC_RECORDING", "SYNTHETIC_ATTACK"]
 Action = Literal["publish_draft", "hold", "verify_first"]
 FindingKind = Literal[
     "conflict",
