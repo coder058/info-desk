@@ -1,0 +1,1031 @@
+{
+  "scope": "Human-authored development questions over the repository's dated PUBLIC_RECORDING excerpts. Not live data, a held-out benchmark or verified publisher claims. Negative cases are unanswerable from these excerpts only.",
+  "evaluated_at": "2026-09-10T03:48:40.995156+00:00",
+  "dataset_sha256": "07cd2424066d71afede0daf13a9b28c200e66a99047bd146411358c80a2ef464",
+  "corpus_sha256": {
+    "ofac": "e4534a89649bedf27142d2534a876ca33568153657d92574c836e6bb01164cfd",
+    "white-house": "a2bcb207071faf5cd6f4be272ad572c08e207efc1ac1a91534cf6ad5e787fbb0",
+    "ap": "8c96e2573be17313939f3cbec7de26003082c522201f72fc14e15602e6277c2c"
+  },
+  "runtime": {
+    "python": "3.14.3",
+    "sqlite": "3.50.4",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "summary": {
+    "cases": 17,
+    "answerable": 13,
+    "unanswerable": 4,
+    "mean_evidence_recall_at_returned_limit": 0.7692307692307693,
+    "top1_hit_rate": 0.7692307692307693,
+    "mean_reciprocal_rank": 0.7692307692307693,
+    "unanswerable_with_retrieved_context": 3,
+    "retrieval_ms_p50": 0.31209999997372506,
+    "retrieval_ms_p95": 0.719300000127987,
+    "repetitions_per_case": 20
+  },
+  "limits": [
+    "Development set, not held out; questions are human-authored, not independent user traffic.",
+    "Corpus is the supplied dated excerpts, not current live connector coverage or independently verified facts.",
+    "No answer generation or semantic correctness is scored. Context returned for an unanswerable question is not necessarily a wrong answer.",
+    "No retrieval confidence or safe abstention can be inferred from non-empty search results.",
+    "Local in-memory retrieval timing excludes network, persistence I/O and model inference."
+  ],
+  "cases": [
+    {
+      "id": "royalties-en",
+      "language": "en",
+      "question": "What royalty and tax payments does the fact sheet expect?",
+      "sources": [
+        "white-house"
+      ],
+      "expected": [
+        {
+          "source": "white-house",
+          "quote": "$200 billion in royalty and tax payments"
+        }
+      ],
+      "evidence_recall": 1.0,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "top1_relevant": true,
+      "retrieved_count": 6,
+      "retrieval_ms_samples": [
+        1.2891000005765818,
+        0.5267999995339778,
+        0.4816999999093241,
+        0.43119999918417307,
+        0.43559999994613463,
+        0.4906999993181671,
+        0.45420000060403254,
+        0.403099999857659,
+        0.4232000001138658,
+        0.3845000001092558,
+        0.4102000002603745,
+        0.3769000004467671,
+        0.35570000000006985,
+        0.43430000005173497,
+        0.37909999991825316,
+        0.3873000005114591,
+        0.5990999998175539,
+        3.2430000001113513,
+        1.6057000002547284,
+        0.40519999947719043
+      ],
+      "retrieved": [
+        {
+          "source": "white-house",
+          "chunk_id": "2:8",
+          "body": "Under this framework, as it scales production, NABEP will pay an expected $200 billion in royalty and tax payments over the first 25 years."
+        },
+        {
+          "source": "white-house",
+          "chunk_id": "2:0",
+          "body": "Fact Sheet: President Donald J. Trump Announces Historic Oil Agreement to Secure American Energy Dominance and Drive Venezuela’s Economic Recovery"
+        },
+        {
+          "source": "white-house",
+          "chunk_id": "2:1",
+          "body": "The White House"
+        },
+        {
+          "source": "white-house",
+          "chunk_id": "2:2",
+          "body": "August 31, 2026"
+        },
+        {
+          "source": "white-house",
+          "chunk_id": "2:7",
+          "body": "NABEP has developed an ambitious plan to rapidly scale production by investing up to $100 billion in new oil infrastructure in Venezuela."
+        },
+        {
+          "source": "white-house",
+          "chunk_id": "2:5",
+          "body": "At no cost to the American taxpayer, NABEP has granted the U.S. Department of War’s Office of Strategic Capital a 35% equity stake in its corporate parent."
+        }
+      ]
+    },
+    {
+      "id": "equity-en",
+      "language": "en",
+      "question": "What equity stake was granted to the Office of Strategic Capital?",
+      "sources": [
+        "white-house",
+        "ap"
+      ],
+      "expected": [
+        {
+          "source": "white-house",
+          "quote": "35% equity stake"
+        },
+        {
+          "source": "ap",
+          "quote": "35% ownership stake"
+        }
+      ],
+      "evidence_recall": 1.0,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "top1_relevant": true,
+      "retrieved_count": 4,
+      "retrieval_ms_samples": [
+        0.663400000121328,
+        0.5989000001136446,
+        0.4806000006283284,
+        0.40549999994254904,
+        0.35710000065591885,
+        0.425100000029488,
+        0.54679999993823,
+        0.40840000019670697,
+        0.36299999919719994,
+        0.37820000034116674,
+        0.35060000027442584,
+        0.32639999972161604,
+        0.3065000000788132,
+        0.31209999997372506,
+        0.3163999999742373,
+        0.3297000002930872,
+        0.3114000001005479,
+        0.33630000052653486,
+        0.3157999999530148,
+        0.3054999997402774
+      ],
+      "retrieved": [
+        {
+          "source": "white-house",
+          "chunk_id": "2:5",
+          "body": "At no cost to the American taxpayer, NABEP has granted the U.S. Department of War’s Office of Strategic Capital a 35% equity stake in its corporate parent."
+        },
+        {
+          "source": "ap",
+          "chunk_id": "3:3",
+          "body": "The deal will give the Pentagon's Office of Strategic Capital a 35% ownership stake in the company, the White House disclosed Monday. The U.S. will also be guaranteed a right to purchase 20% of the output at cost, orchestrated through the State Department."
+        },
+        {
+          "source": "white-house",
+          "chunk_id": "2:6",
+          "body": "NABEP has granted the U.S. Department of State the right to purchase, at production cost, a guaranteed 20% of the off-take from all current and future fields NABEP will operate."
+        },
+        {
+          "source": "white-house",
+          "chunk_id": "2:4",
+          "body": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels."
+        }
+      ]
+    },
+    {
+      "id": "offtake-en",
+      "language": "en",
+      "question": "What off-take purchase right was granted to the Department of State?",
+      "sources": [
+        "white-house"
+      ],
+      "expected": [
+        {
+          "source": "white-house",
+          "quote": "guaranteed 20% of the off-take"
+        }
+      ],
+      "evidence_recall": 1.0,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "top1_relevant": true,
+      "retrieved_count": 3,
+      "retrieval_ms_samples": [
+        0.3528000006554066,
+        0.3210000004401081,
+        0.32079999982670415,
+        0.3588999998100917,
+        0.32249999912892235,
+        0.3422999998292653,
+        0.34020000020973384,
+        0.3589999996620463,
+        1.773299999513256,
+        0.6043000003046473,
+        0.6872000003568246,
+        0.5159000002095127,
+        0.42949999988195486,
+        0.46320000001287553,
+        0.41260000034526456,
+        0.3972999993493431,
+        0.39170000036392594,
+        0.4357999996500439,
+        0.42050000047311187,
+        0.4700999998021871
+      ],
+      "retrieved": [
+        {
+          "source": "white-house",
+          "chunk_id": "2:6",
+          "body": "NABEP has granted the U.S. Department of State the right to purchase, at production cost, a guaranteed 20% of the off-take from all current and future fields NABEP will operate."
+        },
+        {
+          "source": "white-house",
+          "chunk_id": "2:5",
+          "body": "At no cost to the American taxpayer, NABEP has granted the U.S. Department of War’s Office of Strategic Capital a 35% equity stake in its corporate parent."
+        },
+        {
+          "source": "white-house",
+          "chunk_id": "2:4",
+          "body": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels."
+        }
+      ]
+    },
+    {
+      "id": "fields-en",
+      "language": "en",
+      "question": "How many oil fields and how long are the concessions?",
+      "sources": [
+        "white-house"
+      ],
+      "expected": [
+        {
+          "source": "white-house",
+          "quote": "100-year concessions for 17 oil fields"
+        }
+      ],
+      "evidence_recall": 1.0,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "top1_relevant": true,
+      "retrieved_count": 5,
+      "retrieval_ms_samples": [
+        5.587200000263692,
+        0.4107999993721023,
+        0.3775000004679896,
+        0.37059999976918334,
+        0.37309999970602803,
+        0.39120000019465806,
+        0.38219999987632036,
+        0.38159999985509785,
+        0.35850000040227314,
+        0.40210000042861793,
+        0.31680000029155053,
+        0.32809999993332895,
+        0.6963999994695769,
+        0.6313000003501656,
+        0.5842000000484404,
+        0.5221999999776017,
+        0.661000000036438,
+        0.5681000002368819,
+        0.5006999999750406,
+        0.44299999990471406
+      ],
+      "retrieved": [
+        {
+          "source": "white-house",
+          "chunk_id": "2:4",
+          "body": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels."
+        },
+        {
+          "source": "white-house",
+          "chunk_id": "2:6",
+          "body": "NABEP has granted the U.S. Department of State the right to purchase, at production cost, a guaranteed 20% of the off-take from all current and future fields NABEP will operate."
+        },
+        {
+          "source": "white-house",
+          "chunk_id": "2:0",
+          "body": "Fact Sheet: President Donald J. Trump Announces Historic Oil Agreement to Secure American Energy Dominance and Drive Venezuela’s Economic Recovery"
+        },
+        {
+          "source": "white-house",
+          "chunk_id": "2:7",
+          "body": "NABEP has developed an ambitious plan to rapidly scale production by investing up to $100 billion in new oil infrastructure in Venezuela."
+        },
+        {
+          "source": "white-house",
+          "chunk_id": "2:3",
+          "body": "In the biggest oil deal in world history, President Donald J. Trump has secured U.S. majority control of more than 65 billion barrels of proven oil reserves in Venezuela – vastly expanding our current U.S. territorial proven reserves of roughly 46 billion barrels. This deal secures our energy dominance for the next century—all at zero cost to the United States."
+        }
+      ]
+    },
+    {
+      "id": "investment-en",
+      "language": "en",
+      "question": "What investment in new oil infrastructure is planned?",
+      "sources": [
+        "white-house",
+        "ap"
+      ],
+      "expected": [
+        {
+          "source": "white-house",
+          "quote": "$100 billion in new oil infrastructure"
+        },
+        {
+          "source": "ap",
+          "quote": "$100 billion in new oil infrastructure"
+        }
+      ],
+      "evidence_recall": 1.0,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "top1_relevant": true,
+      "retrieved_count": 6,
+      "retrieval_ms_samples": [
+        0.4582999999911408,
+        0.5045999996582395,
+        0.3937999999834574,
+        0.41119999968941556,
+        0.39120000019465806,
+        0.40300000000570435,
+        0.43290000030538067,
+        0.4407999995237333,
+        0.4820000003746827,
+        0.4388999996081111,
+        0.45030000001133885,
+        2.544800000578107,
+        0.5012999999962631,
+        0.3865999997287872,
+        0.4123999997318606,
+        0.35660000048665097,
+        0.37179999981162837,
+        0.38889999996172264,
+        0.3860000006170594,
+        0.3750000005311449
+      ],
+      "retrieved": [
+        {
+          "source": "ap",
+          "chunk_id": "3:4",
+          "body": "Betancourt's company has agreed to put up $100 billion in new oil infrastructure investments."
+        },
+        {
+          "source": "white-house",
+          "chunk_id": "2:7",
+          "body": "NABEP has developed an ambitious plan to rapidly scale production by investing up to $100 billion in new oil infrastructure in Venezuela."
+        },
+        {
+          "source": "ap",
+          "chunk_id": "3:6",
+          "body": "Sen. Jack Reed said a deal that uses the military to boost a private oil venture should be rejected."
+        },
+        {
+          "source": "white-house",
+          "chunk_id": "2:4",
+          "body": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels."
+        },
+        {
+          "source": "ap",
+          "chunk_id": "3:0",
+          "body": "The White House on Monday said it's partnering with North American Blue Energy Partners as part of President Donald Trump's push to tap into Venezuela's oil industry."
+        },
+        {
+          "source": "ap",
+          "chunk_id": "3:2",
+          "body": "Venezuela's acting President Delcy Rodríguez is giving the company 100-year rights over 17 oil fields with proven reserves of 65 billion barrels. Many of those fields were previously owned by Russian or Chinese firms, the White House said."
+        }
+      ]
+    },
+    {
+      "id": "reserve-scope-en",
+      "language": "en",
+      "question": "What are the current U.S. territorial proven reserves?",
+      "sources": [
+        "white-house"
+      ],
+      "expected": [
+        {
+          "source": "white-house",
+          "quote": "territorial proven reserves of roughly 46 billion barrels"
+        }
+      ],
+      "evidence_recall": 1.0,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "top1_relevant": true,
+      "retrieved_count": 3,
+      "retrieval_ms_samples": [
+        0.27520000003278255,
+        0.242400000388443,
+        0.24759999996604165,
+        0.22050000006856862,
+        0.2176000007239054,
+        0.22030000036465935,
+        1.6734999999243882,
+        0.4515000000537839,
+        0.3464999999778229,
+        0.3961000002163928,
+        0.2948000001197215,
+        0.311100000544684,
+        0.30330000026879134,
+        0.4061999998157262,
+        0.3713000005518552,
+        0.3097000007983297,
+        0.24540000049455557,
+        0.2472000005582231,
+        0.30849999984639,
+        0.3020000003743917
+      ],
+      "retrieved": [
+        {
+          "source": "white-house",
+          "chunk_id": "2:3",
+          "body": "In the biggest oil deal in world history, President Donald J. Trump has secured U.S. majority control of more than 65 billion barrels of proven oil reserves in Venezuela – vastly expanding our current U.S. territorial proven reserves of roughly 46 billion barrels. This deal secures our energy dominance for the next century—all at zero cost to the United States."
+        },
+        {
+          "source": "white-house",
+          "chunk_id": "2:4",
+          "body": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels."
+        },
+        {
+          "source": "white-house",
+          "chunk_id": "2:6",
+          "body": "NABEP has granted the U.S. Department of State the right to purchase, at production cost, a guaranteed 20% of the off-take from all current and future fields NABEP will operate."
+        }
+      ]
+    },
+    {
+      "id": "bond-en",
+      "language": "en",
+      "question": "Which license concerns the bond transactions?",
+      "sources": [
+        "ofac"
+      ],
+      "expected": [
+        {
+          "source": "ofac",
+          "quote": "General License 5Y"
+        }
+      ],
+      "evidence_recall": 1.0,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "top1_relevant": true,
+      "retrieved_count": 6,
+      "retrieval_ms_samples": [
+        0.3541999994922662,
+        0.36920000002282904,
+        0.33489999987068586,
+        0.33970000004046597,
+        0.3699000008055009,
+        0.505199999679462,
+        0.4554999995889375,
+        0.38669999958074186,
+        0.7097000006979215,
+        0.6207999995240243,
+        1.234899999872141,
+        0.5326000000422937,
+        0.47760000052221585,
+        0.6018999993102625,
+        0.716900000043097,
+        0.5025999998906627,
+        0.40379999973083613,
+        0.32000000010157237,
+        0.36949999957869295,
+        0.35260000004200265
+      ],
+      "retrieved": [
+        {
+          "source": "ofac",
+          "chunk_id": "1:4",
+          "body": "Venezuela General License 5Y- Authorizing Certain Transactions Related to the Petróleos de Venezuela, S.A. 2020 8.5 Percent Bond on or After September 17, 2026 (August 03, 2026)"
+        },
+        {
+          "source": "ofac",
+          "chunk_id": "1:13",
+          "body": "Venezuela General License 52B- Authorizing Certain Transactions Involving Petróleos de Venezuela, S.A. (August 27, 2026)"
+        },
+        {
+          "source": "ofac",
+          "chunk_id": "1:6",
+          "body": "Venezuela General License 30B- Authorizing Certain Transactions Necessary to Port and Airport Operations (February 10, 2026)"
+        },
+        {
+          "source": "ofac",
+          "chunk_id": "1:5",
+          "body": "Venezuela General License 24A- Certain Transactions Involving the Government of Venezuela Related to Telecommunications and Mail Authorized (June 18, 2026)"
+        },
+        {
+          "source": "ofac",
+          "chunk_id": "1:11",
+          "body": "Venezuela General License 50C- Authorizing Transactions Related to Oil or Gas Sector Operations in Venezuela of Certain Entities (August 27, 2026)"
+        },
+        {
+          "source": "ofac",
+          "chunk_id": "1:7",
+          "body": "Venezuela General License 46D- Authorizing Certain Activities Involving Venezuelan-Origin Oil or Petrochemical Products (August 27, 2026)"
+        }
+      ]
+    },
+    {
+      "id": "ports-en",
+      "language": "en",
+      "question": "Which license mentions port and airport operations?",
+      "sources": [
+        "ofac"
+      ],
+      "expected": [
+        {
+          "source": "ofac",
+          "quote": "General License 30B"
+        }
+      ],
+      "evidence_recall": 1.0,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "top1_relevant": true,
+      "retrieved_count": 6,
+      "retrieval_ms_samples": [
+        0.3997000003437279,
+        1.634399999602465,
+        0.7894000000305823,
+        0.719300000127987,
+        1.2093999994249316,
+        0.46070000007603085,
+        0.4295999997339095,
+        0.5377999996198923,
+        0.47759999961272115,
+        2.317399999810732,
+        0.430400000368536,
+        0.35119999938615365,
+        0.3363999994689948,
+        0.36329999966255855,
+        0.3600999998525367,
+        0.32610000016575214,
+        0.32610000016575214,
+        0.32420000025012996,
+        0.32300000020768493,
+        0.32300000020768493
+      ],
+      "retrieved": [
+        {
+          "source": "ofac",
+          "chunk_id": "1:6",
+          "body": "Venezuela General License 30B- Authorizing Certain Transactions Necessary to Port and Airport Operations (February 10, 2026)"
+        },
+        {
+          "source": "ofac",
+          "chunk_id": "1:11",
+          "body": "Venezuela General License 50C- Authorizing Transactions Related to Oil or Gas Sector Operations in Venezuela of Certain Entities (August 27, 2026)"
+        },
+        {
+          "source": "ofac",
+          "chunk_id": "1:14",
+          "body": "Venezuela General License 54C- Authorizing the Supply of Certain Items and Services for Coal or Minerals Operations in Venezuela (September 02, 2026)"
+        },
+        {
+          "source": "ofac",
+          "chunk_id": "1:13",
+          "body": "Venezuela General License 52B- Authorizing Certain Transactions Involving Petróleos de Venezuela, S.A. (August 27, 2026)"
+        },
+        {
+          "source": "ofac",
+          "chunk_id": "1:7",
+          "body": "Venezuela General License 46D- Authorizing Certain Activities Involving Venezuelan-Origin Oil or Petrochemical Products (August 27, 2026)"
+        },
+        {
+          "source": "ofac",
+          "chunk_id": "1:8",
+          "body": "Venezuela General License 47B- Authorizing the Sale of U.S.-Origin Diluents to Venezuela (August 27, 2026)"
+        }
+      ]
+    },
+    {
+      "id": "operator-scope-en",
+      "language": "en",
+      "question": "Who is the second largest operator behind Chevron?",
+      "sources": [
+        "ap"
+      ],
+      "expected": [
+        {
+          "source": "ap",
+          "quote": "second largest operator in Venezuela, behind Chevron"
+        }
+      ],
+      "evidence_recall": 1.0,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "top1_relevant": true,
+      "retrieved_count": 1,
+      "retrieval_ms_samples": [
+        0.2858000007108785,
+        0.26479999996809056,
+        0.25520000053802505,
+        0.2537000000302214,
+        0.24560000019846484,
+        0.24470000062137842,
+        0.2524999999877764,
+        0.25920000007317867,
+        0.24119999943650328,
+        0.23289999990083743,
+        0.24279999979626155,
+        0.23439999949914636,
+        0.23670000064157648,
+        0.23379999947792385,
+        0.23079999937181128,
+        4.652999999962049,
+        0.3660000002128072,
+        0.2961000000141212,
+        0.28449999990698416,
+        0.2438000001347973
+      ],
+      "retrieved": [
+        {
+          "source": "ap",
+          "chunk_id": "3:1",
+          "body": "As part of the deal, the U.S. is creating a private company as a joint venture with NABEP — a detail the White House had withheld for days. NABEP, owned by Venezuelan businessman Alejandro Betancourt, is already the second largest operator in Venezuela, behind Chevron."
+        }
+      ]
+    },
+    {
+      "id": "risk-en",
+      "language": "en",
+      "question": "What political risk and delay do advisers and analysts mention?",
+      "sources": [
+        "ap"
+      ],
+      "expected": [
+        {
+          "source": "ap",
+          "quote": "it could take years"
+        }
+      ],
+      "evidence_recall": 1.0,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0,
+      "top1_relevant": true,
+      "retrieved_count": 1,
+      "retrieval_ms_samples": [
+        0.2365000000281725,
+        0.2612999996927101,
+        0.2237999997305451,
+        0.23500000042986358,
+        0.2217999999629683,
+        0.21459999970829813,
+        0.21050000032118987,
+        0.21319999996194383,
+        0.2128000005541253,
+        0.22530000023834873,
+        0.21800000013172394,
+        1.4658999998573563,
+        0.32300000020768493,
+        0.26669999988371274,
+        0.26669999988371274,
+        0.22910000006959308,
+        0.24610000036773272,
+        0.22989999979472486,
+        0.22699999954056693,
+        0.22119999994174577
+      ],
+      "retrieved": [
+        {
+          "source": "ap",
+          "chunk_id": "3:5",
+          "body": "Former U.S. government energy advisers have cautioned that the deal comes with political risk. Analysts say it could take years to turn around Venezuela's dilapidated energy sector."
+        }
+      ]
+    },
+    {
+      "id": "royalties-es",
+      "language": "es",
+      "question": "¿Cuántas regalías e impuestos se esperan y durante cuántos años?",
+      "sources": [
+        "white-house"
+      ],
+      "expected": [
+        {
+          "source": "white-house",
+          "quote": "$200 billion in royalty and tax payments"
+        }
+      ],
+      "evidence_recall": 0.0,
+      "first_relevant_rank": null,
+      "reciprocal_rank": 0,
+      "top1_relevant": false,
+      "retrieved_count": 0,
+      "retrieval_ms_samples": [
+        0.1474999999118154,
+        0.15129999974305974,
+        0.1453000004403293,
+        0.13350000062928302,
+        0.15449999955308158,
+        0.1360000005661277,
+        0.13140000010025688,
+        0.1249999995707185,
+        0.12680000054388074,
+        0.12799999967683107,
+        0.1305999994656304,
+        0.1202000003104331,
+        0.12659999993047677,
+        0.1236000007338589,
+        0.12089999927411554,
+        0.12309999965509633,
+        0.14829999963694718,
+        0.15410000014526304,
+        0.12689999948634068,
+        0.12340000012045493
+      ],
+      "retrieved": []
+    },
+    {
+      "id": "ports-es",
+      "language": "es",
+      "question": "¿Qué licencia autoriza operaciones de puertos y aeropuertos?",
+      "sources": [
+        "ofac"
+      ],
+      "expected": [
+        {
+          "source": "ofac",
+          "quote": "General License 30B"
+        }
+      ],
+      "evidence_recall": 0.0,
+      "first_relevant_rank": null,
+      "reciprocal_rank": 0,
+      "top1_relevant": false,
+      "retrieved_count": 0,
+      "retrieval_ms_samples": [
+        0.1731000002109795,
+        0.12240000069141388,
+        0.10969999948429177,
+        0.12739999965560855,
+        0.11619999986578478,
+        0.13750000016443664,
+        0.11610000001383014,
+        0.10729999939940171,
+        0.11150000045745401,
+        0.10750000001280569,
+        0.1111999999920954,
+        0.11390000054234406,
+        0.10759999986476032,
+        0.12659999993047677,
+        0.1173999999082298,
+        0.10409999958937988,
+        0.10040000051958486,
+        0.10939999992842786,
+        0.10620000011840602,
+        0.10439999914524378
+      ],
+      "retrieved": []
+    },
+    {
+      "id": "risk-fr",
+      "language": "fr",
+      "question": "Quels risques politiques et délais évoquent les analystes?",
+      "sources": [
+        "ap"
+      ],
+      "expected": [
+        {
+          "source": "ap",
+          "quote": "it could take years"
+        }
+      ],
+      "evidence_recall": 0.0,
+      "first_relevant_rank": null,
+      "reciprocal_rank": 0,
+      "top1_relevant": false,
+      "retrieved_count": 0,
+      "retrieval_ms_samples": [
+        0.13339999986783369,
+        0.13529999978345586,
+        0.1364999998259009,
+        0.12820000029023504,
+        0.12569999944389565,
+        0.12339999921096023,
+        2.5867000003927387,
+        0.31630000012228265,
+        0.1878000002761837,
+        0.16529999993508682,
+        0.1733999997668434,
+        0.194500000361586,
+        0.12629999946511816,
+        0.12119999973947415,
+        0.12270000024727779,
+        0.12129999959142879,
+        0.12100000003556488,
+        0.11999999969702912,
+        0.11929999982385198,
+        0.146399999721325
+      ],
+      "retrieved": []
+    },
+    {
+      "id": "missing-payroll",
+      "language": "en",
+      "question": "What is NABEP's audited payroll?",
+      "sources": [
+        "ap",
+        "white-house",
+        "ofac"
+      ],
+      "expected": [],
+      "reason": "No payroll or payroll audit appears in the stored excerpts.",
+      "evidence_recall": null,
+      "first_relevant_rank": null,
+      "reciprocal_rank": 0,
+      "top1_relevant": null,
+      "retrieved_count": 6,
+      "retrieval_ms_samples": [
+        0.548200000594079,
+        0.294200000098499,
+        0.26670000079320744,
+        0.24089999988063937,
+        0.230599999667902,
+        0.255299999480485,
+        0.23770000007061753,
+        0.23469999996450497,
+        0.23719999990134966,
+        0.246300000071642,
+        0.2718999994613114,
+        0.24959999973361846,
+        0.2395999999862397,
+        0.2389999999650172,
+        0.2643999996507773,
+        0.23099999998521525,
+        0.22950000038690632,
+        0.22530000023834873,
+        0.2420999999230844,
+        0.22590000025957124
+      ],
+      "retrieved": [
+        {
+          "source": "white-house",
+          "chunk_id": "2:6",
+          "body": "NABEP has granted the U.S. Department of State the right to purchase, at production cost, a guaranteed 20% of the off-take from all current and future fields NABEP will operate."
+        },
+        {
+          "source": "ap",
+          "chunk_id": "3:1",
+          "body": "As part of the deal, the U.S. is creating a private company as a joint venture with NABEP — a detail the White House had withheld for days. NABEP, owned by Venezuelan businessman Alejandro Betancourt, is already the second largest operator in Venezuela, behind Chevron."
+        },
+        {
+          "source": "white-house",
+          "chunk_id": "2:7",
+          "body": "NABEP has developed an ambitious plan to rapidly scale production by investing up to $100 billion in new oil infrastructure in Venezuela."
+        },
+        {
+          "source": "white-house",
+          "chunk_id": "2:8",
+          "body": "Under this framework, as it scales production, NABEP will pay an expected $200 billion in royalty and tax payments over the first 25 years."
+        },
+        {
+          "source": "white-house",
+          "chunk_id": "2:5",
+          "body": "At no cost to the American taxpayer, NABEP has granted the U.S. Department of War’s Office of Strategic Capital a 35% equity stake in its corporate parent."
+        },
+        {
+          "source": "white-house",
+          "chunk_id": "2:4",
+          "body": "In connection with this agreement, the Venezuelan interim authorities have granted North American Blue Energy Partners (NABEP), a privately held oil company that is the second-largest private Venezuelan oil producer and a proven operator, 100-year concessions for 17 oil fields with proven reserves of approximately 65 billion barrels."
+        }
+      ]
+    },
+    {
+      "id": "missing-realized-royalties",
+      "language": "en",
+      "question": "How much royalty revenue has actually been received?",
+      "sources": [
+        "white-house"
+      ],
+      "expected": [],
+      "reason": "Expected future payments are not realized receipts.",
+      "evidence_recall": null,
+      "first_relevant_rank": null,
+      "reciprocal_rank": 0,
+      "top1_relevant": null,
+      "retrieved_count": 1,
+      "retrieval_ms_samples": [
+        0.2389999999650172,
+        0.23179999971034704,
+        0.23710000004939502,
+        0.23129999954107916,
+        0.22150000040710438,
+        0.45990000035089906,
+        0.2899000000979868,
+        0.23879999935161322,
+        0.2294000005349517,
+        0.2519999998185085,
+        0.22280000030150404,
+        0.22050000006856862,
+        0.22019999960321002,
+        0.22009999975125538,
+        0.25180000011459924,
+        0.22779999926569872,
+        0.2217999999629683,
+        0.23830000009184005,
+        0.2386999994996586,
+        0.294200000098499
+      ],
+      "retrieved": [
+        {
+          "source": "white-house",
+          "chunk_id": "2:8",
+          "body": "Under this framework, as it scales production, NABEP will pay an expected $200 billion in royalty and tax payments over the first 25 years."
+        }
+      ]
+    },
+    {
+      "id": "missing-license-endorsement",
+      "language": "en",
+      "question": "Which OFAC license names NABEP?",
+      "sources": [
+        "ofac"
+      ],
+      "expected": [],
+      "reason": "The stored license titles do not name NABEP; this does not establish legal ineligibility.",
+      "evidence_recall": null,
+      "first_relevant_rank": null,
+      "reciprocal_rank": 0,
+      "top1_relevant": null,
+      "retrieved_count": 6,
+      "retrieval_ms_samples": [
+        0.4179999996267725,
+        0.4275999999663327,
+        0.38330000006681075,
+        0.3800000004048343,
+        1.701600000160397,
+        0.5415999994511367,
+        0.5695999998351908,
+        0.5348000004232745,
+        0.38919999951758655,
+        0.39259999994101236,
+        0.34640000012586825,
+        0.3476000001683133,
+        0.39280000055441633,
+        0.3129999995508115,
+        0.3169999999954598,
+        0.31369999942398863,
+        0.3159000007144641,
+        0.3250999998272164,
+        6.766999999854306,
+        0.5749000001742388
+      ],
+      "retrieved": [
+        {
+          "source": "ofac",
+          "chunk_id": "1:13",
+          "body": "Venezuela General License 52B- Authorizing Certain Transactions Involving Petróleos de Venezuela, S.A. (August 27, 2026)"
+        },
+        {
+          "source": "ofac",
+          "chunk_id": "1:6",
+          "body": "Venezuela General License 30B- Authorizing Certain Transactions Necessary to Port and Airport Operations (February 10, 2026)"
+        },
+        {
+          "source": "ofac",
+          "chunk_id": "1:7",
+          "body": "Venezuela General License 46D- Authorizing Certain Activities Involving Venezuelan-Origin Oil or Petrochemical Products (August 27, 2026)"
+        },
+        {
+          "source": "ofac",
+          "chunk_id": "1:8",
+          "body": "Venezuela General License 47B- Authorizing the Sale of U.S.-Origin Diluents to Venezuela (August 27, 2026)"
+        },
+        {
+          "source": "ofac",
+          "chunk_id": "1:9",
+          "body": "Venezuela General License 48C- Authorizing the Supply of Certain Items and Services to Venezuela (August 27, 2026)"
+        },
+        {
+          "source": "ofac",
+          "chunk_id": "1:12",
+          "body": "Venezuela General License 51D- Authorizing Certain Activities Involving Venezuelan-Origin Coal or Minerals, Including Gold (September 02, 2026)"
+        }
+      ]
+    },
+    {
+      "id": "missing-weather",
+      "language": "en",
+      "question": "What snowfall depth was recorded in Oslo?",
+      "sources": [
+        "ap",
+        "white-house",
+        "ofac"
+      ],
+      "expected": [],
+      "reason": "No weather evidence appears in these excerpts.",
+      "evidence_recall": null,
+      "first_relevant_rank": null,
+      "reciprocal_rank": 0,
+      "top1_relevant": null,
+      "retrieved_count": 0,
+      "retrieval_ms_samples": [
+        0.1551000004837988,
+        0.12140000035287812,
+        0.11749999976018444,
+        0.1140000003942987,
+        0.11059999997087289,
+        0.1247000000148546,
+        0.10759999986476032,
+        0.1322999996773433,
+        0.09409999984200113,
+        0.09500000032858225,
+        0.09529999988444615,
+        0.09330000011686934,
+        0.08870000056049321,
+        0.09489999956713291,
+        0.09349999982077861,
+        0.12370000058581354,
+        0.09509999927104218,
+        0.11999999969702912,
+        0.09090000003197929,
+        0.09170000066660577
+      ],
+      "retrieved": []
+    }
+  ]
+}

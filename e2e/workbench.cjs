@@ -28,6 +28,8 @@ async function noOverflow(page){assert(await page.evaluate(()=>document.document
 async function workflow(width, height){
   const page=await browser.newPage({viewport:{width,height}}), errors=[];page.on("pageerror",err=>errors.push(err.message));
   await page.goto(staticUrl+"?mode=recorded");await stable(page);assert.equal(await page.locator("#mode").innerText(),"Recorded replay");
+  assert(await page.locator('#recorded-instructions').isVisible());
+  assert(!(await page.locator('#live-instructions').isVisible()));
   assert.equal(await page.locator("#claims tbody tr").count(),16);await noOverflow(page);
   await page.screenshot({path:path.join(output,`desktop-${width}.png`),fullPage:true});
   await page.locator("#search").fill("royalties");assert.equal(await page.locator("#claims tbody tr").count(),1);

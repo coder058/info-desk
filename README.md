@@ -91,6 +91,8 @@ The default model request timeout is an uncalibrated resource budget, not a late
 
 ## Engineering decisions
 
+[Retrieval evaluation](evals/README.md): a reproducible development set with evidence annotations, cross-language misses and unanswerable questions. The baseline and complete returned passages are committed; CI reruns it without network or model calls. Retrieval metrics are not generated-answer accuracy.
+
 | Component | Depends on | Produces / enforces |
 |---|---|---|
 | `sources.py`, `tools.py` | Allowlisted stored excerpts | Capture metadata and controlled reads; editorial additions excluded from evidence |

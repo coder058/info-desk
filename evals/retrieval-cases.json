@@ -1,0 +1,22 @@
+{
+  "description": "Human-authored development questions over the repository's dated PUBLIC_RECORDING excerpts. Not live data, a held-out benchmark or verified publisher claims. Negative cases are unanswerable from these excerpts only.",
+  "cases": [
+    {"id":"royalties-en","language":"en","question":"What royalty and tax payments does the fact sheet expect?","sources":["white-house"],"expected":[{"source":"white-house","quote":"$200 billion in royalty and tax payments"}]},
+    {"id":"equity-en","language":"en","question":"What equity stake was granted to the Office of Strategic Capital?","sources":["white-house","ap"],"expected":[{"source":"white-house","quote":"35% equity stake"},{"source":"ap","quote":"35% ownership stake"}]},
+    {"id":"offtake-en","language":"en","question":"What off-take purchase right was granted to the Department of State?","sources":["white-house"],"expected":[{"source":"white-house","quote":"guaranteed 20% of the off-take"}]},
+    {"id":"fields-en","language":"en","question":"How many oil fields and how long are the concessions?","sources":["white-house"],"expected":[{"source":"white-house","quote":"100-year concessions for 17 oil fields"}]},
+    {"id":"investment-en","language":"en","question":"What investment in new oil infrastructure is planned?","sources":["white-house","ap"],"expected":[{"source":"white-house","quote":"$100 billion in new oil infrastructure"},{"source":"ap","quote":"$100 billion in new oil infrastructure"}]},
+    {"id":"reserve-scope-en","language":"en","question":"What are the current U.S. territorial proven reserves?","sources":["white-house"],"expected":[{"source":"white-house","quote":"territorial proven reserves of roughly 46 billion barrels"}]},
+    {"id":"bond-en","language":"en","question":"Which license concerns the bond transactions?","sources":["ofac"],"expected":[{"source":"ofac","quote":"General License 5Y"}]},
+    {"id":"ports-en","language":"en","question":"Which license mentions port and airport operations?","sources":["ofac"],"expected":[{"source":"ofac","quote":"General License 30B"}]},
+    {"id":"operator-scope-en","language":"en","question":"Who is the second largest operator behind Chevron?","sources":["ap"],"expected":[{"source":"ap","quote":"second largest operator in Venezuela, behind Chevron"}]},
+    {"id":"risk-en","language":"en","question":"What political risk and delay do advisers and analysts mention?","sources":["ap"],"expected":[{"source":"ap","quote":"it could take years"}]},
+    {"id":"royalties-es","language":"es","question":"¿Cuántas regalías e impuestos se esperan y durante cuántos años?","sources":["white-house"],"expected":[{"source":"white-house","quote":"$200 billion in royalty and tax payments"}]},
+    {"id":"ports-es","language":"es","question":"¿Qué licencia autoriza operaciones de puertos y aeropuertos?","sources":["ofac"],"expected":[{"source":"ofac","quote":"General License 30B"}]},
+    {"id":"risk-fr","language":"fr","question":"Quels risques politiques et délais évoquent les analystes?","sources":["ap"],"expected":[{"source":"ap","quote":"it could take years"}]},
+    {"id":"missing-payroll","language":"en","question":"What is NABEP's audited payroll?","sources":["ap","white-house","ofac"],"expected":[],"reason":"No payroll or payroll audit appears in the stored excerpts."},
+    {"id":"missing-realized-royalties","language":"en","question":"How much royalty revenue has actually been received?","sources":["white-house"],"expected":[],"reason":"Expected future payments are not realized receipts."},
+    {"id":"missing-license-endorsement","language":"en","question":"Which OFAC license names NABEP?","sources":["ofac"],"expected":[],"reason":"The stored license titles do not name NABEP; this does not establish legal ineligibility."},
+    {"id":"missing-weather","language":"en","question":"What snowfall depth was recorded in Oslo?","sources":["ap","white-house","ofac"],"expected":[],"reason":"No weather evidence appears in these excerpts."}
+  ]
+}

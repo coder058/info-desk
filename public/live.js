@@ -8,6 +8,10 @@ function setDeskMode(mode){
   const isLive=mode==="live";live.enabled=isLive;$("live-workspace").hidden=!isLive;$("workspace").hidden=isLive;
   $("open-live").setAttribute("aria-pressed",String(isLive));$("open-recorded").setAttribute("aria-pressed",String(!isLive));
   $("mode").textContent=isLive?"Live research":"Recorded case";
+  $("recorded-instructions").hidden=isLive;$("live-instructions").hidden=!isLive;
+  $("intro-purpose").textContent=isLive
+    ?"Collect official energy and sanctions updates, ask a focused question and inspect the evidence behind the draft answer."
+    :"Compare the claims in dated OFAC, White House and AP excerpts. Open the source quotations and export your review.";
   if(!isLive)window.loadRecordedDesk();
   if(isLive&&!live.ready)bootLive();
   if(!isLive){clearTimeout(live.timer);live.timer=null;}else if(live.ready)scheduleSync();
