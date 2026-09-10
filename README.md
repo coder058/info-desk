@@ -18,7 +18,7 @@ Two workspaces, never mixed. **Live research** uses actual EIA RSS, Federal Regi
 | Federal Register / OFAC | Recent notice metadata and available abstracts | [Official API](https://www.federalregister.gov/developers/documentation/api/v1) |
 | OFAC Venezuela | Current general-license titles, not full license conditions | [Official program page](https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions) |
 
-The model receives retrieved text and a structured output schema. Unknown citations, quotes absent from the retrieved passage and numbers not found in the cited quotation reject the answer. No retrieved evidence means no model call. These checks establish traceability, **not semantic entailment or legal correctness**. Generation failures stay visible; they do not silently become heuristic answers.
+The model receives retrieved text as exact excerpts with reference IDs and a structured output schema. It returns statements and selected IDs; Python attaches the quotations without asking the model to recopy them. Unknown references, quotes absent from the retrieved passage and numbers not found in the cited quotation reject the answer. No retrieved evidence means no model call. These checks establish traceability, **not semantic entailment or legal correctness**. Generation failures stay visible; they do not silently become heuristic answers.
 
 If a statement names a year found only in the retrieved title of the same document version, the validator can attach that exact title as a second citation. The added reference is disclosed; a missing quantity or unrelated document cannot be used this way.
 
@@ -84,6 +84,10 @@ python -m infodesk.app
 ```
 
 In **Live research**, choose **AI brief with citations**. Live failures stay failed and retain retrieved passages. The CPU-model output is bounded to two short statements; the request deadline is an uncalibrated resource budget, not a speed guarantee.
+
+Answers expose client wall time separately from Ollama's reported loading, prompt-processing and generation timings. Missing provider measurements are omitted, never assumed zero. To profile a previously captured job without fetching fresh sources, run `python -m infodesk.profile_model --capture test-results/live-real-job.json --output test-results/model-profile.json`. This manual command accepts only a loopback Ollama endpoint, uses the already configured model and does not install one. Captured evidence and run results stay in the ignored `test-results/` directory.
+
+[Citation-reference optimization](docs/citation-reference-optimization-2026-09-10.md) explains the schema change, observed before/after runs and the limits of those measurements.
 
 In the separate **Recorded case**, select **Model-assisted finding order**, then compare. That older workflow only reorders findings and reports its own deterministic fallback explicitly.
 
