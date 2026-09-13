@@ -10,8 +10,6 @@ from .connectors import FEEDS
 from .sources import SOURCES
 
 LIVE_SOURCE_IDS = tuple(FEEDS)
-RECORDED_SOURCE_IDS = tuple(SOURCES)
-CLAIM_IDS = tuple(item[0] for item in CLAIMS)
 
 _bound_store = None
 
