@@ -67,6 +67,43 @@ python -m infodesk.app
 
 Open **http://127.0.0.1:8000/**. The local database defaults to `data/desk.sqlite3` and survives restarts. Override its path with `INFODESK_DB`. There is no automatic `.env` loader; set variables in your shell.
 
+### Connect in Cursor
+
+The same local tools are available over MCP stdio. GitHub Pages has no MCP server and does not pretend to.
+
+```json
+{
+  "mcpServers": {
+    "info-desk": {
+      "command": "python",
+      "args": ["-m", "infodesk.mcp_server"],
+      "cwd": "/absolute/path/to/info-desk",
+      "env": {
+        "INFODESK_DB": "/absolute/path/to/info-desk/data/desk.sqlite3"
+      }
+    }
+  }
+}
+```
+
+Point `command` at the virtualenv interpreter that has `pip install -e ".[dev]"` installed. After the local app has captured live documents, `search_sources` reuses that Haystack BM25 index. `get_claim` reads the recorded claim table. `propose_write` inserts a pending draft only.
+
+List the same tools from the running local API:
+
+```powershell
+curl -s http://127.0.0.1:8000/api/mcp/tools
+```
+
+#### MCP checklist
+
+| Check | What is actually true |
+|---|---|
+| Auth | Loopback FastAPI + stdio. No API key, login, or hosted MCP. Trusted-Host still rejects unexpected Host headers. |
+| Tool schema | Extra fields (`approve`, unknown names) and missing required fields return a visible 422/tool error. |
+| Writes need `approve()` | `propose_write` cannot approve itself. `POST /api/drafts/{id}/decide` or `store.approve()` writes the note. |
+| 429 / timeout | `search_sources` surfaces existing live-check 429/timeout details. It does not invent a successful fetch. |
+| Eval / harness | Recorded harness, Pages replay JSON and retrieval eval stay on their existing paths. MCP is local/live only. |
+
 To preview only the public replay:
 
 ```powershell
@@ -102,6 +139,7 @@ The default model request timeout is an uncalibrated resource budget, not a late
 | `sources.py`, `tools.py` | Allowlisted stored excerpts | Capture metadata and controlled reads; editorial additions excluded from evidence |
 | `extract.py`, `claims.py` | Curated claim rules + analysed source text | Claim cells, named quantities and attribution; absence is not denial |
 | `haystack_retrieval.py` | Latest captured `live_chunks` rows | Haystack `Document` + `InMemoryBM25Retriever` Pipeline; lexical ranking only |
+| `mcp_tools.py`, `mcp_server.py` | Live store + recorded claims | stdio/HTTP MCP: `search_sources`, `get_claim`, `propose_write`; no self-approve |
 | `interpret.py` | Evidence-backed findings; optional Ollama | Deterministic memo and bounded finding ordering |
 | `validate.py`, `policy.py` | Quantities, licenses, configured instruction-pattern checks | Release guard; no model-controlled database write |
 | `store.py` | SQLite transactions and conditional status updates | Persistent run snapshots, deduplication by complete draft identity, atomic approval and note insertion |
@@ -125,6 +163,8 @@ The local API binds to loopback, rejects unexpected Host headers and cross-origi
 | `POST /api/drafts/{id}/decide` | `{"decision":"approve"}` or `{"decision":"reject"}` |
 | `GET /api/db` | Current local ledger state |
 | `GET /api/harness` | Isolated regression evaluation, not mutations to your ledger |
+| `GET /api/mcp/tools` | List local MCP tools and input schemas |
+| `POST /api/mcp/tools/{name}` | Invoke one listed tool; `propose_write` still needs human `approve()` |
 
 All supplied public-source cases currently produce `hold` or `verify_first`; the UI correctly prevents approval. Positive approval, rejection, replay and concurrency paths are exercised with clearly labelled SYNTHETIC tests. Exporting a memo never approves a note.
 

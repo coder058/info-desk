@@ -14,6 +14,7 @@ dependencies = [
   "beautifulsoup4>=4.12",
   "defusedxml>=0.7",
   "haystack-ai==2.31.0",
+  "mcp==2.2.0",
 ]
 
 [project.optional-dependencies]
@@ -21,6 +22,7 @@ dev = ["pytest>=8.0", "httpx>=0.27"]
 
 [project.scripts]
 info-desk = "infodesk.app:main"
+info-desk-mcp = "infodesk.mcp_server:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -19,6 +19,7 @@ from .store import Store
 from .workbench import analyse
 from .live_store import LiveStore
 from .live_service import LiveRequest, LiveService
+from .mcp_tools import ToolError, bind_store, call_tool, list_tools
 
 ROOT = Path(__file__).resolve().parents[2]
 PUBLIC = ROOT / "public"
@@ -39,6 +40,7 @@ def create_app(db_path: str | Path | None = None) -> FastAPI:
     async def lifespan(app):
         app.state.store = LiveStore(db_path or os.environ.get("INFODESK_DB", str(ROOT / "data" / "desk.sqlite3")))
         app.state.live = LiveService(app.state.store)
+        bind_store(app.state.store)
         try:
             yield
         finally:
@@ -174,6 +176,23 @@ def create_app(db_path: str | Path | None = None) -> FastAPI:
     def harness():
         # Each evaluation uses an isolated in-memory database, never the user's ledger.
         return run_harness()
+
+    @app.get("/api/mcp/tools")
+    def mcp_tools():
+        return {
+            "tools": list_tools(),
+            "transport": ["stdio", "http"],
+            "approval": "propose_write cannot approve. Human approve() writes the note.",
+            "pages": "Recorded GitHub Pages has no MCP server.",
+        }
+
+    @app.post("/api/mcp/tools/{name}")
+    def mcp_call(name: str, body: dict):
+        try:
+            return call_tool(store(), name, body)
+        except ToolError as exc:
+            status = 404 if str(exc).startswith("Unknown tool") else 422
+            raise HTTPException(status, str(exc)) from exc
 
     @app.get("/")
     def index():
