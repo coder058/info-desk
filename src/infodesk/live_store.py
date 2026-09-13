@@ -5,6 +5,7 @@ import re
 from datetime import datetime, timezone
 from uuid import uuid4
 
+from .haystack_retrieval import retrieve_passages
 from .store import Store, serialized
 
 
@@ -119,21 +120,21 @@ class LiveStore(Store):
         tokens = list(dict.fromkeys(word.lower() for word in re.findall(r"[^\W_]+", question, re.UNICODE) if len(word)>2 and word.lower() not in stop))
         if not tokens:
             return []
-        match = " OR ".join('"' + token.replace('"', '""') + '"' for token in tokens)
-        params = [match, *source_ids]
+        params = list(source_ids)
         where = ""
         if document_ids:
             where = " AND d.id IN (" + ",".join("?" for _ in document_ids) + ")"
             params.extend(document_ids)
-        # GUESS: six passages bound CPU-model context. Relevance is not calibrated.
-        return [dict(row) for row in self.conn.execute("""SELECT c.id AS chunk_id, c.body,
+        # Latest captured versions only. Haystack ranks; SQLite does not MATCH here.
+        rows = [dict(row) for row in self.conn.execute("""SELECT c.id AS chunk_id, c.body,
             c.version_id, d.id AS document_id, d.source_id, d.url, d.title,
-            v.received_at, v.published_at, v.text_hash, v.coverage, bm25(live_fts) AS rank
-            FROM live_fts JOIN live_chunks c ON c.id=live_fts.chunk_id
+            v.received_at, v.published_at, v.text_hash, v.coverage
+            FROM live_chunks c
             JOIN live_documents d ON d.id=c.document_id AND d.latest_version=c.version_id
             JOIN live_versions v ON v.id=c.version_id
-            WHERE live_fts MATCH ? AND d.source_id IN (""" + ",".join("?" for _ in source_ids) + ")"
-            + where + " ORDER BY rank, c.id LIMIT 6", params).fetchall()]
+            WHERE d.source_id IN (""" + ",".join("?" for _ in source_ids) + ")"
+            + where + " ORDER BY c.id", params).fetchall()]
+        return retrieve_passages(question, rows)
 
     @serialized
     def new_job(self, kind, request):
