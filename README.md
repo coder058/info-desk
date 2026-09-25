@@ -2,6 +2,20 @@
 
 Live energy and sanctions research: collect official updates, preserve document versions, retrieve evidence and generate short cited AI answers for human review.
 
+**Try it:** [recorded evidence case](https://coder058.github.io/info-desk/). Live research needs the local Python service; it is not running on GitHub Pages.
+
+### What the retrieval evaluation found
+
+The [10 September baseline](evals/retrieval-baseline-2026-09-10.json) tests SQLite FTS5/BM25 against dated recorded excerpts. These are development questions, not a held-out benchmark or live-news accuracy.
+
+| Question group | Observed result | What it means |
+| --- | --- | --- |
+| Answerable questions | Expected evidence ranked first for **10 / 13** | Retrieval success, not generated-answer accuracy. |
+| Spanish/French questions over English sources | Expected evidence ranked first for **0 / 3** | Cross-language retrieval failed in this baseline. |
+| Unanswerable from the excerpts | **3 / 4** still returned passages | A search result does not prove the question can be answered. |
+
+[Reproduce the evaluation](evals/README.md). Citation validation and draft approval are separate checks; these scores do not measure either one. The proposed Haystack/MCP extension is tracked in [PR #1](https://github.com/coder058/info-desk/pull/1), not shipped on `main`.
+
 Two workspaces, never mixed. **Live research** uses actual EIA RSS, Federal Register API and OFAC HTTP responses; it needs the Python backend, so it is the default only when the page is served from localhost. **Recorded case & regression tests** replays dated captures and is the default on GitHub Pages, because that host cannot fetch, persist or run a model. `?mode=live` and `?mode=recorded` override the choice. Recorded output is never presented as live.
 
 ## Live workflow
