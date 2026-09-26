@@ -6,7 +6,7 @@ Run from the repository root:
 python -m infodesk.evaluate_retrieval --output test-results/retrieval-evaluation.json
 ```
 
-This exercises the actual SQLite FTS5/BM25 retriever using an isolated in-memory database. It makes no network requests or model calls and never modifies the live database. CI saves the full result as an artifact.
+This exercises the live Haystack BM25 retriever using captured versions loaded into an isolated in-memory store. It makes no network requests or model calls and never modifies the live database. CI saves the full result as an artifact. The committed baseline JSON below was measured against SQLite FTS5/BM25 on 10 September 2026; CI reruns the same annotations through Haystack and does not treat that file as a pass/fail gate.
 
 ## Dataset and scoring
 

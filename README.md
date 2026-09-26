@@ -22,7 +22,7 @@ Two workspaces, never mixed. **Live research** uses actual EIA RSS, Federal Regi
 
 1. Start the local app (setup below). Source checks run on opening the live workspace, then while the tab is visible and auto-check is enabled. The polling floor is 60 seconds, with longer provider Cache-Control/Retry-After respected. These are publication feeds, not tick streams.
 2. Inspect source status, capture times and publication dates. First-seen documents are labelled new to this installation, not newly published. Errors preserve old evidence with a stale-source warning.
-3. Filter the inbox or select documents. Ask a focused question using **Evidence retrieval only** or **AI brief with citations**. Retrieval uses SQLite FTS5/BM25 over the latest captured document versions.
+3. Filter the inbox or select documents. Ask a focused question using **Evidence retrieval only** or **AI brief with citations**. Retrieval runs a Haystack 2.x BM25 pipeline over the latest captured document versions.
 4. Inspect the returned passages, exact citations and version diffs. AI output is a draft interpretation, not verified truth. No model call occurs on background source refresh.
 5. Export the complete job/evidence JSON. Jobs persist their stages, result and errors; cancellation suppresses acceptance of in-flight results. Restarted unfinished jobs become `interrupted`, never falsely `completed`.
 
@@ -81,6 +81,43 @@ python -m infodesk.app
 
 Open **http://127.0.0.1:8000/**. The local database defaults to `data/desk.sqlite3` and survives restarts. Override its path with `INFODESK_DB`. There is no automatic `.env` loader; set variables in your shell.
 
+### Connect in Cursor
+
+The same local tools are available over MCP stdio. GitHub Pages has no MCP server and does not pretend to.
+
+```json
+{
+  "mcpServers": {
+    "info-desk": {
+      "command": "python",
+      "args": ["-m", "infodesk.mcp_server"],
+      "cwd": "/absolute/path/to/info-desk",
+      "env": {
+        "INFODESK_DB": "/absolute/path/to/info-desk/data/desk.sqlite3"
+      }
+    }
+  }
+}
+```
+
+Point `command` at the virtualenv interpreter that has `pip install -e ".[dev]"` installed. After the local app has captured live documents, `search_sources` reuses that Haystack BM25 index. `get_claim` reads the recorded claim table. `propose_write` inserts a pending draft only.
+
+List the same tools from the running local API:
+
+```powershell
+curl -s http://127.0.0.1:8000/api/mcp/tools
+```
+
+#### MCP checklist
+
+| Check | What is actually true |
+|---|---|
+| Auth | Loopback FastAPI + stdio. No API key, login, or hosted MCP. Trusted-Host still rejects unexpected Host headers. |
+| Tool schema | Extra fields (`approve`, unknown names) and missing required fields return a visible 422/tool error. |
+| Writes need `approve()` | `propose_write` cannot approve itself. `POST /api/drafts/{id}/decide` or `store.approve()` writes the note. |
+| 429 / timeout | `search_sources` surfaces existing live-check 429/timeout details. It does not invent a successful fetch. |
+| Eval / harness | Recorded harness, Pages replay JSON and retrieval eval stay on their existing paths. MCP is local/live only. |
+
 To preview only the public replay:
 
 ```powershell
@@ -115,13 +152,17 @@ The default model request timeout is an uncalibrated resource budget, not a late
 |---|---|---|
 | `sources.py`, `tools.py` | Allowlisted stored excerpts | Capture metadata and controlled reads; editorial additions excluded from evidence |
 | `extract.py`, `claims.py` | Curated claim rules + analysed source text | Claim cells, named quantities and attribution; absence is not denial |
+| `haystack_retrieval.py` | Latest captured `live_chunks` rows | Haystack `Document` + `InMemoryBM25Retriever` Pipeline; lexical ranking only |
+| `mcp_tools.py`, `mcp_server.py` | Live store + recorded claims | stdio/HTTP MCP: `search_sources`, `get_claim`, `propose_write`; no self-approve |
 | `interpret.py` | Evidence-backed findings; optional Ollama | Deterministic memo and bounded finding ordering |
 | `validate.py`, `policy.py` | Quantities, licenses, configured instruction-pattern checks | Release guard; no model-controlled database write |
 | `store.py` | SQLite transactions and conditional status updates | Persistent run snapshots, deduplication by complete draft identity, atomic approval and note insertion |
 | `workbench.py` | The same analysis service | Shared payload for local API and generated replay |
 | `public/` | Replay JSON or local API | Responsive source selector, claim inspector, review queue, exports and visible evaluations |
 
-**Why this scope:** the live workspace demonstrates retrieval-augmented generation with lexical search, versioned evidence and bounded model output. The recorded workspace remains a fixed-rule comparison, not RAG or a general extraction benchmark. Neither independently verifies the publisher's claims.
+Live ask retrieval is: **captures (SQLite ledger) → Haystack `Document` → BM25 retriever → existing citation layer**. Haystack does not write the ledger, approve drafts, or call the model. Citations, claims, `approve()`, and allowlisted connectors stay in Python. This is local lexical BM25, not embeddings, semantic search, or a production service. GitHub Pages still serves the recorded case; Haystack runs only on the live localhost path. Captures are flat paragraph windows, so AutoMergingRetriever is unused.
+
+**Why this scope:** the live workspace demonstrates retrieval-augmented generation with lexical Haystack BM25, versioned evidence and bounded model output. The recorded workspace remains a fixed-rule comparison, not RAG or a general extraction benchmark. Neither independently verifies the publisher's claims.
 
 The local API binds to loopback, rejects unexpected Host headers and cross-origin writes, and accepts only registered source IDs. It is **single-user**. Do not expose it publicly without authentication, per-user authorization, request limits and a production storage design.
 
@@ -136,6 +177,8 @@ The local API binds to loopback, rejects unexpected Host headers and cross-origi
 | `POST /api/drafts/{id}/decide` | `{"decision":"approve"}` or `{"decision":"reject"}` |
 | `GET /api/db` | Current local ledger state |
 | `GET /api/harness` | Isolated regression evaluation, not mutations to your ledger |
+| `GET /api/mcp/tools` | List local MCP tools and input schemas |
+| `POST /api/mcp/tools/{name}` | Invoke one listed tool; `propose_write` still needs human `approve()` |
 
 All supplied public-source cases currently produce `hold` or `verify_first`; the UI correctly prevents approval. Positive approval, rejection, replay and concurrency paths are exercised with clearly labelled SYNTHETIC tests. Exporting a memo never approves a note.
 

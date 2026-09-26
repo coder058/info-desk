@@ -229,7 +229,7 @@ class LiveService:
             if kind == "ask":
                 started = time.perf_counter()
                 result["passages"] = self.store.retrieve(request.question, request.source_ids, request.document_ids)
-                self.store.job_step(job_id, f"Retrieved {len(result['passages'])} passages with SQLite FTS5 / BM25",
+                self.store.job_step(job_id, f"Retrieved {len(result['passages'])} passages with Haystack BM25",
                                     (time.perf_counter()-started)*1000)
                 if not result["passages"]:
                     result["answer"] = {"statements": [], "insufficient_evidence": True,

@@ -8,6 +8,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from time import perf_counter
 
+import haystack
+
 from .live_store import LiveStore
 from .sources import ROOT, load_sources
 
@@ -76,7 +78,7 @@ def evaluate(dataset_path, repeats):
         'dataset_sha256': hashlib.sha256(raw).hexdigest(),
         'corpus_sha256': {sid: hashlib.sha256(s['body'].encode()).hexdigest() for sid, s in sources.items()},
         'runtime': {'python': platform.python_version(), 'sqlite': sqlite3.sqlite_version,
-                    'platform': platform.platform()},
+                    'haystack': haystack.__version__, 'platform': platform.platform()},
         'summary': {'cases': len(rows), 'answerable': len(answerable), 'unanswerable': len(negative),
             'mean_evidence_recall_at_returned_limit': mean([r['evidence_recall'] for r in answerable]),
             'top1_hit_rate': mean([r['top1_relevant'] for r in answerable]),
@@ -88,7 +90,8 @@ def evaluate(dataset_path, repeats):
             'Corpus is the supplied dated excerpts, not current live connector coverage or independently verified facts.',
             'No answer generation or semantic correctness is scored. Context returned for an unanswerable question is not necessarily a wrong answer.',
             'No retrieval confidence or safe abstention can be inferred from non-empty search results.',
-            'Local in-memory retrieval timing excludes network, persistence I/O and model inference.'],
+            'Local in-memory retrieval timing excludes network, persistence I/O and model inference.',
+            'Live ranking is Haystack lexical BM25 over captured versions, not embeddings or a semantic index.'],
         'cases': rows,
     }
 
